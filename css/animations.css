@@ -1,0 +1,165 @@
+/* HEADER
+
+///////////////////////////////////////////////////////////////////// */
+
+
+/* ANIMATION NAV ----------- */
+
+header .main-nav{
+	
+	transition-duration : 0.2s;
+
+}
+
+header .main-nav ul li a {
+	
+	cursor:pointer;
+	
+}
+
+header .main-nav ul li a:hover, .dropdown-content:hover {
+	
+	color: white;
+	background-color: #2e2e2e;
+	transition-duration : 0.4s;
+}
+
+header .main-nav ul #cart a:hover, .main-nav ul #booking a:hover {
+	
+	color: #2e2e2e;
+	background-color: white;
+	transition-duration : 0.2s;
+}
+
+/*dropdown --- */
+
+/*Conditions initiales du contenu dropdown*/
+header .main-nav .dropdown .dropdown-content{
+	
+	visibility:hidden;
+	opacity: 0;
+	transform: translateY(-2em);
+	z-index: -1;
+	
+	transition: all 0.2s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0.0s linear 0s;
+}
+
+/*Animation d'apparition*/
+header .main-nav .dropdown:hover .dropdown-content,
+header .main-nav .dropdown:focus .dropdown-content,
+header .main-nav .dropdown:focus-within .dropdown-content {
+	
+	visibility: visible;
+	z-index: 1;
+	opacity: 1;
+	
+	transition-delay: 0s, 0.0s, 0.2s;
+	
+	transform: translateY(0);
+	
+	background-color: white;
+}
+
+/*Animation du lien principal lors du survol*/
+header .main-nav .dropdown:hover .dropdown-btn {
+	
+	transition-duration : 0.2s;
+	background-color: #2e2e2e;
+	color: white;
+}
+
+/*Animation des liens du dropdown*/
+header .main-nav .dropdown ul li a:hover {
+	
+	transition-duration : 0.2s;
+	background-color: white;
+	color: #2e2e2e   !important;
+}
+
+
+
+/* FOOTER
+
+///////////////////////////////////////////////////////////////////// */
+
+/*Animation hover : Liens Sitemap*/
+footer .footer-links a:hover {
+	
+	color:white;
+
+	transition-duration:0.2;
+	
+}
+
+footer #sitemap ul li a:nth-child(1):hover {
+	
+	color:white;
+	transition-duration:0.2;
+	
+}
+
+/*ligne liens sitemap
+footer .footer-flex .footer-links a:after {
+	display: block;
+	content: '';
+	width: 0%;
+	height: 1px;
+		  
+	background-color:white;
+	opacity: 0;
+	transition-duration: 0.4s;
+}
+
+footer .footer-flex .footer-links a:hover:after {
+	display: block;
+	content: '';
+	width: 50%;
+	height: 1px;
+		  
+	background-color:white;
+	opacity: 0.5;
+	transition-duration: 0.4s;
+}*/
+
+/*Animation des liens sociaux*/
+
+footer .footer-flex #follow .social-links li a{
+
+	transition-duration: 0.2s;
+
+}
+
+
+footer .footer-flex #follow .social-links li a:hover,
+footer .footer-flex #follow .social-links li a:focus,
+footer .footer-flex #follow .social-links li a:focus-within{
+	
+	opacity: 1;
+	transform: scale(1.2);
+	
+	transition-duration: 0.2s;
+
+}
+
+footer .footer-flex #follow .social-links li a:active{
+	
+	opacity: 1;
+	transform: scale(0.9);
+	
+	transition-duration: 0.2s;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,434 @@
+/* Ajustements */
+
+body {
+	font-family: lato, sans-serif;
+	font-size: 80%;
+	width: 100%;
+	margin: 0 auto;
+	box-sizing: border-box;
+	background-color: #EEE;
+}
+
+
+a{color: currentcolor; text-decoration:none;}
+
+.debug-r {background-color:rgba(256,0,0,0.5);}
+.debug-g {background-color:rgba(0,256,0,0.5);}
+.debug-b {background-color:rgba(0,0,256,0.5);}
+
+#placeholder { height: 600px; }
+
+button{
+	
+	cursor: pointer;
+	
+}
+
+/* Header & Footer ///////////////////////////////////////////////////////////////////////////////////// */
+
+/* ///////////////////////////////////////////////////////////////////////////
+	HEADER
+//////////////////////////////////////////////////////////////////////////////*/
+
+header {
+	
+	width: 100%;
+	
+}
+
+header .global-container{box-shadow: 2px 2px 2px rgba(0,0,0,0.25);}
+
+.global-container{
+	width:1200px;
+	margin:0 auto;
+}
+/*conteneur au dessus de la nav*/
+
+header .header-top {
+	
+	/*flex*/
+	display: -webkit-flex;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	
+	padding: 1em 2em;
+	
+	background-color: white;
+	
+	border-bottom: solid 0.3em #2e2e2e;
+}
+
+/*bloc de gauche*/
+
+header #logo{
+	
+	/*Taille*/
+	width:10%;
+	min-width : 150px;
+}
+
+/*bloc de droite*/
+
+header .lang-search{
+	
+	text-align: right;
+	
+}
+
+header .lang-search nav a .flag{
+	
+	width: 12%;
+	min-width: 25px;
+	
+	margin-bottom: 1em ;
+	
+	align-items: flex-end;
+	
+	filter: grayscale(80%);
+}
+
+.selected-lang{
+	
+	filter: none !important;	
+}
+
+header #fr{
+	
+	margin-right: 1em;
+	
+}
+
+header .search-form {
+	
+	display: flex;
+	
+}
+
+header .search-form input {
+	
+	height : 20px;
+	width: 150px;
+	
+	color: rgba(0,0,0,0.40);
+}
+
+header .search-form button{
+	
+	background-color: black;
+	color: white;
+	
+	height: 26px;
+	width: 40px;
+
+}
+
+/*Navigation Principale*/
+
+header .main-nav ul{
+	
+	display:flex;
+	text-align: center;
+	justify-content: space-between;
+	
+}
+
+header .main-nav ul li{
+
+	width: 12.5%;
+	
+	background-color:white;
+	
+}
+
+
+header .main-nav ul li a{
+
+	display: block;
+	
+	padding: 0.8em;
+	
+	font-size: 1.2em;
+	
+	color: #2e2e2e;
+}
+
+#booking, #cart{
+
+	background-color:#2e2e2e;
+
+	text-transform: uppercase;
+	font-weight: bold;
+
+}
+
+#booking{}
+
+#cart{}
+
+#booking a, #cart a{
+
+	color: white;
+
+}
+
+/*Dropdown --- */
+
+header .main-nav .dropdown{
+	
+	position:relative;
+	
+}
+
+header .main-nav .dropdown ul{
+	
+	flex-direction:column;
+	justify-content:center;
+	
+	width:100%;
+	
+	position: absolute;
+		
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.25);
+}
+
+header .main-nav .dropdown ul li{
+	
+	width:100%;
+	background-color:#2e2e2e;
+}
+
+header .main-nav .dropdown ul li a{
+	
+	display:block;
+	color: white;
+}
+
+header .main-nav .dropdown .dropdown-content {
+	
+	visibility:hidden;
+	opacity: 0;
+	
+	position: absolute;
+	
+	z-index: 1;
+	
+}
+
+/* ///////////////////////////////////////////////////////////////////////////
+	FOOTER
+//////////////////////////////////////////////////////////////////////////////*/
+
+footer .global-container {
+		
+	width:1200px;
+	margin:0 auto;
+	
+	background-color: #2e2e2e;
+	color: #AEAEAE;
+}
+
+footer .footer-flex {
+		
+	display:flex;
+	justify-content: space-between;
+
+		
+}
+
+footer .footer-flex .footer-title{
+	
+	color: white;
+	font-size: 1.3em;
+	text-transform: uppercase;
+	
+	margin-bottom: 0.2em;
+	
+}
+
+footer .footer-title{
+	
+	height: 25px;
+}
+
+.footer-row-1{
+	
+	height : 110px;
+	padding-bottom: 0.3em;
+	
+}
+
+.footer-row-2{
+	
+	height : 70px;
+	padding-bottom: 0.2em;
+	
+}
+
+#sitemap, #contact, #follow{
+	
+	padding: 1% 2%;
+	
+}
+
+
+/* PLAN DU SITE
+ -------------------------- */
+
+footer .footer-flex #sitemap {
+		
+	width: 50% ;
+		
+}
+
+footer .footer-flex #sitemap div {
+	
+	display:flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	
+}
+
+footer .footer-flex #sitemap ul{
+		
+	width: 30%;
+	
+	line-height: 1.2em;
+		
+}
+
+
+footer .footer-flex #sitemap ul li:nth-child(1) {
+		
+	color: white;
+	font-size: 1.2em;
+	margin-bottom: 0.3em;
+		
+}
+
+footer .footer-flex #sitemap ul li a {
+		
+	font-size: 1em;
+		
+}
+
+
+/* INFORMATIONS
+ -------------------------- */
+
+footer .footer-flex #contact {
+		
+	width: 18% ;
+		
+}
+
+footer .footer-flex #contact .contact-flex  {
+	
+	display:flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+footer .footer-flex #contact div{
+	
+	width:100%;
+	
+}
+
+footer .footer-flex #contact adress h5 {
+		
+	font-size: 1.1em;
+	color: white;
+}
+
+footer .footer-flex #contact adress p {
+	margin: 0.5em 0;
+	line-height: 1.3em;
+
+}
+
+footer .footer-flex #contact adress #phone-contact {
+	
+	font-size: 1.2em;
+	font-weight : bold;
+	
+	color: white;
+}
+
+footer .footer-flex #contact #legal h5{
+	
+	font-size: 1.2em;
+	margin-bottom: 0.3em;
+	
+	color: white;
+	
+}
+
+footer .footer-flex #contact #legal ul{
+	
+	line-height: 1.3em;
+	
+}
+
+
+/* NOUS SUIVRE
+ -------------------------- */
+ 
+footer .footer-flex #follow {
+		
+	width: 32% ;
+		
+}
+
+/*Lien Réseaux sociaux*/
+footer .footer-flex #follow ul{
+	
+	display:flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content:space-between;
+	
+}
+
+footer .footer-flex #follow ul li{
+	
+	color: white;
+	font-size: 3.2em;
+
+}
+
+footer .footer-flex #follow .nl-form {
+	
+	display:flex;
+	flex-wrap: wrap;
+}
+
+footer .footer-flex #follow .nl-form input{
+	
+	display: flex-item;
+	
+	width: 60%;
+	
+	padding-left: 5px;
+	
+	color: rgba(0,0,0,0.40);
+	
+	border: solid 1px black;
+
+}
+
+footer .footer-flex #follow .nl-form button{
+	
+	display: flex-item;
+	
+	width: 37%;
+	
+	padding: 0.3em 0.8em;
+	
+	color: white;
+	text-transform: uppercase;
+	
+	background-color: black;
+	
+}
