@@ -1,3 +1,45 @@
+
+button:active span{
+	
+	display: inline-block;
+
+}
+
+button:active span, button:active i{
+	
+	transition-duration: 0.2s;
+	transform: scale(0.95);
+	color: grey;
+}
+
+/* Animations globales
+
+///////////////////////////////////////////////////////////////////// */
+
+@keyframes fadeIn {
+  0% { opacity: 0%; }
+  100% { opacity: 100%; }
+}
+
+@keyframes quoteRoll {
+	0% { opacity: 0; }
+	15% { opacity: 1; }
+	85% { opacity: 1; }
+	95% { opacity: 0;}
+	100% { opacity: 0;}
+}
+
+ .fadeIn{ animation: 3s fadeIn linear; }
+ 
+main .standard-btn:hover {
+	
+	background-color:white;
+	color: #2e2e2e;
+	box-shadow: 2px 2px 2px rgba(46,46,46,0.10);
+}
+main .standard-btn{transition: 0.2s ease-in-out;font-size: medium;}
+main .standard-btn:active {transform: scale(0.95);}
+
 /* HEADER
 
 ///////////////////////////////////////////////////////////////////// */
@@ -5,76 +47,153 @@
 
 /* ANIMATION NAV ----------- */
 
-header .main-nav{
-	
-	transition-duration : 0.2s;
+header #main-nav ul li a{transition-duration : 0.2s;}
 
-}
-
-header .main-nav ul li a {
-	
-	cursor:pointer;
-	
-}
-
-header .main-nav ul li a:hover, .dropdown-content:hover {
+header #main-nav ul li a:hover {
 	
 	color: white;
-	background-color: #2e2e2e;
-	transition-duration : 0.4s;
+	background-color: #2e2e2e;	
 }
 
-header .main-nav ul #cart a:hover, .main-nav ul #booking a:hover {
+/*Animations au clic*/
+
+header #main-nav a span{
+	
+	display: inline-block;
+	transform: scale(1);
+	transition-duration : 0.1s;
+}
+
+header #main-nav a:active span{
+	
+	transform: scale(0.90);
+	color: grey;
+}
+
+
+header #main-nav ul #cart a:hover, header #main-nav ul #booking a:hover {
 	
 	color: #2e2e2e;
 	background-color: white;
 	transition-duration : 0.2s;
 }
 
-/*dropdown --- */
+header .options nav a .flag{transition-duration : 0.1s;}
+
+header .options nav a .flag:hover{filter:grayscale(0%);}
+
+/* DROPDOWN
+ --- */
 
 /*Conditions initiales du contenu dropdown*/
-header .main-nav .dropdown .dropdown-content{
+header #main-nav .dropdown .dropdown-content{
+	
+
 	
 	visibility:hidden;
 	opacity: 0;
 	transform: translateY(-2em);
 	z-index: -1;
 	
-	transition: all 0.2s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0.0s linear 0s;
+	transition-duration: 0.5s; 			/* vendorless fallback */
+    -o-transition-duration: 0.5s; 		/* opera */
+    -ms-transition-duration: 0.5s; 		/* IE 10 */
+    -moz-transition-duration: 0.5s; 	/* Firefox */
+    -webkit-transition-duration: 0.5s;	/*safari and chrome */
 }
 
 /*Animation d'apparition*/
-header .main-nav .dropdown:hover .dropdown-content,
-header .main-nav .dropdown:focus .dropdown-content,
-header .main-nav .dropdown:focus-within .dropdown-content {
+header #main-nav .dropdown:hover .dropdown-content,
+header #main-nav .dropdown:focus .dropdown-content {
 	
 	visibility: visible;
-	z-index: 1;
 	opacity: 1;
+	transform: translateY(0);			/* vendorless fallback */
+	-o-transform: translateY(0); 		/* opera */
+	-ms-transform: translateY(0);		/* IE 10 */
+	-moz-transform: translateY(0); 		/* Firefox */
+	-webkit-transform: translateY(0);	/*safari and chrome */
 	
-	transition-delay: 0s, 0.0s, 0.2s;
-	
-	transform: translateY(0);
+	transition-duration: 0.5s; 			/* vendorless fallback */
+    -o-transition-duration: 0.5s; 		/* opera */
+    -ms-transition-duration: 0.5s; 		/* IE 10 */
+    -moz-transition-duration: 0.5s; 	/* Firefox */
+    -webkit-transition-duration: 0.5s;	/*safari and chrome */
 	
 	background-color: white;
 }
 
 /*Animation du lien principal lors du survol*/
-header .main-nav .dropdown:hover .dropdown-btn {
+header #main-nav .dropdown:hover .dropdown-btn {
 	
-	transition-duration : 0.2s;
 	background-color: #2e2e2e;
 	color: white;
 }
 
 /*Animation des liens du dropdown*/
-header .main-nav .dropdown ul li a:hover {
+header #main-nav .dropdown .dropdown-content li a:hover {
 	
 	transition-duration : 0.2s;
 	background-color: white;
-	color: #2e2e2e   !important;
+	color: #2e2e2e;
 }
+
+/*ANIMATION ECRAN SEULEMENT*/
+@media screen and (min-width: 850px)
+{
+	/* ACCUEIL
+
+	///////////////////////////////////////////////////////////////////// */
+
+	main #services-top .fw{
+		
+		opacity:0;
+		transition: opacity .3s ease-in-out 0.1s;
+		
+	}
+
+	main #services-top .caption {
+
+    transform: translateY(15em);
+    transition: 0.5s ease-in-out 0.1s;
+
+	}
+
+	main #services-top .caption h2:after{
+		
+		transition: width .4s ease-in-out 0.1s;
+		
+	}
+
+	main #services-top .frame:hover .caption{
+		
+		transform: translateY(0%);
+		background-color: rgba(256,256,256,0.85);
+		text-shadow: none;
+		color:#2e2e2e;
+		margin-bottom: 5%;
+		
+	}
+	
+	main .services-block .caption p {opacity:0;}
+
+
+	main #services-top .frame p{	transition: opacity 0.5s ease-in-out;}
+
+	main #services-top .frame:hover p {opacity: 1; transition-delay:0.4s;}
+
+	main #services-top .frame:hover .caption h2:after {width: 50%;}
+
+	main #services-top #hitBoxChambres:hover ~ #fwChambres{opacity:1;}
+
+	main #services-top #hitBoxSpa:hover ~ #fwSpa{opacity:1;}
+
+	main #services-top #hitBoxRestaurant:hover ~ #fwRestaurant{opacity:1;}
+}
+
+	
+	
+	main #quoteContainer {animation: 8s quoteRoll infinite;}
 
 
 
@@ -98,41 +217,18 @@ footer #sitemap ul li a:nth-child(1):hover {
 	
 }
 
-/*ligne liens sitemap
-footer .footer-flex .footer-links a:after {
-	display: block;
-	content: '';
-	width: 0%;
-	height: 1px;
-		  
-	background-color:white;
-	opacity: 0;
-	transition-duration: 0.4s;
-}
-
-footer .footer-flex .footer-links a:hover:after {
-	display: block;
-	content: '';
-	width: 50%;
-	height: 1px;
-		  
-	background-color:white;
-	opacity: 0.5;
-	transition-duration: 0.4s;
-}*/
-
 /*Animation des liens sociaux*/
 
-footer .footer-flex #follow .social-links li a{
+footer #follow .social-links li a{
 
 	transition-duration: 0.2s;
 
 }
 
 
-footer .footer-flex #follow .social-links li a:hover,
-footer .footer-flex #follow .social-links li a:focus,
-footer .footer-flex #follow .social-links li a:focus-within{
+footer #follow .social-links li a:hover,
+footer #follow .social-links li a:focus,
+footer #follow .social-links li a:focus-within{
 	
 	opacity: 1;
 	transform: scale(1.2);
@@ -141,7 +237,7 @@ footer .footer-flex #follow .social-links li a:focus-within{
 
 }
 
-footer .footer-flex #follow .social-links li a:active{
+footer #follow .social-links li a:active{
 	
 	opacity: 1;
 	transform: scale(0.9);
@@ -150,11 +246,120 @@ footer .footer-flex #follow .social-links li a:active{
 
 }
 
+/*Animation de la Gmap*/
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opcatity: 1;}
+}
+
+.adress-gmap{
+	
+	animation-name: fadeIn;
+	animation-duration: 5s;
+	
+}
+
+/* TABLETTE / ENTRE DEUX //////////////////*/
+@media screen and (max-width: 850px)
+{
+	
+		/* MOBILE MENU
+	////////////////////////////////////////*/
+	
+	header #nav-block {
+		
+		transistion-duration: 1s;
+		
+	}
+	
+	header #main-nav ul li a:hover, .dropdown-content:hover {
+	
+		background: transparent;
+	}
+
+	header #main-nav ul #cart a:hover, header #nav-block  #main-nav ul #booking a:hover {
+	
+		background: transparent;
+		color: white;
+	}
+	
+	header #main-nav ul li a:active {
+		
+		transform: scale(0.8);
+
+	}
+
+	/*Animation du lien principal lors du survol*/
+	header #main-nav .dropdown:hover .dropdown-btn {
+		
+		transition-duration : 0;
+		background-color: transparent;
+		color: white;
+	}
+}
 
 
+@media screen and (max-width: 650px)
+{
+	
 
 
+	/*Animation d'apparition*/
+	header #main-nav .dropdown:hover .dropdown-content,
+	header #main-nav .dropdown:focus .dropdown-content,
+	header #main-nav .dropdown:focus-within .dropdown-content {
+		
+		visibility: visible;
+		z-index: 0;
+		opacity: 1;
+		
+		transition-delay: 0s, 0.0s, 0.2s;
+		
+		transform: translateY(0);
+		
+		background-color: white;
+	}
 
+	/*Animation du lien principal lors du survol*/
+	header #main-nav .dropdown:hover .dropdown-btn {
+		
+		transition-duration : 0;
+		background-color: transparent;
+		color: white;
+	}
+
+	/*Animation des liens du dropdown*/
+	header #main-nav .dropdown .dropdown-content  li a:hover {
+	
+		transition-duration : 0.2s;
+		background-color: transparent;
+		color: rgba(256,256,256, 0.8);
+	}
+	
+	/*Animation des liens du dropdown*/
+	header #main-nav .dropdown .dropdown-content  li a:active {
+	
+		transform: scale(0.8);
+		text-shadow: 0px 0px 10px white;
+	}
+	
+	/*Animation des liens du dropdown*/
+	header #main-nav .dropdown .dropdown-content  li a:active {
+	
+		transform: scale(0.8);
+		text-shadow: 0px 0px 10px white;
+	}
+	
+	
+	header .navBtn:active {
+		
+		transform: scale(0.9);
+		transistion-duration: 0.5s;
+	}
+
+	
+}
 
 
 

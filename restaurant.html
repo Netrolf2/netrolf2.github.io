@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 
-	<title>Parimis - Hôtel Restaurant 5 étoiles - Accueil</title>
+	<title>Parimis - Hôtel Restaurant 5 étoiles - Chambres &amp; Suites</title>
 	<meta name="description" content="Parimis - Hôtel 5 étoiles - Paris VIIIe">
 	<meta name="author" content="Florent Maillard">
 	
@@ -54,18 +54,17 @@
 	
 	<!-- APPELS CSS -->
 	<link rel="stylesheet" href="css/reset.css"> 		<!--Reset -->
-		<link rel="stylesheet" href="css/style.css">		<!-- Styles -->
+	<link rel="stylesheet" href="css/style.css">		<!-- Styles -->
 	<link rel="stylesheet" href="css/animations.css">	<!-- Animations-->
-	
+
 	<!-- FONT -->
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Bitter:400,700" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300, 400,700" rel="stylesheet"> 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 	
 </head>
 <body>
-	<!-- HEADER /////////////////////////////////////////////////--> 
+<!-- HEADER /////////////////////////////////////////////////--> 
 	<header class="">
 		<div class="global-container">
 			<div class="header-top flex">
@@ -101,7 +100,7 @@
 					<ul class="flex">
 						<!--ACCUEIL-->
 						<li>
-							<a class="active" href="index.html"><span>Accueil</span></a>
+							<a href="javascript:void(0)"><span>Accueil</span></a>
 						</li>
 						<!--CHAMBRES-->
 						<li class="dropdown">
@@ -116,17 +115,17 @@
 						</li>
 						<!-- RESTAURANT -->
 						<li class="dropdown">
-							<a class="dropdown-btn" href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 0);"><span>Restaurant</span></a>
+							<a class="dropdown-btn" href="restaurant.html"><span>Restaurant</span></a>
 							<!-- Dropdown Restaurant -->
 							<ul  class="dropdown-content">
-								<li><a href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 0);"><span>Brasserie</span></a></li>
-								<li><a href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 1);"><span>Dégustation</span></a></li>
-								<li><a href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 2);"><span>Restaurant</span></a></li>
+								<li><a href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 1);"><span>Brasserie</span></a></li>
+								<li><a href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 2);"><span>Dégustation</span></a></li>
+								<li><a href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 3);"><span>Restaurant</span></a></li>
 							</ul>
 						</li>
 						<!-- SPA-->
 						<li class="dropdown">
-							<a class="dropdown-btn" href="spa.html"><span>SPA</span></a>
+							<a class="dropdown-btn active" href="spa.html"><span>SPA</span></a>
 							<!-- Dropdown Spa -->
 							<ul class="dropdown-content">
 								<li><a href="spa.htm#detente">Détente</a></li>
@@ -215,80 +214,85 @@
 	
 	<main>
 		<div class="global-container fadeIn">
-		
-				<!-- SLIDER -->
-				<div class="slider">
-					<figure>
-						<img src="img/photos/parimis_hotel_slider_1.jpg" alt="">
-						<img src="img/photos/parimis_hotel_slider_2.jpg" alt="">
-						<img src="img/photos/parimis_hotel_slider_3.jpg" alt="">
-						<img src="img/photos/parimis_hotel_slider_4.jpg" alt="">
-						<img src="img/photos/parimis_hotel_slider_1.jpg" alt="">
-					</figure>
-					<div class="accroche ">
-						<h1 class="uppercase">Vivez une autre conception du 5 étoiles.</h1>
-						<p>Pour vous relaxer au sein de notre Spa, pour profiter des mets préparés par nos brigades de talents ou pour passer une nuit sous le regard bienveillant de la Tour Eiffel, notre personnel vous accueillera toujours à bras ouvert.</p>
-					</div>
-				</div>
-
-			<!-- Hotel Restau Spa <-->
 			
-			<section id="services" class="">
-
-				<!-- CADRE BLANC ET CAPTION BOXES -->
-				<div id="services-top" class="services-block flex">	
-					<div id="hitBoxChambres" class="frame">
-						<div class="caption justified">
-							<h2 class="regular">Chambres</h2>
-							<p>Nos chambres vous proposent un moment unique en plein cœur de Paris à la croisée des plus beaux monuments de la capitale.</p>
-							<a class="standard-btn b-black" href="javascript:void(0)">DÉCOUVRIR</a>
-						</div>
-					</div>
-					
-					<div id="hitBoxSpa" class="frame">
-						<div class="caption justified">
-							<h2 class="regular">Spa</h2>
-							<p>Offrez-vous un moment de détente hors norme au sein de notre espace bien-être comprenant piscine, sauna, hammam et salles de massages.</p>
-							<a class="standard-btn b-black" href="javascript:void(0)">DÉCOUVRIR</a>
-						</div>
-					</div>
-
-					<div id="hitBoxRestaurant" class="frame">
-						<div class="caption justified">
-							<h2 class="regular">Restaurant</h2>
-							<p>Notre chef de renommée Jacques Maginhard vous propose des mets qui font honneur à la gastronomie réputée de notre pays ainsi que des créations surprenantes.</p>
-							<a class="standard-btn b-black" href="javascript:void(0)">DÉCOUVRIR</a>
-						</div>
-					</div>
-					
-					<!-- IMAGE FULL WIDTH -->
-					<div id="fwChambres"  class="services-block fw" ><img src="img/photos/parimis_hotel_chambres.jpg" alt="Chambres Parimis Hôtel"></div>
-					<div id="fwSpa"  class="services-block fw"><img src="img/photos/parimis_hotel_spa2.jpg" alt="Spa Parimis Hôtel"></div>
-					<div id="fwRestaurant"  class="services-block fw"><img  src="img/photos/parimis_hotel_restaurant.jpg" alt="Restaurant  Parimis Hôtel"></div>
-				</div>
-				<!-- Background -->
-				<div id="services-bot" class="services-block flex ">
-					<div id="frameChambres" class="frame"></div>
-					<div id="frameSpa" class="frame"></div>
-					<div id="frameRestaurant" class="frame"></div>	
-				</div>
-			</section>
-			
-			<section id="testimonies" class="b-black">
-				<i class="fas fa-quote-right"></i>
-				<h2 class="centered">Témoignages</h2>
-				<div id="quoteContainer" class="flex">
-					<div class="quote-mark">«</div>
-					<blockquote class="justified">
-						<p id="quote"></p>
-						<p class="italic"><span id="author" class="bold"></span><br><span id="authorMisc">.</span></p>
-					</blockquote>
-					<div class="quote-mark">»</div>
-				</div>
+			<div  class=" centered text-block">
 				
-			</section>
+				<img class="portrait" src="" alt="">
+				
+				<h1>Savourez le moment présent.</h1>
+				<p>La cuisine hors norme de notre chef de renom Jacques Maginhard suit la tradition gastronomique française et y un avant-gardisme cullinaire qui vous laissera sans voix.</p>
+				<br>
+				<hr>
+			</div>
+			
+			<nav class="flex menu-selectors">
+				<button id="brasserieBtn" class="standard-btn selected" onclick="mySwipe.slide(0, 1000);">Menu Brasserie</button>
+				<button id="degustationBtn" class="standard-btn" onclick="mySwipe.slide(1, 1000);">Menu Dégustation</button>
+				<button id="restaurantBtn"  class="standard-btn" onclick="mySwipe.slide(2, 1000);">Menu Restaurant</button>
+			</nav>
+			
+			<div  id="menuContainer" class="swipe-block swipe block-menu">
+					<div class="swipe-wrap">
+					
+						<!-- MENU BRASSERIE -->
+						<div id="brasserie" class="block-menu">
+							<!-- TITRE DU MENU -->
+							<h3 class="text-block">Carte Brasserie <span style="font-size:0.9em; font-weight:light;" class="grey">Carte du midi</span></h3>
+							<!-- ENTREE -->
+							<div class="flex">
+								<div class=" step text-block">								
+									<h4>Entrée</h4>
+									<p>Velouté glacé de tomate, tourteau</p>
+									<p class="grey">ou</p>
+									<p>Bonite mi-cuite, jeunes poireaux grillés et sésame torréfié</p>
+									<p class="grey">ou</p>
+									<p>Foie gras de canard confit, pêche et amandes fraîches</p>								
+								</div>
+								<div class="food-img">
+									<div title="parimis hotel menu brasserie image entrée" class="brasserie-img"></div>
+								</div>
+							</div>
+							<div class="flex">
+								<div class=" step text-block">								
+									<h4>Plat</h4>
+									<p>Tronçon de barbue au four, courgette violon et criste marine</p>
+									<p class="grey">ou</p>
+									<p>Faux-filet de boeuf au sautoir, pommes Anna</p>
+									<p class="grey">ou</p>
+									<p>Côte de cochon en cocotte, girolles et jus à la sariette</p>								
+								</div>
+								<div class="food-img">
+									<div title="parimis hotel menu brasserie image entrée" class="brasserie-img"></div>
+								</div>
+							</div>
+							<div class="flex">
+								<div class=" step text-block">								
+									<h4>Dessert</h4>
+									<p>Velouté glacé de tomate, tourteau</p>
+									<p class="grey">ou</p>
+									<p>Bonite mi-cuite, jeunes poireaux grillés et sésame torréfié</p>
+									<p class="grey">ou</p>
+									<p>Foie gras de canard confit, pêche et amandes fraîches</p>								
+								</div>
+								<div class="food-img">
+									<div title="parimis hotel menu brasserie image entrée" class="brasserie-img"></div>
+								</div>
+							</div>
+	
+						</div>	
+						
+						<div id="degustation" class="centered block-menu">
 
-		</div>
+						</div>
+						
+						<div id="restaurant" class="centered block-menu">
+
+						</div>
+						
+				</div>
+			</div>
+			
+			
 	</main>
 	
 	<!-- FOOTER /////////////////////////////////////////////////-->
@@ -402,8 +406,85 @@
 	
 	<!-- APPELS JS -->
 	<script src="js/responsiveMenu.min.js"></script>
-	<script src="js/testimonies.min.js"></script>
+	<script src="js/swipe.min.js"></script>
 	<script src="js/calendar.js"></script>
+	
+	
+	
+	
+	<script>
+		/*SCRIPT SWIPE
+		var element = document.getElementById('mySwipe'),
+	    prevBtn = document.getElementById('prev'),
+	    nextBtn = document.getElementById('next');
+	
+		window.mySwipe = new Swipe(element, {
+
+		  startSlide: 0,
+		  speed: 700,
+		  auto: 3000,
+		  draggable: true,
+		  continuous: true,
+		  disableScroll: true, // prevent touch events from scrolling the page
+		  stopPropagation: false,
+		  
+		});*/
+		
+		var element = document.getElementById('menuContainer'),
+			brasserieBtn = document.getElementById('brasserieBtn'),
+			degustationBtn = document.getElementById('degustationBtn'),
+			restaurantBtn = document.getElementById('restaurantBtn');
+		
+
+		window.mySwipe = Swipe(element, {
+			startSlide: 0,
+			continuous: true,
+			disableScroll: true,
+			draggable: true,
+			
+			callback: function() {
+			
+				var slideNB = mySwipe.getPos();
+				console.log(typeof(slideNB));
+		
+				switch(slideNB){
+				
+				case 0:
+					
+					brasserieBtn.classList.toggle("selected", true);
+					degustationBtn.classList.toggle("selected", false);
+					restaurantBtn.classList.toggle("selected", false);
+
+				break;
+				
+				case 1:
+				
+					brasserieBtn.classList.remove("selected", false);
+					degustationBtn.classList.toggle("selected", true);
+					restaurantBtn.classList.remove("selected", false);
+
+				break;
+				
+				case 2:
+			
+					brasserieBtn.classList.remove("selected", false);
+					degustationBtn.classList.remove("selected", false);
+					restaurantBtn.classList.toggle("selected", true);
+					
+				break;
+				
+				}
+			
+			}
+				
+		});
+		
+		mySwipe.slide(localStorage.getItem("selectedMenu"), 1000);
+		localStorage.clear();		
+
+		
+	
+	</script>
 		
 </body>
 
