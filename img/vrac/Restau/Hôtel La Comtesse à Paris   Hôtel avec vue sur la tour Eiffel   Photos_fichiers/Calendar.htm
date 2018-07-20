@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <title>Calendar</title>
+
+
+
+<link href="Calendar_data/BigCalendarStyleJquery.css" rel="stylesheet">
+    <link href="Calendar_data/BigCalendarStyles.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" type="text/css" href="Calendar_data/BigCalendarCss.css">
+<style type="text/css"></style></head>
+
+<body id="body">
+    <input name="__RequestVerificationToken" value="MJ2HO1vAotgfFNKcfzK0Hm7V_ltqi51WJvZKJwzd0FSEweHDPNfQm8P_Rf2QyfmnCE5qGFqQe-daBlWFxdIV_ekastnsJoIwXp8LNX4BPKk1" type="hidden">
+    <p class="month">
+        <select class="month-select" id="month-select">
+                    <option value="7/2018" selected="selected">juillet 2018</option>
+                    <option value="8/2018">août 2018</option>
+                    <option value="9/2018">septembre 2018</option>
+                    <option value="10/2018">octobre 2018</option>
+                    <option value="11/2018">novembre 2018</option>
+                    <option value="12/2018">décembre 2018</option>
+                    <option value="1/2019">janvier 2019</option>
+                    <option value="2/2019">février 2019</option>
+                    <option value="3/2019">mars 2019</option>
+                    <option value="4/2019">avril 2019</option>
+                    <option value="5/2019">mai 2019</option>
+                    <option value="6/2019">juin 2019</option>
+
+        </select>
+    </p>
+
+    <p class="notice">Sélectionnez votre date d'arrivée. Le prix affiché est le meilleur prix pour un séjour d'une nuit.</p>
+
+    <p class="error-message" id="error-message"></p>
+
+    <div class="calendar-wrapper">
+        <a class="navigation-button navigation-button-disabled navigation-button-prev" id="navigation-prev"><i class="navigation-button-prev-icon"></i></a>
+
+        <ul class="this-calendar" id="this-calendar"></ul>
+
+        <a class="navigation-button navigation-button-next" id="navigation-next"><i class="navigation-button-next-icon"></i></a>
+    </div>
+
+    <div class="dialog-blockout" id="dialog-blockout"></div>
+
+    <div class="dialog-host" id="dialog-host">
+        <div class="dialog-content">
+            <a class="dialog-content-close" id="dialog-content-close">✖</a>
+
+            <p class="dialog-content-title">Arrivée <span id="dialog-content-checkin"></span></p>
+
+            <p class="dialog-content-request" id="dialog-content-request">Vous
+ pouvez nous envoyer une demande de disponibilité pour les types de 
+chambres ci-dessous. Cliquez sur le bouton de demande de disponibilité 
+et vous recevrez une réponse sous 48 heures.</p>
+
+            <p class="dialog-content-min-stay" id="dialog-content-min-stay"></p>
+
+                <p class="dialog-content-departure-date-wrapper">
+                    <label for="departureDate">Date de départ</label>
+                    <input class="form-itext" id="departureDate" type="text">
+                </p>
+
+            <p class="dialog-content-guest">
+                Occupants
+                <select id="dialog-content-adult-count">
+                    <option value="1">1 adulte</option>
+                        <option value="2" selected="selected">
+                            2 adultes
+                        </option>
+                        <option value="3">
+                            3 adultes
+                        </option>
+                        <option value="4">
+                            4 adultes
+                        </option>
+                        <option value="5">
+                            5 adultes
+                        </option>
+                        <option value="6">
+                            6 adultes
+                        </option>
+                        <option value="7">
+                            7 adultes
+                        </option>
+                        <option value="8">
+                            8 adultes
+                        </option>
+                        <option value="9">
+                            9 adultes
+                        </option>
+                        <option value="10">
+                            10 adultes
+                        </option>
+                        <option value="11">
+                            11 adultes
+                        </option>
+                        <option value="12">
+                            12 adultes
+                        </option>
+                        <option value="13">
+                            13 adultes
+                        </option>
+                        <option value="14">
+                            14 adultes
+                        </option>
+                        <option value="15">
+                            15 adultes
+                        </option>
+                        <option value="16">
+                            16 adultes
+                        </option>
+                        <option value="17">
+                            17 adultes
+                        </option>
+                        <option value="18">
+                            18 adultes
+                        </option>
+                        <option value="19">
+                            19 adultes
+                        </option>
+                        <option value="20">
+                            20 adultes
+                        </option>
+                </select>
+                    <select id="dialog-content-child-count">
+                        <option value="0" selected="selected">0 enfant</option>
+                        <option value="1">1 enfant</option>
+                            <option value="2">2 enfants</option>
+                            <option value="3">3 enfants</option>
+                            <option value="4">4 enfants</option>
+                            <option value="5">5 enfants</option>
+                            <option value="6">6 enfants</option>
+                            <option value="7">7 enfants</option>
+                            <option value="8">8 enfants</option>
+                            <option value="9">9 enfants</option>
+                            <option value="10">10 enfants</option>
+                            <option value="11">11 enfants</option>
+                            <option value="12">12 enfants</option>
+                            <option value="13">13 enfants</option>
+                            <option value="14">14 enfants</option>
+                            <option value="15">15 enfants</option>
+                            <option value="16">16 enfants</option>
+                            <option value="17">17 enfants</option>
+                            <option value="18">18 enfants</option>
+                            <option value="19">19 enfants</option>
+                            <option value="20">20 enfants</option>
+                    </select>
+                                    <select id="dialog-content-infant-count">
+                        <option value="0" selected="selected">0 bébé</option>
+                        <option value="1">1 bébé</option>
+                            <option value="2">2 bébés</option>
+                            <option value="3">3 bébés</option>
+                            <option value="4">4 bébés</option>
+                            <option value="5">5 bébés</option>
+                            <option value="6">6 bébés</option>
+                            <option value="7">7 bébés</option>
+                            <option value="8">8 bébés</option>
+                            <option value="9">9 bébés</option>
+                            <option value="10">10 bébés</option>
+                            <option value="11">11 bébés</option>
+                            <option value="12">12 bébés</option>
+                            <option value="13">13 bébés</option>
+                            <option value="14">14 bébés</option>
+                            <option value="15">15 bébés</option>
+                            <option value="16">16 bébés</option>
+                            <option value="17">17 bébés</option>
+                            <option value="18">18 bébés</option>
+                            <option value="19">19 bébés</option>
+                            <option value="20">20 bébés</option>
+                    </select>
+                                    </p><p class="dialog-content-promocode-wrapper">
+                        <label for="dialog-content-promocode">Code promo</label>
+                        <input class="form-itext" id="dialog-content-promocode" type="text">
+                    </p>
+            <p></p>
+
+            <a class="dialog-content-submit" id="dialog-content-submit">Réserver</a>
+        </div>
+    </div>
+
+<script type="text/javascript" async="" src="Calendar_data/ga.js"></script><script async="" src="Calendar_data/analytics.js"></script><script async="" src="Calendar_data/gtm.js"></script><script>
+    (function (global) {
+        global.bigCalendar = {
+            domain: "https://widgets.secure-hotel-booking.com",
+            baseUrl: "https://www.secure-hotel-booking.com/Hotel-La-Comtesse/25SI/fr-FR/",
+            maxStayLength: 90,
+            maxStayLengthLimit: 30,
+            language: 'fr',
+            calendarImageUrl: "/Content/Common/Images/calendar.jpg",
+            controllerUrls: {
+                getAvailability: "/Hotel-La-Comtesse/25SI/17801/fr/BigCalendar/GetAvailability"
+            },
+            translation: {
+                requestAvailability: "Demande de disponibilité",
+                book: "Réserver",
+                minStay: "La durée minimum de séjour est de {{ minStay }} nuits pour bénéficier de ce prix.",
+                night: "nuit",
+                nights: "nuits"
+            },
+            discountCodeEnabled: true
+        };
+        // Import ids at the same place of best price
+        global.bookingEngineReference = '25SI';
+        global.hotelId = 17801;
+        global.hotelName = 'Hôtel La Comtesse';
+        global.language = 'fr';
+        global.widgetName = 'big-calendar';
+        global.googleAnalyticsEnabled = true;
+        global.googleTracking = {
+            clientTrackingId: 'UA-75711123-1',
+            clientLinkWebsite: true,
+            clientDomain: 'comtesse-hotel.com',
+            availproUniversalTrackingId: 'UA-2720050-20',
+            availproGtmId: 'GTM-NPBR5QJ',
+            clientGtmId: ''
+        };
+
+    })(window);
+    </script>
+
+    <script src="Calendar_data/BigCalendarScripts.js"></script>
+
+
+<script src="Calendar_data/GoogleTagManagerTrackingScripts.js"></script><noscript><iframe src='//www.googletagmanager.com/ns.html?id=GTM-NPBR5QJ height='0' width='0' style='display:none;visibility:hidden'></iframe></noscript>
+<script src="Calendar_data/AvailproUniversalTrackingScripts.js"></script>
+<script src="Calendar_data/ClientAnalyticsTrackingScripts.js"></script>
+  
+
+
+
+
+
+</body></html>

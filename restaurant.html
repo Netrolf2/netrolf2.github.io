@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 
-	<title>Parimis - Hôtel Restaurant 5 étoiles - Chambres &amp; Suites</title>
-	<meta name="description" content="Parimis - Hôtel 5 étoiles - Paris VIIIe">
+	<title>Parimis - Hôtel Restaurant Spa - 5 étoiles -  Le Restaurant</title>
+	<meta name="description" content="Que vous soyez résident ou non, le Parimis vous propose de découvrir la gastronomie hors normes proposée par notre chef Jacques Maginhard.">
 	<meta name="author" content="Florent Maillard">
 	
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -20,12 +20,12 @@
 	<meta name="googlebot" content="index, follow">
 	
 	<!-- Réseaux Sociaux -->
-	<meta property="og:site_name" content="Parimis - Hôtel 5 étoile"/>
-	<meta property="og:title" content="Parimis - Hôtel 5 étoiles - Accueil" />
+	<meta property="og:site_name" content="Parimis - Hôtel Restaurant Spa - 5 étoiles"/>
+	<meta property="og:title" content="Parimis - Hôtel Restaurant Spa - 5 étoiles -  Le Restaurant" />
 	<meta property="og:type" content="article" />
-	<meta property="og:url" content="http://www.parimis-hotel.eu" />
+	<meta property="og:url" content="http://www.parimis-hotel.eu/restaurant.html" />
 	<meta property="og:image" content="http://www.parimis-hotel.eu/img/parimis-logo.png" />
-	<meta property="og:description" content="une petite description en 150-160 caractères" /> <!-- DESCRIPTION A REDIGER -->
+	<meta property="og:description" content="Que vous soyez résident ou non, le Parimis vous propose de découvrir la gastronomie hors normes proposée par notre chef Jacques Maginhard." /> 
 	
 	
 	<!-- Favicons -->
@@ -64,7 +64,7 @@
 	
 </head>
 <body>
-<!-- HEADER /////////////////////////////////////////////////--> 
+	<!-- HEADER /////////////////////////////////////////////////--> 
 	<header class="">
 		<div class="global-container">
 			<div class="header-top flex">
@@ -100,7 +100,7 @@
 					<ul class="flex">
 						<!--ACCUEIL-->
 						<li>
-							<a href="javascript:void(0)"><span>Accueil</span></a>
+							<a href="index.html"><span>Accueil</span></a>
 						</li>
 						<!--CHAMBRES-->
 						<li class="dropdown">
@@ -115,17 +115,17 @@
 						</li>
 						<!-- RESTAURANT -->
 						<li class="dropdown">
-							<a class="dropdown-btn" href="restaurant.html"><span>Restaurant</span></a>
+							<a class="dropdown-btn active" href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 0);"><span>Restaurant</span></a>
 							<!-- Dropdown Restaurant -->
 							<ul  class="dropdown-content">
-								<li><a href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 1);"><span>Brasserie</span></a></li>
-								<li><a href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 2);"><span>Dégustation</span></a></li>
-								<li><a href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 3);"><span>Restaurant</span></a></li>
+								<li><a href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 0);"><span>Brasserie</span></a></li>
+								<li><a href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 1);"><span>Dégustation</span></a></li>
+								<li><a href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 2);"><span>Restaurant</span></a></li>
 							</ul>
 						</li>
 						<!-- SPA-->
 						<li class="dropdown">
-							<a class="dropdown-btn active" href="spa.html"><span>SPA</span></a>
+							<a class="dropdown-btn" href="spa.html"><span>SPA</span></a>
 							<!-- Dropdown Spa -->
 							<ul class="dropdown-content">
 								<li><a href="spa.htm#detente">Détente</a></li>
@@ -140,20 +140,20 @@
 							<a class="dropdown-btn" href="hotel.html"><span>l'Hôtel</span></a>
 							<!-- Dropdown Hôtel -->
 							<ul class="dropdown-content">
-								<li><a href="hotel.html"><span>À propos</span></a></li>
-								<li><a href="hotel.html"><span>Accès</span></a></li>
-								<li><a href="hotel.html"><span>Actualités</span></a></li>
-								<li><a href="hotel.html"><span>Avis</span></a></li>
-								<li><a href="hotel.html"><span>Presse</span></a></li>
+								<li><a href="hotel.html#about"><span>À propos</span></a></li>
+								<li><a href="hotel.html#acces"><span>Accès</span></a></li>
+								<li><a href="hotel.html#news"><span>Actualités</span></a></li>
+								<li><a href="hotel.html#avis"><span>Avis</span></a></li>
+								<li><a href="hotel.html#presse"><span>Presse</span></a></li>
 							</ul>
 						</li>
 						<!--CONTACT-->
 						<li>
-							<a href="javascript:void(0)"><span>Contact</span></a>
+							<a href="contact.html"><span>Contact</span></a>
 						</li>
 						<!-- RESERVER -->
 						<li id="booking" class="dropdown">
-							<a href="javascript:void(0)"><span>Réserver</span></a>
+							<a href="reservation.html"><span>Réserver</span></a>
 							<fieldset class="dropdown-content calendar">
 								<div>
 									<label class="normal" for="start">Arrivée</label>
@@ -217,82 +217,196 @@
 			
 			<div  class=" centered text-block">
 				
-				<img class="portrait" src="" alt="">
+				<img class="portrait" src="img/photos/parimis_hotel_jacques_maginhard_medaillon.png" alt="portrait de Jacques Maginhard">
 				
 				<h1>Savourez le moment présent.</h1>
-				<p>La cuisine hors norme de notre chef de renom Jacques Maginhard suit la tradition gastronomique française et y un avant-gardisme cullinaire qui vous laissera sans voix.</p>
+				<p>La cuisine hors norme de notre chef de renom Jacques Maginhard suit la tradition gastronomique française et y allie un avant-gardisme cullinaire qui vous laissera sans voix.</p>
 				<br>
-				<hr>
+				
 			</div>
-			
+			<hr>
 			<nav class="flex menu-selectors">
-				<button id="brasserieBtn" class="standard-btn selected" onclick="mySwipe.slide(0, 1000);">Menu Brasserie</button>
-				<button id="degustationBtn" class="standard-btn" onclick="mySwipe.slide(1, 1000);">Menu Dégustation</button>
-				<button id="restaurantBtn"  class="standard-btn" onclick="mySwipe.slide(2, 1000);">Menu Restaurant</button>
+				<button id="brasserieBtn" class="standard-btn b-black selected" onclick="mySwipe.slide(0, 1000);">Menu Brasserie</button>
+				<button id="degustationBtn" class="standard-btn b-black" onclick="mySwipe.slide(1, 1000);">Menu Dégustation</button>
+				<button id="restaurantBtn"  class="standard-btn b-black" onclick="mySwipe.slide(2, 1000);">Menu Restaurant</button>
 			</nav>
 			
 			<div  id="menuContainer" class="swipe-block swipe block-menu">
-					<div class="swipe-wrap">
-					
-						<!-- MENU BRASSERIE -->
-						<div id="brasserie" class="block-menu">
-							<!-- TITRE DU MENU -->
-							<h3 class="text-block">Carte Brasserie <span style="font-size:0.9em; font-weight:light;" class="grey">Carte du midi</span></h3>
-							<!-- ENTREE -->
-							<div class="flex">
-								<div class=" step text-block">								
+				<div class="swipe-wrap">
+				<!-- BRASSERIE -->
+					<div id="brasserie" class="block-menu centered">
+						<div class="brasserie-img menu-cover"></div>
+						<!-- TITRE DU MENU -->
+						<h3 class="uppercase">Carte Brasserie <span class="grey">Carte du midi</span></h3>
+						<!-- ENTREE -->
+						<div class="flex food-row">
+							<div class=" step">		
+								<div class="text-block">
 									<h4>Entrée</h4>
 									<p>Velouté glacé de tomate, tourteau</p>
 									<p class="grey">ou</p>
 									<p>Bonite mi-cuite, jeunes poireaux grillés et sésame torréfié</p>
 									<p class="grey">ou</p>
-									<p>Foie gras de canard confit, pêche et amandes fraîches</p>								
-								</div>
-								<div class="food-img">
-									<div title="parimis hotel menu brasserie image entrée" class="brasserie-img"></div>
-								</div>
+									<p>Foie gras de canard confit, pêche et amandes fraîches</p>
+								</div>								
 							</div>
-							<div class="flex">
-								<div class=" step text-block">								
+							<div class="food-img">
+								<div title="parimis hotel menu brasserie image entrée" class="brasserie-img"></div>
+							</div>
+						</div>
+						<div class="flex food-row">
+							<div class=" step">	
+								<div class="text-block">
 									<h4>Plat</h4>
 									<p>Tronçon de barbue au four, courgette violon et criste marine</p>
 									<p class="grey">ou</p>
 									<p>Faux-filet de boeuf au sautoir, pommes Anna</p>
 									<p class="grey">ou</p>
-									<p>Côte de cochon en cocotte, girolles et jus à la sariette</p>								
-								</div>
-								<div class="food-img">
-									<div title="parimis hotel menu brasserie image entrée" class="brasserie-img"></div>
+									<p>Côte de cochon en cocotte, girolles et jus à la sariette</p>	
 								</div>
 							</div>
-							<div class="flex">
-								<div class=" step text-block">								
+							<div class="food-img">
+								<div title="parimis hotel menu brasserie image plat" class="brasserie-img"></div>
+							</div>
+						</div>
+						<div class="flex food-row">
+							<div class="step">	
+								<div class="text-block">
 									<h4>Dessert</h4>
-									<p>Velouté glacé de tomate, tourteau</p>
+									<p>Soufflé à l’abricot, glace verveine</p>
 									<p class="grey">ou</p>
-									<p>Bonite mi-cuite, jeunes poireaux grillés et sésame torréfié</p>
+									<p>Millefeuille framboises-hibiscus</p>
 									<p class="grey">ou</p>
-									<p>Foie gras de canard confit, pêche et amandes fraîches</p>								
-								</div>
-								<div class="food-img">
-									<div title="parimis hotel menu brasserie image entrée" class="brasserie-img"></div>
+									<p>L’écrou croustillant au chocolat de notre Manufacture à Paris</p>
 								</div>
 							</div>
-	
-						</div>	
-						
-						<div id="degustation" class="centered block-menu">
-
+							<div class="food-img">
+								<div title="parimis hotel menu brasserie image dessert" class="brasserie-img"></div>
+							</div>
+						</div>
+						<div class="flex food-row">
+							<div class="step">	
+								<div class="text-block">
+									<h4>Formule : Plat / Entrée / Dessert : <span class="bold">105€</span></h4>
+									<p class="grey">Le service du midi s'effectue de 11h30 à 14h tous les jours de la semaine.</p>
+								</div>
+							</div>
+						</div>
+						<div class="download-row">
+							<a href="pdf/parimis_hotel_menus_brasserie.pdf" target="_blank" class="uppercase standard-btn b-black">Télécharger <i class="far fa-file-pdf"></i></a>
+							<a href="reservation.html" class="uppercase standard-btn b-black">RÉSERVER</a>
+						</div>
+					</div>	
+					
+					<!-- DEGUSTATION -->
+					<div id="degustation" class="centered block-menu">
+						<div class="degustation-img menu-cover"></div>
+						<!-- TITRE DU MENU -->
+						<h3 class="uppercase">Carte Dégustation <span class="grey">Carte des friandises</span></h3>
+						<!-- ENTREE -->
+						<div class="food-row dessert justified">
+							<div class="step ">		
+								<div class="text-block">
+									<p>Tarte au fraises et citron Yuzu : <span class="bold">15€</span></p>
+									<p>Mont St Georges mousse chocolat blanc &amp; vanille de Madagascar : <span class="bold">17.50€</span></p>
+									<p>Déclinaison d’orange selon Les Marronniers : <span class="bold">17.50€</span></p>
+									<p>Larme de bruccio fermier « al mado » compotée d’abricots, fève de Tonka : <span class="bold">19.75€</span></p>
+									<p>Le chocolat miel, sous la Monnaie de Paris : <span class="bold">19.75€</span></p>
+									<p>Mousse coco, dacquoise, hibiscus &amp; geranium, meringue : <span class="bold">21.50€</span></p>
+									<p>Déclinaison d’orange selon Les Marronniers : <span class="bold">22€</span></p>
+								</div>
+							</div>
 						</div>
 						
-						<div id="restaurant" class="centered block-menu">
-
+						<div class="food-row dessert justified">
+							<div class="step ">		
+								<div class="flex food-img">
+									<div title="parimis hotel menu degustation image" class="degustation-img"></div>
+									<div title="parimis hotel menu degustation image" class="degustation-img"></div>
+									<div title="parimis hotel menu degustation image" class="degustation-img"></div>
+								</div>
+							</div>
 						</div>
-						
+							
+							
+						<div class="flex food-row">
+							<div class="step">	
+								<div class="text-block">
+									<p class="grey">Le service dégustation s'effectue de 15h à 18h tous les jours de la semaine.</p>
+								</div>
+							</div>
+						</div>
+						<div class="download-row">
+							<a href="pdf/parimis_hotel_menus_brasserie.pdf" target="_blank" class="uppercase standard-btn b-black">Télécharger<i class="far fa-file-pdf"></i></a>
+							<a href="reservation.html" class="standard-btn b-black">RÉSERVER</a>
+						</div>
+					</div>
+					
+					<div id="restaurant" class="centered block-menu">
+						<div class="restaurant-img menu-cover"></div>
+						<!-- TITRE DU MENU -->
+						<h3 class="uppercase">Carte restaurant<span class="grey">Carte du soir</span></h3>
+						<!-- ENTREE -->
+						<div class="flex food-row">
+							<div class=" step">		
+								<div class="text-block">
+									<h4>Entrée</h4>
+									<p>Le tourin à l’ail du Gers croissant et tartines</p>
+									<p class="grey">ou</p>
+									<p>fraicheur de chair de tourteau, mangue, espuma basilic</p>
+									<p class="grey">ou</p>
+									<p>langoustines saveurs gingembre, crème glacée de petits pois</p>
+								</div>								
+							</div>
+							<div class="food-img">
+								<div title="parimis hotel menu restaurant image entrée" class="restaurant-img"></div>
+							</div>
+						</div>
+						<div class="flex food-row">
+							<div class=" step">	
+								<div class="text-block">
+									<h4>Plat</h4>
+									<p>Suprême de pintade mariné au citron vert, ratatouille de légumes de saison</p>
+									<p class="grey">ou</p>
+									<p>coeur d’aloyau normand, sauce au poivre vert, paillasson lyonnais de pomme de terre</p>
+									<p class="grey">ou</p>
+									<p>filets de daurade royale, risotto crémeux aux cèpes,sauce citronnelle gingembre</p>	
+								</div>
+							</div>
+							<div class="food-img">
+								<div title="parimis hotel menu restaurant image plat" class="restaurant-img"></div>
+							</div>
+						</div>
+						<div class="flex food-row">
+							<div class="step">	
+								<div class="text-block">
+									<h4>Dessert</h4>
+									<p>coulant au chocolat noir intense, coulis de fruits rouges</p>
+									<p class="grey">ou</p>
+									<p>mille feuille caramélisé à la crème légère de vanille bourbon</p>
+									<p class="grey">ou</p>
+									<p>fraisier, crème mascarpone à la pistache</p>
+								</div>
+							</div>
+							<div class="food-img">
+								<div title="parimis hotel menu restaurant image dessert" class="restaurant-img"></div>
+							</div>
+						</div>
+						<div class="flex food-row">
+							<div class="step">	
+								<div class="text-block">
+									<h4>Formule : Plat / Entrée / Dessert : <span class="bold">205€</span></h4>
+									<p class="grey">Le service du midi s'effectue de 19h à 23h tous les jours de la semaine.</p>
+								</div>
+							</div>
+						</div>
+						<div class="download-row">
+							<a href="pdf/parimis_hotel_menus_brasserie.pdf" target="_blank" class="uppercase standard-btn b-black">Télécharger <i class="far fa-file-pdf"></i></a>
+							<a href="reservation.html" class="uppercase standard-btn b-black">RÉSERVER</a>
+						</div>
+					</div>	
 				</div>
 			</div>
-			
-			
 	</main>
 	
 	<!-- FOOTER /////////////////////////////////////////////////-->
@@ -309,12 +423,12 @@
 					
 					<div class="footer-links flex">
 						<ul class="footer-row-1">
-							<li><a href="">l'Hôtel</a></li>
-							<li><a href="">Présentation</a></li>
-							<li><a href="">Accès</a></li>
-							<li><a href="">Actualités</a></li>
-							<li><a href="">Presse</a></li>
-							<li><a href="">Avis</a></li>
+							<li><a href="hotel.html">l'Hôtel</a></li>
+							<li><a href="hotel.html#about">Présentation</a></li>
+							<li><a href="hotel.html#access">Accès</a></li>
+							<li><a href="hotel.html#news">Actualités</a></li>
+							<li><a href="hotel.html#presse"><span>Presse</span></a></li>
+							<li><a href="hotel.html#avis">Avis</a></li>
 						</ul>
 						<ul class="footer-row-1">
 							<li><a href="chambres.html">Chambres</a></li>
@@ -384,7 +498,7 @@
 					<div class="footer-row-2">
 						<h4 class="footer-title">Newsletter</h4>
 						<form class="nl-form flex" action="javascript:void(0)">
-							<input type="text" placeholder="Entrez votre adresse courriel..." name="newsletter">
+							<input type="text" placeholder="Adresse courriel..." name="newsletter">
 							<button type="submit"><span>S'abonner</span></button>
 						</form>
 					</div>
@@ -409,31 +523,39 @@
 	<script src="js/swipe.min.js"></script>
 	<script src="js/calendar.js"></script>
 	
-	
-	
-	
+	<!-- Attribution des Background IMG -->
 	<script>
-		/*SCRIPT SWIPE
-		var element = document.getElementById('mySwipe'),
-	    prevBtn = document.getElementById('prev'),
-	    nextBtn = document.getElementById('next');
-	
-		window.mySwipe = new Swipe(element, {
+		var menuB = "brasserie",
+			menuD = "degustation",
+			menuR = "restaurant";
 
-		  startSlide: 0,
-		  speed: 700,
-		  auto: 3000,
-		  draggable: true,
-		  continuous: true,
-		  disableScroll: true, // prevent touch events from scrolling the page
-		  stopPropagation: false,
-		  
-		});*/
+		function imgAttribution(currentMenu){
 		
+			var menuClass = document.getElementsByClassName(currentMenu+"-img");
+			console.log(menuClass);
+		
+			for(i=0; i<menuClass.length; i++){
+			
+				menuClass[i].style.backgroundImage = "url('./img/photos/parimis_hotel_" + currentMenu + "_" + [i+1] + ".jpg')";
+				
+			}
+		}
+	
+		imgAttribution(menuB);
+		imgAttribution(menuD);
+		imgAttribution(menuR);
+		
+	</script>
+	
+	<!-- Script pour déterminer la Slide avec les boutons et le menu. -->
+	<script>
 		var element = document.getElementById('menuContainer'),
 			brasserieBtn = document.getElementById('brasserieBtn'),
 			degustationBtn = document.getElementById('degustationBtn'),
-			restaurantBtn = document.getElementById('restaurantBtn');
+			restaurantBtn = document.getElementById('restaurantBtn'),
+			brasserie = document.getElementById('brasserie'),
+			degustation = document.getElementById('degustation'),
+			restaurant = document.getElementById('restaurant');
 		
 
 		window.mySwipe = Swipe(element, {
@@ -445,45 +567,45 @@
 			callback: function() {
 			
 				var slideNB = mySwipe.getPos();
-				console.log(typeof(slideNB));
 		
 				switch(slideNB){
-				
+				//Brasserie
 				case 0:
-					
 					brasserieBtn.classList.toggle("selected", true);
 					degustationBtn.classList.toggle("selected", false);
 					restaurantBtn.classList.toggle("selected", false);
-
+					brasserie.classList.toggle("fadeSwipe", false);
+					degustation.classList.toggle("fadeSwipe", true);
+					restaurant.classList.toggle("fadeSwipe", true);
+					
+					
 				break;
-				
+				//Dégustation
 				case 1:
-				
 					brasserieBtn.classList.remove("selected", false);
 					degustationBtn.classList.toggle("selected", true);
 					restaurantBtn.classList.remove("selected", false);
-
+					brasserie.classList.toggle("fadeSwipe", true);
+					degustation.classList.toggle("fadeSwipe", false);
+					restaurant.classList.toggle("fadeSwipe", true);
+					
 				break;
-				
+				//Soir
 				case 2:
-			
 					brasserieBtn.classList.remove("selected", false);
 					degustationBtn.classList.remove("selected", false);
 					restaurantBtn.classList.toggle("selected", true);
-					
+					brasserie.classList.toggle("fadeSwipe", true);
+					degustation.classList.toggle("fadeSwipe", true);
+					restaurant.classList.toggle("fadeSwipe", false);
 				break;
-				
 				}
-			
-			}
-				
+			}	
 		});
 		
+		//Je récupère la variable selected menu stockée en mémoire et je la wipe une fois utilisée.
 		mySwipe.slide(localStorage.getItem("selectedMenu"), 1000);
 		localStorage.clear();		
-
-		
-	
 	</script>
 		
 </body>

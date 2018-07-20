@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 
-	<title>Parimis - Hôtel Restaurant 5 étoiles - Chambres &amp; Suites</title>
-	<meta name="description" content="Parimis - Hôtel 5 étoiles - Paris VIIIe">
+	<title>Parimis - Hôtel Restaurant Spa - 5 étoiles - Le Spa</title>
+	<meta name="description" content="Que vous soyez résident ou non, le Parimis vous propose de découvrir les services et soins mis à disposition par notre spa.">
 	<meta name="author" content="Florent Maillard">
 	
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -20,12 +20,12 @@
 	<meta name="googlebot" content="index, follow">
 	
 	<!-- Réseaux Sociaux -->
-	<meta property="og:site_name" content="Parimis - Hôtel 5 étoile"/>
-	<meta property="og:title" content="Parimis - Hôtel 5 étoiles - Accueil" />
+	<meta property="og:site_name" content="Parimis - Hôtel Restaurant Spa - 5 étoiles"/>
+	<meta property="og:title" content="Parimis - Hôtel Restaurant Spa - 5 étoiles -  Le Spa" />
 	<meta property="og:type" content="article" />
-	<meta property="og:url" content="http://www.parimis-hotel.eu" />
+	<meta property="og:url" content="http://www.parimis-hotel.eu/spa.html" />
 	<meta property="og:image" content="http://www.parimis-hotel.eu/img/parimis-logo.png" />
-	<meta property="og:description" content="une petite description en 150-160 caractères" /> <!-- DESCRIPTION A REDIGER -->
+	<meta property="og:description" content="Que vous soyez résident ou non, le Parimis vous propose de découvrir les services et soins mis à disposition par notre spa." /> 
 	
 	
 	<!-- Favicons -->
@@ -65,7 +65,7 @@
 	
 </head>
 <body>
-<!-- HEADER /////////////////////////////////////////////////--> 
+	<!-- HEADER /////////////////////////////////////////////////--> 
 	<header class="">
 		<div class="global-container">
 			<div class="header-top flex">
@@ -101,7 +101,7 @@
 					<ul class="flex">
 						<!--ACCUEIL-->
 						<li>
-							<a href="javascript:void(0)"><span>Accueil</span></a>
+							<a href="index.html"><span>Accueil</span></a>
 						</li>
 						<!--CHAMBRES-->
 						<li class="dropdown">
@@ -116,17 +116,17 @@
 						</li>
 						<!-- RESTAURANT -->
 						<li class="dropdown">
-							<a class="dropdown-btn" href="restaurant.html"><span>Restaurant</span></a>
+							<a class="dropdown-btn" href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 0);"><span>Restaurant</span></a>
 							<!-- Dropdown Restaurant -->
 							<ul  class="dropdown-content">
-								<li><a href="restaurant.html#brasserie"><span>Brasserie</span></a></li>
-								<li><a href="restaurant.html#degustation"><span>Dégustation</span></a></li>
-								<li><a href="restaurant.html#restaurant"><span>Restaurant</span></a></li>
+								<li><a href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 0);"><span>Brasserie</span></a></li>
+								<li><a href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 1);"><span>Dégustation</span></a></li>
+								<li><a href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 2);"><span>Restaurant</span></a></li>
 							</ul>
 						</li>
 						<!-- SPA-->
 						<li class="dropdown">
-							<a class="dropdown-btn active" href="spa.html"><span>SPA</span></a>
+							<a class="active dropdown-btn" href="spa.html"><span>SPA</span></a>
 							<!-- Dropdown Spa -->
 							<ul class="dropdown-content">
 								<li><a href="spa.htm#detente">Détente</a></li>
@@ -141,20 +141,20 @@
 							<a class="dropdown-btn" href="hotel.html"><span>l'Hôtel</span></a>
 							<!-- Dropdown Hôtel -->
 							<ul class="dropdown-content">
-								<li><a href="hotel.html"><span>À propos</span></a></li>
-								<li><a href="hotel.html"><span>Accès</span></a></li>
-								<li><a href="hotel.html"><span>Actualités</span></a></li>
-								<li><a href="hotel.html"><span>Avis</span></a></li>
-								<li><a href="hotel.html"><span>Presse</span></a></li>
+								<li><a href="hotel.html#about"><span>À propos</span></a></li>
+								<li><a href="hotel.html#acces"><span>Accès</span></a></li>
+								<li><a href="hotel.html#news"><span>Actualités</span></a></li>
+								<li><a href="hotel.html#avis"><span>Avis</span></a></li>
+								<li><a href="hotel.html#presse"><span>Presse</span></a></li>
 							</ul>
 						</li>
 						<!--CONTACT-->
 						<li>
-							<a href="javascript:void(0)"><span>Contact</span></a>
+							<a href="contact.html"><span>Contact</span></a>
 						</li>
 						<!-- RESERVER -->
 						<li id="booking" class="dropdown">
-							<a href="javascript:void(0)"><span>Réserver</span></a>
+							<a href="reservation.html"><span>Réserver</span></a>
 							<fieldset class="dropdown-content calendar">
 								<div>
 									<label class="normal" for="start">Arrivée</label>
@@ -216,65 +216,40 @@
 	<main>
 		<div class="global-container fadeIn">
 		
-			<div  class="swipe-block swipe block-image image-top">
-				<div class="swipe-wrap">
-					<div><img src="img/photos/parimis_hotel_spa_1.jpg" alt="parimis hotel piscine" ></div>
-					<div><img src="img/photos/parimis_hotel_spa_2.jpg" alt="parimis hotel spa" ></div>
-					<div><img src="img/photos/parimis_hotel_spa_3.jpg" alt="parimis hotel sauna" ></div>
+			<!-- DETENTE -->
+			<div id="detente" class="item-container flex">
+				<!-- BLOC IMAGE A GAUCHE -->
+				<div title="parimis hotel soin " class="flex img-block"><img src="https://placeimg.com/600/480/people" alt="parimis hotel chambre confort 1" ></div>
+				<!-- DESCRIPTION A DROITE -->
+				<div class="description text-block justified">
+					<h1>Soin Détente</h1>
+					<hr>
+					<p>Accédez à la piscine, aux hammam et aux sauna et offrez-vous un moment de détente. Cette offre constitue un choix idéal après une journée intense ou de longue balade à Paris.</p>
+					<p class="bold ul-opener">Cette offre comprend<span> :</span></p>
+					<ul>
+						<li>Piscine et jacuzzi</li>
+						<li>Hammam</li>
+						<li>Sauna</li>
+					</ul>
+					<hr>
+					<!-- ICONE PARTAGE -->
+					<ul class="share-buttons flex">
+						  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.parimis-hotel.eu&quote=" target="_blank" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&quote=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-facebook-f fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
+						  <li><a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fwww.parimis-hotel.eu&text=:%20https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-twitter fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
+						  <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-google-plus-g fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+						  <li><a href="mailto:?subject=&body=:%20https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><i class="fas fa-envelope fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+					</ul>
+					<!-- BOUTON RESERVER -->
+					<a class="standard-btn b-black" href="reservation.html">RÉSERVER</a>
 				</div>
 			</div>
-			
-			<div  class="intro-text centered text-block">
-				<h1>Profitez d'un moment de détente hors du temps.</h1>
-				<p>Que vous soyez résident ou non, découvrez notre spa que soit pour vous relaxer ou pour profiter des soins bien-être dispensés par des professionnels de haute volée.</p>
-				<br>
-				<hr>
-			</div>
-			
-			<ul class="">
-				<!-- Détente-->
-				<li id="detente" class="item-container flex">
-					<!-- Block image Gauche -->
-					<div class="block-image">
-						<div class="swipe-wrap">
-							<div><img src="img/photos/parimis_hotel_chambre_confort_1.jpg" alt="parimis hotel chambre confort 1" ></div>
-						</div>
-					</div>
-					<!-- Block texte Droite -->
-					<div class="description text-block justified">
-						<h1>Soin Détente</h1>
-						<hr>
-						<p>Accédez à la piscine, aux hammam et aux sauna et offrez-vous un moment de détente. Cette offre constitue un choix idéal après une journée intense ou de longue balade à Paris.</p>
-						<p class="bold ul-opener">Cette offre comprend<span> :</span></p>
-						<ul>
-							<li>Piscine et jacuzzi</li>
-							<li>Hammam</li>
-							<li>Sauna</li>
-						</ul>
-						<hr>
-						<div class="flex">
-							<ul class="share-buttons flex">
-							  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.parimis-hotel.eu&quote=" target="_blank" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&quote=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-facebook-f fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-							  <li><a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fwww.parimis-hotel.eu&text=:%20https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-twitter fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-							  <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-google-plus-g fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-							  <li><a href="mailto:?subject=&body=:%20https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><i class="fas fa-envelope fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
-							</ul>
-							<a class="standard-btn b-black" href="reservation.html">RÉSERVER</a>
-						</div>
-					</div>
-				</li>
-				
-				<!-- Découverte -->
-				<li id="decouverte" class="item-container flex">
-					<!-- Block image Gauche -->
-					<div class="block-image">
-						<div class="swipe-wrap">
-							<div><img src="img/photos/parimis_hotel_chambre_confort_1.jpg" alt="parimis hotel chambre confort 1" ></div>
-						</div>
-					</div>
-					<!-- Block texte Droite -->
-					<div class="description text-block justified">
-						<h1>Offre Découverte</h1>
+			<!-- DÉCOUVERTE -->
+			<div id="detente" class="item-container flex">
+				<!-- BLOC IMAGE A GAUCHE -->
+				<div title="parimis hotel soin " class="flex img-block"><img src="https://placeimg.com/600/480/people" alt="parimis hotel chambre confort 1" ></div>
+				<!-- DESCRIPTION A DROITE -->
+				<div class="description text-block justified">
+					<h1>Offre Découverte</h1>
 						<hr>
 						<p>Tout comme le soin de détente, l'offre découverte vous octroie l'accès à la piscine, aux hammam et aux sauna. Toutefois, vous bénéficierez en plus d'un massage Amma Assis de 30 minutes.</p>
 						<p class="bold">A propos :</p>
@@ -286,31 +261,26 @@
 							<li>Un massage amma assis de 30 minutes.</li>
 						</ul>
 						<hr>
-						<div class="flex">
-							<ul class="share-buttons flex">
-							  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.parimis-hotel.eu&quote=" target="_blank" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&quote=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-facebook-f fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-							  <li><a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fwww.parimis-hotel.eu&text=:%20https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-twitter fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-							  <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-google-plus-g fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-							  <li><a href="mailto:?subject=&body=:%20https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><i class="fas fa-envelope fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
-							</ul>
-							<a class="standard-btn b-black" href="reservation.html">RÉSERVER</a>
-						</div>
-					</div>
-				</li>
-
-				<!-- Relaxant -->
-				<li id="relaxant" class="item-container flex">
-					<!-- Block image Gauche -->
-					<div class="block-image">
-						<div class="swipe-wrap">
-							<div><img src="img/photos/parimis_hotel_chambre_confort_1.jpg" alt="parimis hotel chambre confort 1" ></div>
-						</div>
-					</div>
-					<!-- Block texte Droite -->
-					<div class="description text-block justified">
-						<h1>Soin Relaxant</h1>
+					<!-- ICONE PARTAGE -->
+					<ul class="share-buttons flex">
+						  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.parimis-hotel.eu&quote=" target="_blank" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&quote=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-facebook-f fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
+						  <li><a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fwww.parimis-hotel.eu&text=:%20https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-twitter fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
+						  <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-google-plus-g fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+						  <li><a href="mailto:?subject=&body=:%20https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><i class="fas fa-envelope fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+					</ul>
+					<!-- BOUTON RESERVER -->
+					<a class="standard-btn b-black" href="reservation.html">RÉSERVER</a>
+				</div>
+			</div>
+			<!-- RELAXANT -->
+			<div id="detente" class="item-container flex">
+				<!-- BLOC IMAGE A GAUCHE -->
+				<div title="parimis hotel soin " class="flex img-block"><img src="https://placeimg.com/600/480/people" alt="parimis hotel chambre confort 1" ></div>
+				<!-- DESCRIPTION A DROITE -->
+				<div class="description text-block justified">
+					<h1>Soin Relaxant</h1>
 						<hr>
-						<p>En plus de l'accès complet à nos installations de bien-être cette offre comprend un massage relaxant de 45 minutes qui vous permettra de faire une coupure avec le monde extérieur afin de profiter du moment présent.</p>
+						<p>En plus de l'accès complet à nos installations de bien-être cette offre comprend un massage relaxant de 45 minutes qui vous permettra de faire une coupure avec le monde extérieur.</p>
 						<p class="bold">A propos :</p>
 						<p>Ce massage ultra relaxant fait disparaitre en douceur les tensions de votre corps et redonne souplesse à vos muscles tout en encourageant le relâchement du mental. Le massage relaxant amène calme, volupté et vous permet de prendre conscience de vos tensions.</p>
 						
@@ -321,93 +291,20 @@
 							<li>Un massage relaxant de 45 minutes.</li>
 						</ul>
 						<hr>
-						<div class="flex">
-							<ul class="share-buttons flex">
-							  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.parimis-hotel.eu&quote=" target="_blank" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&quote=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-facebook-f fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-							  <li><a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fwww.parimis-hotel.eu&text=:%20https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-twitter fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-							  <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-google-plus-g fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-							  <li><a href="mailto:?subject=&body=:%20https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><i class="fas fa-envelope fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
-							</ul>
-							<a class="standard-btn b-black" href="reservation.html">RÉSERVER</a>
-						</div>
-					</div>
-				</li>
-				
-				<!-- Plaisir -->
-				<li id="plaisir" class="item-container flex">
-					<!-- Block image Gauche -->
-					<div class="block-image">
-						<div class="swipe-wrap">
-							<div><img src="img/photos/parimis_hotel_chambre_confort_1.jpg" alt="parimis hotel chambre confort 1" ></div>
-						</div>
-					</div>
-					<!-- Block texte Droite -->
-					<div class="description text-block justified">
-						<h1>Soin Plaisir</h1>
-						<hr>
-						<p>En plus de l'accès complet à nos installations de bien-être cette offre comprend un massage kobido de 60 minutes.</p>
-						<p class="bold">A propos :</p>
-						<p>D'origine japonaise, le massage kobido est une technique de massage doux et apaisant à une stimulation énergétique de différents points du visage. Ce massage redonne vitalité au visage, détente et légèreté au corps et à l’esprit.</p>
-						
-						<p class="bold ul-opener">Cette offre comprend<span> :</span></p>
-						<ul>
-							<li>Accès Piscine et Jacuzzi</li>
-							<li>Accès Hammam et Sauna</li>
-							<li>Un massage Kobido de 60 minutes.</li>
-						</ul>
-						<hr>
-						<div class="flex">
-							<ul class="share-buttons flex">
-							  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.parimis-hotel.eu&quote=" target="_blank" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&quote=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-facebook-f fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-							  <li><a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fwww.parimis-hotel.eu&text=:%20https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-twitter fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-							  <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-google-plus-g fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-							  <li><a href="mailto:?subject=&body=:%20https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><i class="fas fa-envelope fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
-							</ul>
-							<a class="standard-btn b-black" href="reservation.html">RÉSERVER</a>
-						</div>
-					</div>
-				</li>
-				
-				<!-- Plaisir -->
-				<li id="plaisir" class="item-container flex">
-					<!-- Block image Gauche -->
-					<div class="block-image">
-						<div class="swipe-wrap">
-							<div><img src="img/photos/parimis_hotel_chambre_confort_1.jpg" alt="parimis hotel chambre confort 1" ></div>
-						</div>
-					</div>
-					<!-- Block texte Droite -->
-					<div class="description text-block justified">
-						<h1>Soin Évasion</h1>
-						<hr>
-						<p>En plus de l'accès complet à nos installations de bien-être comprenant piscines, hammam et sauna, cette offre comprend un massage Ayurvédique à l'huile de sésame chaude de 90 minutes.</p>
-						<p class="bold">A propos :</p>
-						<p>D'origine indienne, ce massage permet de se réunifier, de se recentrer. Il est spécialement indiqué en cas de stress, de surmenage intellectuel et physique, de mal être. Il procure rapidement détente et bien être du corps et de l’esprit.</p>
-						
-						<p class="bold ul-opener">Cette offre comprend<span> :</span></p>
-						<ul>
-							<li>Accès Piscine et Jacuzzi</li>
-							<li>Accès Hammam et Sauna</li>
-							<li>Un massage Ayurvédique de 90 minutes.</li>
-						</ul>
-						<hr>
-						<div class="flex">
-							<ul class="share-buttons flex">
-							  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.parimis-hotel.eu&quote=" target="_blank" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&quote=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-facebook-f fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
-							  <li><a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fwww.parimis-hotel.eu&text=:%20https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-twitter fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
-							  <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-google-plus-g fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
-							  <li><a href="mailto:?subject=&body=:%20https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><i class="fas fa-envelope fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
-							</ul>
-							<a class="standard-btn b-black" href="reservation.html">RÉSERVER</a>
-						</div>
-					</div>
-				</li>
-		
-			</ul>
-			<div class="disclaimer-spa centered grey">
-				<p class="">Tous nos massages sont effectués par des massothérapeutes agréés.</p>
-				<p class="">Veuillez consulter les <a href="conditions_generales_de_vente.html">conditions générales de ventes</a> avant de prendre rendez-vous.</p>
+					<!-- ICONE PARTAGE -->
+					<div class="flex"><ul class="share-buttons flex">
+						  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.parimis-hotel.eu&quote=" target="_blank" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&quote=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-facebook-f fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
+						  <li><a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fwww.parimis-hotel.eu&text=:%20https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-twitter fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
+						  <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-google-plus-g fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+						  <li><a href="mailto:?subject=&body=:%20https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><i class="fas fa-envelope fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+					</ul>
+					<a class="standard-btn b-black" href="reservation.html">RÉSERVER</a></div>
+					<!-- BOUTON RESERVER -->
+					
+				</div>
 			</div>
+			
+			
 		</div>
 	</main>
 	
@@ -425,12 +322,12 @@
 					
 					<div class="footer-links flex">
 						<ul class="footer-row-1">
-							<li><a href="">l'Hôtel</a></li>
-							<li><a href="">Présentation</a></li>
-							<li><a href="">Accès</a></li>
-							<li><a href="">Actualités</a></li>
-							<li><a href="">Presse</a></li>
-							<li><a href="">Avis</a></li>
+							<li><a href="hotel.html">l'Hôtel</a></li>
+							<li><a href="hotel.html#about">Présentation</a></li>
+							<li><a href="hotel.html#access">Accès</a></li>
+							<li><a href="hotel.html#news">Actualités</a></li>
+							<li><a href="hotel.html#presse"><span>Presse</span></a></li>
+							<li><a href="hotel.html#avis">Avis</a></li>
 						</ul>
 						<ul class="footer-row-1">
 							<li><a href="chambres.html">Chambres</a></li>
@@ -500,7 +397,7 @@
 					<div class="footer-row-2">
 						<h4 class="footer-title">Newsletter</h4>
 						<form class="nl-form flex" action="javascript:void(0)">
-							<input type="text" placeholder="Entrez votre adresse courriel..." name="newsletter">
+							<input type="text" placeholder="Adresse courriel..." name="newsletter">
 							<button type="submit"><span>S'abonner</span></button>
 						</form>
 					</div>
@@ -526,22 +423,7 @@
 	<script src="js/calendar.js"></script>
 	
 	<script>
-		/*SCRIPT SWIPE
-		var element = document.getElementById('mySwipe'),
-	    prevBtn = document.getElementById('prev'),
-	    nextBtn = document.getElementById('next');
 	
-		window.mySwipe = new Swipe(element, {
-
-		  startSlide: 0,
-		  speed: 700,
-		  auto: 3000,
-		  draggable: true,
-		  continuous: true,
-		  disableScroll: true, // prevent touch events from scrolling the page
-		  stopPropagation: false,
-		  
-		});*/
 		
 		var element = document.getElementsByClassName('swipe-block');
 		
@@ -557,7 +439,7 @@
 			  disableScroll: true, // prevent touch events from scrolling the page
 			  stopPropagation: false,
 		  
-		})
+			})
 		
 		
 		}

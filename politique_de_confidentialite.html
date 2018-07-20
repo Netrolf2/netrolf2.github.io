@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 
 	<title>Parimis - Hôtel 5 étoiles - Politique de confidentialité</title>
-	<meta name="description" content="Parimis - Hôtel 5 étoiles - Paris VIIIe">
+	<meta name="description" content="Le Parimis hôtel restaurant Spa 5 étoiles vous accueille dans son cadre somptueux. Consultez ici la politique de confidentialité de l'etablissement.">
 	<meta name="author" content="Florent Maillard">
 	
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -20,12 +20,12 @@
 	<meta name="googlebot" content="index, follow">
 	
 	<!-- Réseaux Sociaux -->
-	<meta property="og:site_name" content="Parimis - Hôtel 5 étoile"/>
-	<meta property="og:title" content="Parimis - Hôtel 5 étoiles - Politique de confidentialité" />
+	<meta property="og:site_name" content="Parimis - Hôtel Restaurant Spa - 5 étoiles"/>
+	<meta property="og:title" content="Parimis - Hôtel Restaurant Spa - Politique de confidentialité" />
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="http://www.parimis-hotel.eu/politique_de_confidentialite.html" />
 	<meta property="og:image" content="http://www.parimis-hotel.eu/img/parimis-logo.png" />
-	<meta property="og:description" content="une petite description en 150-160 caractères" /> <!-- DESCRIPTION A REDIGER -->
+	<meta property="og:description" content="Consultez ici la politique de confidentialité de l'hôtel restaurant spa cinq étoile Parimis." /> 
 	
 	
 	<!-- Favicons -->
@@ -65,7 +65,7 @@
 	
 </head>
 <body>
-<!-- HEADER /////////////////////////////////////////////////--> 
+	<!-- HEADER /////////////////////////////////////////////////--> 
 	<header class="">
 		<div class="global-container">
 			<div class="header-top flex">
@@ -101,7 +101,7 @@
 					<ul class="flex">
 						<!--ACCUEIL-->
 						<li>
-							<a class="active" href="javascript:void(0)"><span>Accueil</span></a>
+							<a href="index.html"><span>Accueil</span></a>
 						</li>
 						<!--CHAMBRES-->
 						<li class="dropdown">
@@ -116,12 +116,12 @@
 						</li>
 						<!-- RESTAURANT -->
 						<li class="dropdown">
-							<a class="dropdown-btn" href="restaurant.html"><span>Restaurant</span></a>
+							<a class="dropdown-btn" href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 0);"><span>Restaurant</span></a>
 							<!-- Dropdown Restaurant -->
 							<ul  class="dropdown-content">
-								<li><a href="restaurant.html#brasserie"><span>Brasserie</span></a></li>
-								<li><a href="restaurant.html#degustation"><span>Dégustation</span></a></li>
-								<li><a href="restaurant.html#restaurant"><span>Restaurant</span></a></li>
+								<li><a href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 0);"><span>Brasserie</span></a></li>
+								<li><a href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 1);"><span>Dégustation</span></a></li>
+								<li><a href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 2);"><span>Restaurant</span></a></li>
 							</ul>
 						</li>
 						<!-- SPA-->
@@ -141,20 +141,20 @@
 							<a class="dropdown-btn" href="hotel.html"><span>l'Hôtel</span></a>
 							<!-- Dropdown Hôtel -->
 							<ul class="dropdown-content">
-								<li><a href="hotel.html"><span>À propos</span></a></li>
-								<li><a href="hotel.html"><span>Accès</span></a></li>
-								<li><a href="hotel.html"><span>Actualités</span></a></li>
-								<li><a href="hotel.html"><span>Avis</span></a></li>
-								<li><a href="hotel.html"><span>Presse</span></a></li>
+								<li><a href="hotel.html#about"><span>À propos</span></a></li>
+								<li><a href="hotel.html#acces"><span>Accès</span></a></li>
+								<li><a href="hotel.html#news"><span>Actualités</span></a></li>
+								<li><a href="hotel.html#avis"><span>Avis</span></a></li>
+								<li><a href="hotel.html#presse"><span>Presse</span></a></li>
 							</ul>
 						</li>
 						<!--CONTACT-->
 						<li>
-							<a href="javascript:void(0)"><span>Contact</span></a>
+							<a href="contact.html"><span>Contact</span></a>
 						</li>
 						<!-- RESERVER -->
 						<li id="booking" class="dropdown">
-							<a href="javascript:void(0)"><span>Réserver</span></a>
+							<a href="reservation.html"><span>Réserver</span></a>
 							<fieldset class="dropdown-content calendar">
 								<div>
 									<label class="normal" for="start">Arrivée</label>
@@ -213,7 +213,7 @@
 		</div>
 	</header>
 	<main>
-		<div class="global-container">
+		<div class="global-container legal">
 			<div class="text-block justified b-white">
 				<h1>Politique de confidentialité (standard RGPD)</h1>
 				<h2 class="grey">Sécurité et protection des données personnelles</h2>
@@ -222,29 +222,29 @@
 				<hr>
 				<br>
 				
-				<h4>Définitions :</h4>
+				<h3>Définitions :</h3>
 				
 				<p><span class="bold">L'éditeur : </span>Parimis Hôtel</p>
 				<p><span class="bold">Le site : </span>L'ensemble des sites, pages Internet et services en ligne proposés par l'Éditeur.</p>
 				<p><span class="bold">L'utilistateur : </span>La personne utilisant le Site et les services.</p>
 				
 				
-				<h4>Nature des données collectées :</h4>
+				<h3>Nature des données collectées :</h3>
 				
 				<p>Dans le cadre de l'utilisation des Sites, l'Éditeur est susceptible de collecter les catégories de données suivantes concernant ses Utilisateurs : Données d'état-civil, d'identité, d'identification, adresse courriel.</p>
 				
-				<h4>Communication des données personnelles à des tiers</h4>
+				<h3>Communication des données personnelles à des tiers</h3>
 				
 				<p>Vos données ne font l'objet d'aucune communication à des tiers. Vous êtes toutefois informés qu'elles pourront être divulguées en application d'une loi, d'un règlement ou en vertu d'une décision d'une autorité réglementaire ou judiciaire compétente.</p>
 				
-				<h4>Communication des données personnelles à des tiers</h4>
+				<h3>Communication des données personnelles à des tiers</h3>
 				
 				<p class="bold">Collecte de l’opt-in (consentement) préalable à la transmission des données suite à une fusion / acquisition</p>
 				
 				<p>Dans le cas où nous prendrions part à une opération de fusion, d’acquisition ou à toute autre forme de cession d’actifs, nous nous engageons à obtenir votre consentement préalable à la transmission de vos données personnelles et à maintenir le niveau de confidentialité de vos données personnelles auquel vous avez consenti.</p>
 				
 				
-				<h4>Finalité de la réutilisation des données personnelles collectées</h4>
+				<h3>Finalité de la réutilisation des données personnelles collectées</h3>
 				
 				<p class="bold">Effectuer les opérations relatives à la gestion des clients concernant</p>
 				
@@ -261,7 +261,7 @@
 				<p class="bold">La gestion des avis des personnes sur des produits, services ou contenus</p>
 				
 				
-				<h4>Agrégation des données</h4>
+				<h3>Agrégation des données</h3>
 				
 				<p class="bold">Agrégation avec des données non personnelles</p>
 				<p>Nous pouvons publier, divulguer et utiliser les informations agrégées (informations relatives à tous nos Utilisateurs ou à des groupes ou catégories spécifiques d'Utilisateurs que nous combinons de manière à ce qu'un Utilisateur individuel ne puisse plus être identifié ou mentionné) et les informations non personnelles à des fins d'analyse du secteur et du marché, de profilage démographique, à des fins promotionnelles et publicitaires et à d'autres fins commerciales.</p>
@@ -270,7 +270,7 @@
 				
 				<p>Si vous connectez votre compte à un compte d’un autre service afin de faire des envois croisés, ledit service pourra nous communiquer vos informations de profil, de connexion, ainsi que toute autre information dont vous avez autorisé la divulgation. Nous pouvons agréger les informations relatives à tous nos autres Utilisateurs, groupes, comptes, aux données personnelles disponibles sur l’Utilisateur.</p>
 				
-				<h4>Collecte des données d'identité</h4>
+				<h3>Collecte des données d'identité</h3>
 				<p class="bold">Consultation libre</p>
 				<p>La consultation du Site ne nécessite pas d'inscription ni d'identification préalable. Elle peut s'effectuer sans que vous ne communiquiez de données nominatives vous concernant (nom, prénom, adresse, etc). Nous ne procédons à aucun enregistrement de données nominatives pour la simple consultation du Site.</p>
 				
@@ -280,7 +280,7 @@
 				<p class="bold">Collecte des données du terminal</p>
 				<p>Nous ne collectons et ne conservons aucune donnée technique de votre appareil (adresse IP, fournisseur d'accès à Internet...).</p>
 				
-				<h4>Cookies</h4>
+				<h3>Cookies</h3>
 				
 				<p class="bold">Durée de conservation des cookies</p>
 				
@@ -294,11 +294,11 @@
 				
 				<p>Vous reconnaissez avoir été informé que l'Éditeur peut avoir recours à des cookies. Si vous ne souhaitez pas que des cookies soient utilisés sur votre terminal, la plupart des navigateurs vous permettent de désactiver les cookies en passant par les options de réglage.</p>
 		
-				<h4>Conservation des données techniques</h4>
+				<h3>Conservation des données techniques</h3>
 				<p class="bold">Durée de conservation des données techniques</p>
 				<p>Les données techniques sont conservées pour la durée strictement nécessaire à la réalisation des finalités visées ci-avant.</p>
 				
-				<h4>Délai de conservation des données personnelles et d'anonymisation</h4>
+				<h3>Délai de conservation des données personnelles et d'anonymisation</h3>
 				
 				<p class="bold">Conservation des données pendant la durée de la relation contractuelle</p>
 				
@@ -317,7 +317,7 @@
 				<p class="bold">Suppression des données après 3 ans d'inactivité</p>
 				<p>Pour des raisons de sécurité, si vous ne vous êtes pas authentifié sur le Site pendant une période de trois ans, vous recevrez un e-mail vous invitant à vous connecter dans les plus brefs délais, sans quoi vos données seront supprimées de nos bases de données.</p>
 				
-				<h4>Suppression du compte</h4>
+				<h3>Suppression du compte</h3>
 
 				<p class="bold">Suppression du compte à la demande</p>
 
@@ -328,7 +328,7 @@
 				<p>En cas de violation d'une ou de plusieurs dispositions des CGU ou de tout autre document incorporé aux présentes par référence, l'Éditeur se réserve le droit de mettre fin ou restreindre sans aucun avertissement préalable et à sa seule discrétion, votre usage et accès aux services, à votre compte et à tous les Sites.</p>
 
 				
-				<h4>Indications en cas de faille de sécurité décelée par l'Éditeur</h4>
+				<h3>Indications en cas de faille de sécurité décelée par l'Éditeur</h3>
 
 				<p class="bold">Information de l'Utilisateur en cas de faille de sécurité</p>
 
@@ -385,12 +385,12 @@
 					
 					<div class="footer-links flex">
 						<ul class="footer-row-1">
-							<li><a href="">l'Hôtel</a></li>
-							<li><a href="">Présentation</a></li>
-							<li><a href="">Accès</a></li>
-							<li><a href="">Actualités</a></li>
-							<li><a href="">Presse</a></li>
-							<li><a href="">Avis</a></li>
+							<li><a href="hotel.html">l'Hôtel</a></li>
+							<li><a href="hotel.html#about">Présentation</a></li>
+							<li><a href="hotel.html#access">Accès</a></li>
+							<li><a href="hotel.html#news">Actualités</a></li>
+							<li><a href="hotel.html#presse"><span>Presse</span></a></li>
+							<li><a href="hotel.html#avis">Avis</a></li>
 						</ul>
 						<ul class="footer-row-1">
 							<li><a href="chambres.html">Chambres</a></li>
@@ -409,9 +409,9 @@
 						</ul>
 						<ul class="footer-row-2">
 							<li><a href="restaurant.html">Restaurant</a></li>
-							<li><a href="restaurant.html#brasserie">Brasserie</a></li>
-							<li><a href="restaurant.html#degustation">Dégustation</a></li>
-							<li><a href="restaurant.html#restaurant">Restaurant</a></li>
+							<li><a href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 0);">Brasserie</a></li>
+							<li><a href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 1);">Dégustation</a></li>
+							<li><a href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 2);">Restaurant</a></li>
 						</ul>
 						<ul class="footer-row-2">
 							<li><a href="reservation.html">Réservation</a></li>
@@ -460,7 +460,7 @@
 					<div class="footer-row-2">
 						<h4 class="footer-title">Newsletter</h4>
 						<form class="nl-form flex" action="javascript:void(0)">
-							<input type="text" placeholder="Entrez votre adresse courriel..." name="newsletter">
+							<input type="text" placeholder="Adresse courriel..." name="newsletter">
 							<button type="submit"><span>S'abonner</span></button>
 						</form>
 					</div>
@@ -472,7 +472,7 @@
 					<li><a href="conditions_generales_de_vente.html">Conditions générales de vente</a></li>
 					<li><a href="mentions_legales.html">Mentions légales</a></li>
 					<li><a href="politique_de_confidentialite.html">Politique de confidentialité</a></li>
-					<li><a href="javascript:window.print()">Imprimer la page</a></li>
+					<li><a href="javascript:window.print()"><i style="margin-right: 0.5em;" class="fas fa-print"></i>Imprimer la page</a></li>
 				</ul>
 				<p id="credits">2018 - conçu et codé par <a href="http://florentmaillard.fr">Florent Maillard</a><span id="tiret"> - </span><span>Parimis est un site est fictif et n'a aucun but commercial.</span></p>
 			</div>
@@ -481,7 +481,8 @@
 	</footer>
 	
 	<!-- APPELS JS -->
-	<script src="js/responsiveMenu.js"></script>
+	<script src="js/responsiveMenu.min.js"></script>
+	<script src="js/calendar.js"></script>
 		
 </body>
 

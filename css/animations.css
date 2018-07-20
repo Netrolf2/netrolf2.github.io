@@ -12,6 +12,7 @@ button:active span, button:active i{
 	color: grey;
 }
 
+
 /* Animations globales
 
 ///////////////////////////////////////////////////////////////////// */
@@ -29,7 +30,7 @@ button:active span, button:active i{
 	100% { opacity: 0;}
 }
 
- .fadeIn{ animation: 3s fadeIn linear; }
+.fadeIn{ animation: 3s fadeIn linear; }
  
 main .standard-btn:hover {
 	
@@ -39,6 +40,13 @@ main .standard-btn:hover {
 }
 main .standard-btn{transition: 0.2s ease-in-out;font-size: medium;}
 main .standard-btn:active {transform: scale(0.95);}
+
+main .icons-animation{transition: 0.2s ease-in-out;}
+main .icons-animation:hover {transform: scale(1.1);}
+main .icons-animation:active {transform: scale(0.9);}
+
+main .greyed{opacity:0.5; transition: 0.1s ease-in-out;}
+main .greyed:hover {opacity:1;}
 
 /* HEADER
 

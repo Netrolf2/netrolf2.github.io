@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 
-	<title>Parimis - Hôtel Restaurant 5 étoiles - Accueil</title>
-	<meta name="description" content="Parimis - Hôtel 5 étoiles - Paris VIIIe">
+	<title>Parimis - Hôtel Restaurant 5 étoiles - Contact</title>
+	<meta name="description" content="Prenez contact avec le personnelle de l'hôtel Parimis afin de préparer votre séjour ou tout simplement pour vous renseigner.">
 	<meta name="author" content="Florent Maillard">
 	
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,19 +13,19 @@
 	<!-- SEO -                         -->
 	
 	<!-- Obsolète - pour Yahoo et Bing -->
-	<meta name="keywords" content="hôtels,hotels,hotel,restaurant, spa, bien-être, bien, etre, brasserie,Luxe,Paris,centre ville,Ile de France,8ème arrondissement,,huitième,calme,très beau,montaigne">
+	<meta name="keywords" content="hôtels,hotels,hotel,restaurant, spa, bien-être, bien, etre, brasserie,Luxe,Paris,centre ville,Ile de France,8ème arrondissement,,huitième,calme,très beau,montaigne,contact">
 	
 	<!-- robots -->
 	<meta name="robots" content="index, follow">
 	<meta name="googlebot" content="index, follow">
 	
 	<!-- Réseaux Sociaux -->
-	<meta property="og:site_name" content="Parimis - Hôtel 5 étoile"/>
-	<meta property="og:title" content="Parimis - Hôtel 5 étoiles - Accueil" />
+	<meta property="og:site_name" content="Parimis - Hôtel Restaurant Spa - 5 étoiles"/>
+	<meta property="og:title" content="Parimis - Hôtel Restaurant 5 étoiles - Contact" />
 	<meta property="og:type" content="article" />
-	<meta property="og:url" content="http://www.parimis-hotel.eu" />
+	<meta property="og:url" content="http://www.parimis-hotel.eu/contact.html" />
 	<meta property="og:image" content="http://www.parimis-hotel.eu/img/parimis-logo.png" />
-	<meta property="og:description" content="une petite description en 150-160 caractères" /> <!-- DESCRIPTION A REDIGER -->
+	<meta property="og:description" content="Prenez contact avec le personnelle de l'hôtel Parimis afin de préparer votre séjour ou tout simplement pour vous renseigner."/> 
 	
 	
 	<!-- Favicons -->
@@ -101,7 +101,7 @@
 					<ul class="flex">
 						<!--ACCUEIL-->
 						<li>
-							<a class="active" href="index.html"><span>Accueil</span></a>
+							<a href="index.html"><span>Accueil</span></a>
 						</li>
 						<!--CHAMBRES-->
 						<li class="dropdown">
@@ -141,20 +141,20 @@
 							<a class="dropdown-btn" href="hotel.html"><span>l'Hôtel</span></a>
 							<!-- Dropdown Hôtel -->
 							<ul class="dropdown-content">
-								<li><a href="hotel.html"><span>À propos</span></a></li>
-								<li><a href="hotel.html"><span>Accès</span></a></li>
-								<li><a href="hotel.html"><span>Actualités</span></a></li>
-								<li><a href="hotel.html"><span>Avis</span></a></li>
-								<li><a href="hotel.html"><span>Presse</span></a></li>
+								<li><a href="hotel.html#about"><span>À propos</span></a></li>
+								<li><a href="hotel.html#acces"><span>Accès</span></a></li>
+								<li><a href="hotel.html#news"><span>Actualités</span></a></li>
+								<li><a href="hotel.html#avis"><span>Avis</span></a></li>
+								<li><a href="hotel.html#presse"><span>Presse</span></a></li>
 							</ul>
 						</li>
 						<!--CONTACT-->
 						<li>
-							<a href="javascript:void(0)"><span>Contact</span></a>
+							<a class="active" href="contact.html"><span>Contact</span></a>
 						</li>
 						<!-- RESERVER -->
 						<li id="booking" class="dropdown">
-							<a href="javascript:void(0)"><span>Réserver</span></a>
+							<a href="reservation.html"><span>Réserver</span></a>
 							<fieldset class="dropdown-content calendar">
 								<div>
 									<label class="normal" for="start">Arrivée</label>
@@ -216,59 +216,72 @@
 	<main>
 		<div class="global-container fadeIn contact-page">
 			<!-- Image du Haut -->
-			<div class="top-banner"><img src="img/photos/parimis_hotel_slider_3.jpg" alt=""></div>
-		
-			<div  class=" centered text-block">
-				<h1>Vous souhaitez nous contacter ?</h1>
-				<p>Pour toute demande d'informations veuillez prendre contact avec nos équipe via le formulaire ci-dessous.<br>Une réponse vous sera fournie dans un délai maximum de 24h.</p>
-				<br>
-				<hr>
-			</div>
-		
+			<div class="top-banner"><img src="img/photos/parimis_hotel_slider_3.jpg" alt=""></div>	
+			<div class="flex contact-block">
 			<!-- Contact général -->
-			<section id="infosContact">
-			
-				<form action="">
+				<section id="contact-form">
+				
+					<div class="justified">
+						<h2 class="uppercase" >Formulaire de contact</h2>
+						<div class="h-line-white"></div>
+						<p>Pour toute demande d'informations veuillez nous contacter par le biais du formulaire ci-dessous.<br>Une réponse vous sera fournie dans un délai maximum de 24h.</p>
+					</div>
+				
+					<form action="" method="">
+						<label class="form-components" for="fname">Prénom<span class="mandatory">*</span></label>
+						<input class="form-components" type="text" id="clientFirstName" name="firstname" placeholder="Prénom" required>
 
-					<label for="fname">Prénom<span class="mandatory">*</span></label>
-					<input type="text" id="clientFirstName" name="firstname" placeholder="Prénom" required>
+						<label class="form-components" for="lname">Nom<span class="mandatory">*</span></label>
+						<input class="form-components" type="text" id="clientLastName" name="lastname" placeholder="Nom"  required>
+						
+						<label class="form-components" for="clientEmail">Email<span class="mandatory">*</span></label>
+						<input class="form-components" type="text" id="clientEmail" name="clientEmail" placeholder="adresse email"  required>
+						
+						<label class="form-components" for="clientPhone">Téléphone</label>
+						<input class="form-components" type="tel" pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$" id="clientPhone" name="clientPhone" placeholder="ex : +33 12 34 56 78 90">
+						<div class="select-style">
+							<label class="form-components" for="departement">Ma question concerne :</label>
+							<select class="form-components" id="departement" name="departement"  required>
+								<option selected="selected" value="0">Selectionnez un département</option>
+								<option value="hotel">l'Hôtel</option>
+								<option value="spa">le Spa</option>
+								<option value="restaurant">le Restaurant</option>
+								<option value="support">le Service client</option>
+								<option value="other">Autre</option>
+							</select>
+						</div>
+						<label class="form-components" for="clientSubject">Objet<span class="mandatory">*</span></label>
+						<input class="form-components" type="text" id="clientSubject" name="clientSubject" placeholder="Objet"  required>
 
-					<label for="lname">Nom<span class="mandatory">*</span></label>
-					<input type="text" id="clientLastName" name="lastname" placeholder="Nom"  required>
+						<label class="form-components" for="subject">Votre Message<span class="mandatory">*</span></label>
+						<textarea class="form-components" id="clientMessage" name="Message" placeholder="Votre Message" style="height:200px" required></textarea>
+
+						<button class="form-components standard-btn b-white" type="submit">ENVOYER</button>
+					 </form>
+
+				
+				</section>
+				
+				<div class="contact-right flex">					
+					<section id="adress-block" class="justified b-black">
+						<h2 class="uppercase">Coordonées</h2>
+						<div class="h-line-white"></div>
+						<p><span class="bold">Parimis - Hotel Restaurant Spa</span><br>1 avenue Montaigne,<span><br>75008, PARIS<br>FRANCE</span></p>
+						<p class="bold"><i class="fas fa-phone"></i>+33 (0)1 23 45 67 89</p>
+					</section>
 					
-					<label for="clientEmail">Email<span class="mandatory">*</span></label>
-					<input type="text" id="clientEmail" name="clientEmail" placeholder="adresse email"  required>
-					
-					<label for="clientPhone">Téléphone</label>
-					<input type="tel" pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$" id="clientPhone" name="clientPhone" placeholder="ex : +33 12 34 56 78 90">
-
-					<label for="departement">Ma question concerne :</label>
-					<select id="departement" name="departement"  required>
-						<option value="hotel">l'Hôtel</option>
-						<option value="spa">le Spa</option>
-						<option value="restaurant">le Restaurant</option>
-						<option value="support">le Service client</option>
-						<option value="other">Autre motif</option>
-					</select>
-					
-					<label for="clientSubject">Objet<span class="mandatory">*</span></label>
-					<input type="text" id="clientSubject" name="clientSubject" placeholder="Objet"  required>
-
-					<label for="subject">Votre Message</label>
-					<textarea id="clientMessage" name="Message" placeholder="Votre Message" style="height:200px"></textarea>
-
-					<input type="submit" value="Submit">
-
-				 </form>
-			
-			</section>
-			
-			
-			<section id="careers" class="flex">
-			
-			
-			</section>
-		
+					<section id="careers" class="justified b-black">
+						<h2 class="uppercase">Recrutement</h2>
+						<div class="h-line-white"></div>
+						<p>Vous êtes passionnés et vous souhaitez rejoindre une équipe d'excellence dans un cadre somptueux ?</p>
+						<p>L'Hôtel Parimis recherche en permanence de nouveaux talents afin de renforcer ses équipes!</p>
+						<a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin fa-2x icons-animation"></i><span class="bold greyed">Consultez nos offres sur notre page LinkeIn.</span></a>
+						<a href="mailto:emploi@parimis-hotel.eu?Subject=Candidature%20Parimis" target="_blank"><i class="fas fa-envelope fa-2x icons-animation"></i><span class="bold greyed">Adressez nous votre CV et une lettre de motivation.</span></a>
+					</section>
+							
+						<div class="bk-cover contact-right-img"></div>
+				</div>
+			</div>
 		
 		
 		</div>
@@ -288,12 +301,12 @@
 					
 					<div class="footer-links flex">
 						<ul class="footer-row-1">
-							<li><a href="">l'Hôtel</a></li>
-							<li><a href="">Présentation</a></li>
-							<li><a href="">Accès</a></li>
-							<li><a href="">Actualités</a></li>
-							<li><a href="">Presse</a></li>
-							<li><a href="">Avis</a></li>
+							<li><a href="hotel.html">l'Hôtel</a></li>
+							<li><a href="hotel.html#about">Présentation</a></li>
+							<li><a href="hotel.html#access">Accès</a></li>
+							<li><a href="hotel.html#news">Actualités</a></li>
+							<li><a href="hotel.html#presse"><span>Presse</span></a></li>
+							<li><a href="hotel.html#avis">Avis</a></li>
 						</ul>
 						<ul class="footer-row-1">
 							<li><a href="chambres.html">Chambres</a></li>
@@ -363,7 +376,7 @@
 					<div class="footer-row-2">
 						<h4 class="footer-title">Newsletter</h4>
 						<form class="nl-form flex" action="javascript:void(0)">
-							<input type="text" placeholder="Entrez votre adresse courriel..." name="newsletter">
+							<input type="text" placeholder="Adresse courriel..." name="newsletter">
 							<button type="submit"><span>S'abonner</span></button>
 						</form>
 					</div>
@@ -375,7 +388,7 @@
 					<li><a href="conditions_generales_de_vente.html">Conditions générales de vente</a></li>
 					<li><a href="mentions_legales.html">Mentions légales</a></li>
 					<li><a href="politique_de_confidentialite.html">Politique de confidentialité</a></li>
-					<li><a href="javascript:window.print()">Imprimer la page</a></li>
+					<li><a href="javascript:window.print()"><i style="margin-right: 0.5em;" class="fas fa-print"></i>Imprimer la page</a></li>
 				</ul>
 				<p id="credits">2018 - conçu et codé par <a href="http://florentmaillard.fr">Florent Maillard</a><span id="tiret"> - </span><span>Parimis est un site est fictif et n'a aucun but commercial.</span></p>
 			</div>
@@ -384,8 +397,7 @@
 	</footer>
 	
 	<!-- APPELS JS -->
-	<script src="js/responsiveMenu.js"></script>
-	<script src="js/testimonies.js"></script>
+	<script src="js/responsiveMenu.min.js"></script>
 	<script src="js/calendar.js"></script>
 		
 </body>

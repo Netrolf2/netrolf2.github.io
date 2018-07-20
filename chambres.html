@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 
-	<title>Parimis - Hôtel Restaurant 5 étoiles - Chambres &amp; Suites</title>
-	<meta name="description" content="Parimis - Hôtel 5 étoiles - Paris VIIIe">
+	<title>Parimis - Hôtel Restaurant Spa - 5 étoiles -  Chambres &amp; Suites</title>
+	<meta name="description" content="Découvrez les chambres à l'atmosphère épurée et intimiste de l'hôtel cinq étoiles Parimis situé en plein c&oelig;ur de paris.">
 	<meta name="author" content="Florent Maillard">
 	
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -20,12 +20,12 @@
 	<meta name="googlebot" content="index, follow">
 	
 	<!-- Réseaux Sociaux -->
-	<meta property="og:site_name" content="Parimis - Hôtel 5 étoile"/>
-	<meta property="og:title" content="Parimis - Hôtel 5 étoiles - Accueil" />
+	<meta property="og:site_name" content="Parimis - Hôtel Restaurant Spa - 5 étoiles"/>
+	<meta property="og:title" content="Parimis - Hôtel Restaurant Spa - 5 étoiles -  Chambres &amp; Suites" />
 	<meta property="og:type" content="article" />
-	<meta property="og:url" content="http://www.parimis-hotel.eu" />
+	<meta property="og:url" content="http://www.parimis-hotel.eu/chambres.html" />
 	<meta property="og:image" content="http://www.parimis-hotel.eu/img/parimis-logo.png" />
-	<meta property="og:description" content="une petite description en 150-160 caractères" /> <!-- DESCRIPTION A REDIGER -->
+	<meta property="og:description" content="Découvrez les chambres à l'atmosphère épurée et intimiste de l'hôtel cinq étoiles Parimis situé en plein c&oelig;ur de paris." />
 	
 	
 	<!-- Favicons -->
@@ -65,7 +65,7 @@
 	
 </head>
 <body>
-<!-- HEADER /////////////////////////////////////////////////--> 
+	<!-- HEADER /////////////////////////////////////////////////--> 
 	<header class="">
 		<div class="global-container">
 			<div class="header-top flex">
@@ -101,11 +101,11 @@
 					<ul class="flex">
 						<!--ACCUEIL-->
 						<li>
-							<a href="javascript:void(0)"><span>Accueil</span></a>
+							<a href="index.html"><span>Accueil</span></a>
 						</li>
 						<!--CHAMBRES-->
 						<li class="dropdown">
-							<a class="dropdown-btn active" href="chambres.html"><span>Chambres</span></a>
+							<a class="active dropdown-btn" href="chambres.html"><span>Chambres</span></a>
 							<!-- Dropdown Chambres -->
 							<ul class="dropdown-content ">
 								<li><a href="chambres.html#classique"><span>Classique</span></a></li>
@@ -116,12 +116,12 @@
 						</li>
 						<!-- RESTAURANT -->
 						<li class="dropdown">
-							<a class="dropdown-btn" href="restaurant.html"><span>Restaurant</span></a>
+							<a class="dropdown-btn" href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 0);"><span>Restaurant</span></a>
 							<!-- Dropdown Restaurant -->
 							<ul  class="dropdown-content">
-								<li><a href="restaurant.html#brasserie"><span>Brasserie</span></a></li>
-								<li><a href="restaurant.html#degustation"><span>Dégustation</span></a></li>
-								<li><a href="restaurant.html#restaurant"><span>Restaurant</span></a></li>
+								<li><a href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 0);"><span>Brasserie</span></a></li>
+								<li><a href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 1);"><span>Dégustation</span></a></li>
+								<li><a href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 2);"><span>Restaurant</span></a></li>
 							</ul>
 						</li>
 						<!-- SPA-->
@@ -141,20 +141,20 @@
 							<a class="dropdown-btn" href="hotel.html"><span>l'Hôtel</span></a>
 							<!-- Dropdown Hôtel -->
 							<ul class="dropdown-content">
-								<li><a href="hotel.html"><span>À propos</span></a></li>
-								<li><a href="hotel.html"><span>Accès</span></a></li>
-								<li><a href="hotel.html"><span>Actualités</span></a></li>
-								<li><a href="hotel.html"><span>Avis</span></a></li>
-								<li><a href="hotel.html"><span>Presse</span></a></li>
+								<li><a href="hotel.html#about"><span>À propos</span></a></li>
+								<li><a href="hotel.html#acces"><span>Accès</span></a></li>
+								<li><a href="hotel.html#news"><span>Actualités</span></a></li>
+								<li><a href="hotel.html#avis"><span>Avis</span></a></li>
+								<li><a href="hotel.html#presse"><span>Presse</span></a></li>
 							</ul>
 						</li>
 						<!--CONTACT-->
 						<li>
-							<a href="javascript:void(0)"><span>Contact</span></a>
+							<a href="contact.html"><span>Contact</span></a>
 						</li>
 						<!-- RESERVER -->
 						<li id="booking" class="dropdown">
-							<a href="javascript:void(0)"><span>Réserver</span></a>
+							<a href="reservation.html"><span>Réserver</span></a>
 							<fieldset class="dropdown-content calendar">
 								<div>
 									<label class="normal" for="start">Arrivée</label>
@@ -379,12 +379,12 @@
 					
 					<div class="footer-links flex">
 						<ul class="footer-row-1">
-							<li><a href="">l'Hôtel</a></li>
-							<li><a href="">Présentation</a></li>
-							<li><a href="">Accès</a></li>
-							<li><a href="">Actualités</a></li>
-							<li><a href="">Presse</a></li>
-							<li><a href="">Avis</a></li>
+							<li><a href="hotel.html">l'Hôtel</a></li>
+							<li><a href="hotel.html#about">Présentation</a></li>
+							<li><a href="hotel.html#access">Accès</a></li>
+							<li><a href="hotel.html#news">Actualités</a></li>
+							<li><a href="hotel.html#presse"><span>Presse</span></a></li>
+							<li><a href="hotel.html#avis">Avis</a></li>
 						</ul>
 						<ul class="footer-row-1">
 							<li><a href="chambres.html">Chambres</a></li>
@@ -403,9 +403,9 @@
 						</ul>
 						<ul class="footer-row-2">
 							<li><a href="restaurant.html">Restaurant</a></li>
-							<li><a href="restaurant.html#brasserie">Brasserie</a></li>
-							<li><a href="restaurant.html#degustation">Dégustation</a></li>
-							<li><a href="restaurant.html#restaurant">Restaurant</a></li>
+							<li><a href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 0);">Brasserie</a></li>
+							<li><a href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 1);">Dégustation</a></li>
+							<li><a href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 2);">Restaurant</a></li>
 						</ul>
 						<ul class="footer-row-2">
 							<li><a href="reservation.html">Réservation</a></li>
@@ -454,7 +454,7 @@
 					<div class="footer-row-2">
 						<h4 class="footer-title">Newsletter</h4>
 						<form class="nl-form flex" action="javascript:void(0)">
-							<input type="text" placeholder="Entrez votre adresse courriel..." name="newsletter">
+							<input type="text" placeholder="Adresse courriel..." name="newsletter">
 							<button type="submit"><span>S'abonner</span></button>
 						</form>
 					</div>
@@ -466,7 +466,7 @@
 					<li><a href="conditions_generales_de_vente.html">Conditions générales de vente</a></li>
 					<li><a href="mentions_legales.html">Mentions légales</a></li>
 					<li><a href="politique_de_confidentialite.html">Politique de confidentialité</a></li>
-					<li><a href="javascript:window.print()">Imprimer la page</a></li>
+					<li><a href="javascript:window.print()"><i style="margin-right: 0.5em;" class="fas fa-print"></i>Imprimer la page</a></li>
 				</ul>
 				<p id="credits">2018 - conçu et codé par <a href="http://florentmaillard.fr">Florent Maillard</a><span id="tiret"> - </span><span>Parimis est un site est fictif et n'a aucun but commercial.</span></p>
 			</div>
@@ -476,27 +476,11 @@
 	
 	
 	<!-- APPELS JS -->
-	<script src="js/responsiveMenu.js"></script>
+	<script src="js/responsiveMenu.min.js"></script>
 	<script src="js/calendar.js"></script>
-	<script src="js/swipe.js"></script>
+	<script src="js/swipe.min.js"></script>
 	
 	<script>
-		/*SCRIPT SWIPE
-		var element = document.getElementById('mySwipe'),
-	    prevBtn = document.getElementById('prev'),
-	    nextBtn = document.getElementById('next');
-	
-		window.mySwipe = new Swipe(element, {
-
-		  startSlide: 0,
-		  speed: 700,
-		  auto: 3000,
-		  draggable: true,
-		  continuous: true,
-		  disableScroll: true, // prevent touch events from scrolling the page
-		  stopPropagation: false,
-		  
-		});*/
 		
 		var element = document.getElementsByClassName('swipe-block');
 		
@@ -504,20 +488,19 @@
 		
 			window.mySwipe = new Swipe(element[i], {
 
-		  startSlide: 0,
-		  speed: 700,
-		  auto: 3000,
-		  draggable: true,
-		  continuous: true,
-		  disableScroll: true, // prevent touch events from scrolling the page
-		  stopPropagation: false,
+			  startSlide: 0,
+			  speed: 700,
+			  auto: 3000,
+			  draggable: true,
+			  continuous: true,
+			  disableScroll: true, // prevent touch events from scrolling the page
+			  stopPropagation: false,
 		  
-		})
+			})
 		
 		
 		}
 		
-	
 	</script>
 		
 </body>

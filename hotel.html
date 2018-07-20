@@ -1,0 +1,346 @@
+ <!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+
+	<title>Parimis - Hôtel Restaurant Spa - 5 étoiles - l'Hôtel</title>
+	<meta name="description" content="Découvrez notre etablissement 5 étoiles en plein c&oelig;ur de Paris, son histoire, son actualité et ses événements.">
+	<meta name="author" content="Florent Maillard">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+	<!-- SEO -->
+	
+	<!-- Obsolète - pour Yahoo et Bing -->
+	<meta name="keywords" content="hôtels,hotels,hotel,restaurant, spa, bien-être, bien, etre, brasserie,Luxe,Paris,centre ville,Ile de France,8ème arrondissement,,huitième,calme,très beau,montaigne">
+	
+	<!-- robots -->
+	<meta name="robots" content="index, follow">
+	<meta name="googlebot" content="index, follow">
+	
+	<!-- Réseaux Sociaux -->
+	<meta property="og:site_name" content="Parimis - Hôtel Restaurant Spa - 5 étoiles"/>
+	<meta property="og:title" content="Parimis - Hôtel Restaurant Spa - 5 étoiles - l'Hôtel" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="http://www.parimis-hotel.eu/hotel.html" />
+	<meta property="og:image" content="http://www.parimis-hotel.eu/img/parimis-logo.png" />
+	<meta property="og:description" content="Découvrez notre etablissement 5 étoiles en plein c&oelig;ur de Paris, son histoire, son actualité et ses événements." /> 
+	
+	
+	<!-- Favicons -->
+	<link rel="icon" type="image/png" href="favicon/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#2e2e2e">
+	<link rel="shortcut icon" href="/favicon/favicon.ico">
+	<meta name="apple-mobile-web-app-title" content="Parimis Hotel">
+	<meta name="application-name" content="Parimis Hotel">
+	<meta name="msapplication-TileColor" content="#2e2e2e">
+	<meta name="msapplication-config" content="/favicon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+
+	<!-- Protection Duplicata -->
+	<link rel="canonical" href="http://www.parimis-hotel.eu"/>
+	
+	<!-- FIN SEO 					-->
+
+	<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	
+	<!-- APPELS CSS -->
+	<link rel="stylesheet" href="css/reset.css"> 		<!--Reset -->
+	<link rel="stylesheet" href="css/style.css">		<!-- Styles -->
+	<link rel="stylesheet" href="css/animations.css">	<!-- Animations-->
+	
+	<!-- FONT -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bitter:400,700" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	
+</head>
+<body>
+	<!-- HEADER /////////////////////////////////////////////////--> 
+	<header class="">
+		<div class="global-container">
+			<div class="header-top flex">
+				<!-- Logo -->
+				
+				<a href="index.html"><img id="logo" src="img/parimis-logo.png" alt="Logo de l'hôtel 5 étoiles Parimis"></a>
+				<!--Conteneur de droite-->
+				<div class="options flex">
+				
+					<button class="navBtn" id="navToggle"><i class="fa fa-bars"></i></button>
+				
+					<!-- Langage -->
+					<nav class="langage">
+						<a href="javascript:void(0)"><img class="flag selected-lang fr" src="img/flag_fr.png" alt="flag_fr"></a>
+						<a href="javascript:void(0)"><img class="flag en" src="img/flag_en.png" alt="flag_en"></a>
+					</nav>
+					
+					<!-- Barre de Recherche -->
+					<form id="search-form" class="flex" action="javascript:void(0)">
+						<input type="text" placeholder="Rechercher..." name="search">
+						<button type="submit"><i class="fa fa-search"></i></button>
+					</form>
+					
+				</div>
+				
+			</div>
+			
+			<!-- Navigation Principale -->
+			
+			<div id="nav-block">
+			
+				<nav id="main-nav">
+					<ul class="flex">
+						<!--ACCUEIL-->
+						<li>
+							<a href="index.html"><span>Accueil</span></a>
+						</li>
+						<!--CHAMBRES-->
+						<li class="dropdown">
+							<a class="dropdown-btn" href="chambres.html"><span>Chambres</span></a>
+							<!-- Dropdown Chambres -->
+							<ul class="dropdown-content ">
+								<li><a href="chambres.html#classique"><span>Classique</span></a></li>
+								<li><a href="chambres.html#confort"><span>Confort</span></a></li>
+								<li><a href="chambres.html#deluxe"><span>Deluxe</span></a></li>
+								<li><a href="chambres.html#suite"><span>Suites</span></a></li>
+							</ul>
+						</li>
+						<!-- RESTAURANT -->
+						<li class="dropdown">
+							<a class="dropdown-btn" href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 0);"><span>Restaurant</span></a>
+							<!-- Dropdown Restaurant -->
+							<ul  class="dropdown-content">
+								<li><a href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 0);"><span>Brasserie</span></a></li>
+								<li><a href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 1);"><span>Dégustation</span></a></li>
+								<li><a href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 2);"><span>Restaurant</span></a></li>
+							</ul>
+						</li>
+						<!-- SPA-->
+						<li class="dropdown">
+							<a class="dropdown-btn" href="spa.html"><span>SPA</span></a>
+							<!-- Dropdown Spa -->
+							<ul class="dropdown-content">
+								<li><a href="spa.htm#detente">Détente</a></li>
+								<li><a href="spa.html#decouverte">Découverte</a></li>
+								<li><a href="spa.html#relaxant">Relaxant</a></li>
+								<li><a href="spa.html#plaisir">Plaisir</a></li>
+								<li><a href="spa.html#evasion">Évasion</a></li>
+							</ul>
+						</li>
+						<!-- HOTEL-->
+						<li class="dropdown">
+							<a class="dropdown-btn active" href="hotel.html"><span>l'Hôtel</span></a>
+							<!-- Dropdown Hôtel -->
+							<ul class="dropdown-content">
+								<li><a href="hotel.html#about"><span>À propos</span></a></li>
+								<li><a href="hotel.html#acces"><span>Accès</span></a></li>
+								<li><a href="hotel.html#news"><span>Actualités</span></a></li>
+								<li><a href="hotel.html#avis"><span>Avis</span></a></li>
+								<li><a href="hotel.html#presse"><span>Presse</span></a></li>
+							</ul>
+						</li>
+						<!--CONTACT-->
+						<li>
+							<a href="contact.html"><span>Contact</span></a>
+						</li>
+						<!-- RESERVER -->
+						<li id="booking" class="dropdown">
+							<a href="reservation.html"><span>Réserver</span></a>
+							<fieldset class="dropdown-content calendar">
+								<div>
+									<label class="normal" for="start">Arrivée</label>
+									<input type="date" id="start" name="booking" value="" min="" max="2020-12-31" />
+								</div>
+
+								<div>
+									<label class="normal" for="end">Départ</label>
+									<input type="date" id="end" name="booking" value="" min="" max="2022-12-31"/>
+								</div>
+								
+								<div>
+									<label class="normal" for="end">Chambre</label>
+									<select id="chambre">
+										<option value="classique" selected>Classique</option>
+										<option value="confort">Confort</option>
+										<option value="deluxe">Deluxe</option>
+										<option value="suite">Suite</option>
+									</select>							
+								</div>
+								
+								<div>
+									<label class="normal" for="end">Nombre d'occupants</label>
+									<select id="occupants">
+										<option value="1" selected>1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+									</select>							
+								</div>
+								<button type="submit" id="book"><span>Réserver</span></button>
+							</fieldset>
+						</li>
+						<!-- PANIER -->
+						<li id="cart">
+							<a class="dropdown-btn" href="javascript:void(0)"><i class="fa fa-calendar-alt"></i></a>
+						</li>
+						<!-- Search Mobile-->
+						<li class="mobile-only">
+							<form id="search-mobile" class="flex" action="javascript:void(0)">
+								<input type="text" placeholder="Rechercher..." name="search">
+								<button type="submit"><i class="fa fa-search"></i></button>
+							</form>
+						</li>
+						<!-- LANG MOBILE -->
+						<li class="mobile-only">
+							<div class="flex">
+								<a href="javascript:void(0)"><img class="flag selected-lang fr" src="img/flag_fr.png" alt="flag_fr"></a>
+								<a href="javascript:void(0)"><img class="flag en" src="img/flag_en.png" alt="flag_en"></a>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			
+		</div>
+	</header>
+	
+	<main>
+		<div class="global-container fadeIn">
+
+		</div>
+	</main>
+	
+	<!-- FOOTER /////////////////////////////////////////////////-->
+	<footer>
+		<div class="global-container">
+		
+			<!-- Conteneur Flex  : Sitemap / Contact / Socials -->
+			<div class="footer-container flex">
+			
+				<!-- Plan du Site -->
+				<section id="sitemap">
+				
+					<h4 class="footer-title">Plan du Site</h4>
+					
+					<div class="footer-links flex">
+						<ul class="footer-row-1">
+							<li><a href="hotel.html">l'Hôtel</a></li>
+							<li><a href="hotel.html#about">Présentation</a></li>
+							<li><a href="hotel.html#access">Accès</a></li>
+							<li><a href="hotel.html#news">Actualités</a></li>
+							<li><a href="hotel.html#presse"><span>Presse</span></a></li>
+							<li><a href="hotel.html#avis">Avis</a></li>
+						</ul>
+						<ul class="footer-row-1">
+							<li><a href="chambres.html">Chambres</a></li>
+							<li><a href="chambres.html#classique">Classique</a></li>
+							<li><a href="chambres.html#confort">Confort</a></li>
+							<li><a href="chambres.html#deluxe">Deluxe</a></li>
+							<li><a href="chambres.html#suite">Suites</a></li>
+						</ul>
+						<ul class="footer-row-1">
+							<li><a href="spa.html">Spa</a></li>
+							<li><a href="spa.htm#detente">Détente</a></li>
+							<li><a href="spa.html#decouverte">Découverte</a></li>
+							<li><a href="spa.html#relaxant">Relaxant</a></li>
+							<li><a href="spa.html#plaisir">Plaisir</a></li>
+							<li><a href="spa.html#evasion">Évasion</a></li>
+						</ul>
+						<ul class="footer-row-2">
+							<li><a href="restaurant.html">Restaurant</a></li>
+							<li><a href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 0);">Brasserie</a></li>
+							<li><a href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 1);">Dégustation</a></li>
+							<li><a href="restaurant.html" onclick="localStorage.setItem('selectedMenu', 2);">Restaurant</a></li>
+						</ul>
+						<ul class="footer-row-2">
+							<li><a href="reservation.html">Réservation</a></li>
+							<li><a href="reservation.html">Réserver</a></li>
+							<li><a href="reservation.html">Votre séjour</a></li>
+						</ul>
+						<ul class="footer-row-2">
+							<li><a href="contact.html">Contact</a></li>
+							<li><a href="contact.html#contactForm">Nous contacter</a></li>
+							<li><a href="contact.html#careers">Recrutement</a></li>
+						</ul>
+					</div>
+				</section>
+				
+				<!-- Contact & Infos -->
+				<section id="contact" class="">
+				
+					<h4 class="footer-title">Informations</h4>
+					<div  class="">
+					
+						<div class="adress-gmap  footer-row-1">
+							<iframe class="" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4414.127057053113!2d2.2988721968096146!3d48.864776420254465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fdd0b743c25%3A0xf7293b466460cc38!2s1.+Avenue+Montaigne%2C+75008+Paris!5e0!3m2!1sfr!2sfr!4v1530006422181" allowfullscreen></iframe>
+						</div>
+					
+						<div class="footer-row-2  adress">
+								<h5>HÔTEL PARIMIS</h5>
+								<p>1 avenue Montaigne,<span>75008, PARIS, FRANCE</span></p> 
+								<a id="phone-contact" href="tel:+33123456789">Informations / réservations : <span>+33 (0)1 23 45 67 89</span></a>	
+						</div>
+					</div>
+				</section>
+				
+				<!-- Nous Suivre -->
+				<section id="follow" class="">
+				
+					<h4 class="footer-title">Nous Suivre</h4>
+					
+					<ul  class="footer-row-1 social-links flex">
+						<li id="fb-icon"><a  href="javascript:void(0);"><i class="fab fa-facebook-square"></i></a></li>
+						<li id="instagram-icon"><a  href="javascript:void(0);"><i class="fab fa-instagram"></i></a></li>
+						<li id="twitter-icon"><a  href="javascript:void(0);"><i class="fab fa-twitter-square"></i></a></li>
+						<li id="g-icon"><a  href="javascript:void(0);"><i class="fab fa-google-plus-g"></i></a></li>
+						<li id="tripadvisor-icon"><a  href="javascript:void(0);"><i class="fab fa-tripadvisor"></i></a></li>
+					</ul>
+									
+					<div class="footer-row-2">
+						<h4 class="footer-title">Newsletter</h4>
+						<form class="nl-form flex" action="javascript:void(0)">
+							<input type="text" placeholder="Adresse courriel..." name="newsletter">
+							<button type="submit"><span>S'abonner</span></button>
+						</form>
+					</div>
+				</section>
+			</div>
+			<!-- Crédits & mentions légales.-->
+			<div id="legal" class=" footer-links">	
+				<ul>
+					<li><a href="conditions_generales_de_vente.html">Conditions générales de vente</a></li>
+					<li><a href="mentions_legales.html">Mentions légales</a></li>
+					<li><a href="politique_de_confidentialite.html">Politique de confidentialité</a></li>
+					<li><a href="javascript:window.print()"><i style="margin-right: 0.5em;" class="fas fa-print"></i>Imprimer la page</a></li>
+				</ul>
+				<p id="credits">2018 - conçu et codé par <a href="http://florentmaillard.fr">Florent Maillard</a><span id="tiret"> - </span><span>Parimis est un site est fictif et n'a aucun but commercial.</span></p>
+			</div>
+
+		</div>
+	</footer>
+	
+	<!-- APPELS JS -->
+	<script src="js/responsiveMenu.min.js"></script>
+	<script src="js/testimonies.min.js"></script>
+	<script src="js/calendar.js"></script>
+		
+</body>
+
+
+<!-- 	
+		2018 - IFOCOP - Site conçu et développé par Florent Maillard dans le cadre d'une formation.
+		Ce site est fictif et représente un exercice de fin de session sans aucune vocation commerciale.
+		
+		Sources des images : www.lenarcisseblanc.com.
+-->
+
+</html>
