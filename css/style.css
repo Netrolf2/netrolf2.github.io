@@ -36,13 +36,19 @@ body {
 	flex: 0 1 auto; /*Pour IE : Verifier si bug*/
 }
 
+.margin-auto{margin-left:auto;margin-right:auto;}
+
+.clear{clear:both;}
+
+.block{display:block;}
+
 .hide{display:none;}
 
 ul, ol {list-style: none;}
 
 header a, footer a{color: currentcolor; text-decoration:none;}
 
-main a {color: rgba(0,0,0,0.5); font-weight: bold; text-decoration:none;}
+main a {color: #2E2E2E; font-weight: bold; text-decoration:none;}
 
 /*débug*/
 .red {background-color:Tomato;}
@@ -73,6 +79,7 @@ button:focus {outline:0;}
 	
 	padding: 0.8em 1em;
 	margin:1em auto;
+	display:block;
 	
 }
 
@@ -89,7 +96,7 @@ header {
 	
 	width: 100%;
 	position: relative;
-	z-index: 1;
+	z-index: 2;
 	
 }
 
@@ -390,7 +397,7 @@ header #main-nav .mobile-only #search-mobile input {
 	text-align: center;
 }
 
-header         #main-nav .mobile-only #search-mobile button {
+header  #main-nav .mobile-only #search-mobile button {
 	
 	height: 40px;
 	background-color: white;
@@ -507,7 +514,6 @@ li p {
 .b-grey {background-color: rgba(0,0,0,0.5);}
 .b-black{background-color: #2e2e2e; color: white;}
 .b-white {background-color: white; color: #2e2e2e; }
-
 /* ///////////////////////////////////////////////////////////////////////////
 	CONTENU
 //////////////////////////////////////////////////////////////////////////////*/
@@ -515,18 +521,22 @@ li p {
 /* ÉLÉMENTS PARTAGÉS	////////////////////////////////////////////////*/
 
 main .top-banner {
-    width: 100%;
-    height: 250px;
-    overflow: hidden;
-    text-align: center;
-		/*! border-bottom: 5px solid #2e2e2e; */
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  text-align: center;
+  border-bottom: 5px solid #2e2e2e;
+  position: relative;
+	/*Background options*/
+	background-position: center;
+	background-size: cover;
 }
 
 main .top-banner img {
   margin: auto;
 	display:block;
   width: 100%;
-	
+  position: absolute;
 }
 
 .swipe {
@@ -647,38 +657,6 @@ main .intro-text{
 	margin: 3em auto;
 }
 
-main .article-container{
-	
-	flex-direction:row;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: flex-start;
-	
-}
-
-main .article{
-	
-	padding: 3%;
-	flex-basis:27%;
-	box-shadow: 0px 0px 2px rgba(0,0,0,0.25);
-	align-self: stretch;
-	
-}
-
-main .article img{
-	
-	width:100%;
-	height: auto;
-	
-}
-
-main .article p {height: 8em;}
-
-main .article .standard-btn{
-	
-	display: block;
-	text-align: center;
-}
 
 /* DISPLAY STYLE NARCISSE BLANC	////////////////////////////////////////////////*/
 
@@ -1068,6 +1046,169 @@ main .dessert .degustation-img {flex:1;}
 main .fadeSwipe{opacity:0;}
 
 
+/* HOTEL /////////////////////////////////////////////////////////////*/
+
+main .hotel-section{
+
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+main .hotel-section h2{
+
+	padding-top: 0.5em;
+
+}
+
+main .hotel-section .gmap{
+	
+	width:100%;
+	height:100%;
+}
+
+main .hotel-section i{font-size:1.2em; margin: 0.5em;}
+
+main .hotel-section > div{flex:1;}
+
+main .hotel-section .standard-btn{
+	
+	width:50%;
+	text-align: center;
+	
+	text-transform: uppercase;
+}
+
+main .transports{width:1.2em; height:auto; margin-right:0.5em;top: 0.25em;position: relative;}
+
+main .hotel-section .h-line-white,
+main .hotel-section .h-line-black{
+	margin-bottom: 1em; 
+	margin-top:1em;
+}
+
+main .news{
+	
+	overflow-y: auto;
+}
+
+main #news > div:first-child{
+	
+	border-right:1px solid rgba(46,46,46,0.1);
+	
+}
+
+main #news > div:last-child{
+	
+	border-left:1px solid rgba(46,46,46,0.1);
+	
+}
+
+
+main .article-container{
+	
+	flex-direction: column;
+	justify-content:center;
+	align-items:center;
+	overflow-x: hidden;
+	margin: auto;
+}
+
+main .article{
+	
+	width:99%;
+	padding:0;
+	margin-bottom: 0.8em;
+	flex-direction: row;
+	border: rgba(46,46,46,0.1) solid 1px;
+	box-shadow: 2px 2px 2px rgba(46,46,46,0.25);
+}
+
+main .article_img{
+	
+	flex: 0.5;
+  
+}
+
+main .article-txt{
+	
+	flex:1;
+	padding: 0.5em 0 0.5em 1em;
+	
+}
+
+main .article-txt .standard-btn{
+	
+	margin: 2em 0 0 0;
+	font-size: 0.95em;
+}
+
+main .article-txt h3{margin:0;}
+
+
+main .events{
+	
+	overflow:hidden;
+	margin:1em;
+	border: rgba(46,46,46,0.1) solid 1px;
+	box-shadow: 2px 2px 2px rgba(46,46,46,0.25);
+}
+
+main .event-img{
+	
+	margin: 1em auto;
+	width:100%;
+	height:21em;
+	border: rgba(46,46,46,0.5) solid 1px;
+}
+
+
+main .avis-container{
+	
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items:center;
+	
+	padding: 1.5em;
+}
+
+main .avis{
+	
+	padding:1%;
+	flex-basis: 48%;
+
+}
+
+main .avis_portrait,
+main .presse_logo{
+	
+	overflow:hidden;
+	align-self: center;
+	height:150px;
+	background-size: contain;
+	flex-shrink: 0;
+	width: 90px;
+	flex-grow: 0;
+}
+
+main .avis-txt{
+	
+	padding: 1em;
+	font-size: 1.1em;
+	align-self: center;
+	flex: 1;
+}
+
+main .avis-txt a{
+
+	text-decoration: underline;
+ 
+}
+	
+	
+	
+}
+
+
 /* CONTACT /////////////////////////////////////////////////////////////*/
 
 
@@ -1102,7 +1243,7 @@ main .contact-right section{
 	
 }
 
-main #contact-form{
+main .contact-form{
 
   flex:1;
 	color:white;
@@ -1111,34 +1252,34 @@ main #contact-form{
 }
 
 
-main #contact-form > div{
+main .contact-form > div{
 
 	width:86%;
 	margin:auto;
 }
 
-main #contact-form form{
+main .contact-form form{
   
 	margin:auto;
 	padding: 1em
 
 }
 
-main #contact-form .form-components{
+main .contact-form .form-components{
 	width: 90%;
 	margin-left:auto; margin-right: auto;
 	display:block;
 	font-family: 'Montserrat', sans-serif;
 }
 
-main #contact-form label{
+main .contact-form label{
 	
 	margin:1.5em auto 0.75em auto;
 	
 }
 
-main #contact-form input,
-main #contact-form textarea{
+main .contact-form input,
+main .contact-form textarea{
 	
 	font-size: 1.1em;
 	border:none;
@@ -1150,7 +1291,7 @@ main #contact-form textarea{
 	background-color: #222222
 }
 
-main #contact-form select{
+main .contact-form select{
 	
 	padding: 5px;
 	border:none;
@@ -1163,7 +1304,7 @@ main #contact-form select{
     outline: none;
 }
 
-main #contact-form .mandatory{
+main .contact-form .mandatory{
 	
 	margin-left: 0.2em;
 	color: tomato;
@@ -1335,8 +1476,8 @@ footer #contact #phone-contact span {
 /*grayscale gmap*/
 .adress-gmap iframe {
 	
-	width:100%;
-	height: 100%;
+width:100%;
+height: 100%;
   filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+ */
   filter: gray; /* IE6-9 */
 		-webkit-filter: grayscale(99%); /* Chrome 19+ & Safari 6+ */
@@ -1534,7 +1675,7 @@ footer #credits{
 	
 	/*contact*/
 	
-	.adress-gmap iframe {
+	footer .adress-gmap iframe {
 	
 	width:90%;
 	height: 100%;
@@ -1903,23 +2044,32 @@ footer #credits{
 		flex: 1; -moz-flex: 1; -o-flex: 1; -webkit-flex: 1;
 
 	}
+
 	
-	main .article-container{
+	main .hotel-section{
 		
-		flex-direction: column;
+		flex-direction:column;
+		padding:0.5em;
 		
 	}
+	main .events{width:80%; margin:0 auto;}
+	main .event-img{width: 100% ; height:auto;}
+	main .article{/*! flex-direction: column; */width: 95%;margin: 1em auto;}
+	main .article-txt{padding:1em;margin: auto;}
+	main .article-img{position:static;flex: 0.4;}
+  main .article-img img{position: static;}
+	main .avis-container{flex-direction: column;}
+	main .avis{width:100%;}
 	
-	main .article{
+	main .hotel-section .standard-btn{width:100%;margin:2em auto auto auto; padding:1em 0; font-size: 0.9em;}
+
+
+	
+	main #map {
 		
-	font-size: 1.5em;
-	padding: 1em;
-	flex-basis:auto;
-	box-shadow:none;
-	border-bottom: 2px solid #2e2e2e;
-	border-top: 2px solid #2e2e2e;	
-	
-  }
+		height:300px;
+		
+	}
 	
 	main .menu-selectors{display:block; text-align:center; width:100%;}
 	main .menu-selectors .standard-btn{margin: auto; width: 100%; padding: 2em; margin-bottom: 0.1em;}
@@ -1935,7 +2085,7 @@ footer #credits{
 	/*CONTACT ///////////////////////////////////////*/
 	
 	main .contact-block{display:block; font-size:1.1em;}
-	main #contact-form .form-components{width: 95%;}
+	main .contact-form .form-components{width: 95%;}
 	
 	main #careers a {margin: 2em auto;}
 	
@@ -1983,6 +2133,9 @@ footer #credits{
 	
 	main .contact-right-img{display:none;}
 		
+	
+	main .article-img img{width: 100%;}
+
 	/* FOOTER	////////////////////////////////////////////////////////*/
 	
 	footer .footer-container{
