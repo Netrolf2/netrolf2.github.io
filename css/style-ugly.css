@@ -1,18 +1,12 @@
 /*Notes
 
-Gris : 		#2f333e rgba(47,51,62,1)
-			#939bac	rgba(147,155,172,1)
-			
-Bleu :		#1b3a59	rgba(27,58,89,1)
-
-Jaune : 	#F2c87c	rgba(242,220,124,1)
-			#d99648	rgba(217,150,72,1)
-
-"Noir"		#2E2E2E rgba(46,46,46,1);
-
 pourpre: 2E112D
 
 */
+
+/* ///////////////////////////////////////////////////////////////////////////
+	GÉNÉRAL
+//////////////////////////////////////////////////////////////////////////////*/
 
 /* Ajustements */
 
@@ -42,13 +36,19 @@ body {
 	flex: 0 1 auto; /*Pour IE : Verifier si bug*/
 }
 
+.margin-auto{margin-left:auto;margin-right:auto;}
+
+.clear{clear:both;}
+
+.block{display:block;}
+
 .hide{display:none;}
 
 ul, ol {list-style: none;}
 
 header a, footer a{color: currentcolor; text-decoration:none;}
 
-main a {color: rgba(0,0,0,0.5); font-weight: bold; text-decoration:none;}
+main a {color: #2E2E2E; font-weight: bold; text-decoration:none;}
 
 /*débug*/
 .red {background-color:Tomato;}
@@ -79,10 +79,14 @@ button:focus {outline:0;}
 	
 	padding: 0.8em 1em;
 	margin:1em auto;
+	display:block;
 	
 }
 
 .active{ background-color:#2e2e2e !important; color:white !important; }
+
+.bk-cover{background-position:center; background-repeat: no-repeat; background-size: cover;}
+}
 
 /* ///////////////////////////////////////////////////////////////////////////
 	HEADER
@@ -92,7 +96,7 @@ header {
 	
 	width: 100%;
 	position: relative;
-	z-index: 1;
+	z-index: 2;
 	
 }
 
@@ -182,8 +186,7 @@ header #search-form button{
 
 }
 
-/*NAVIGATION ////////////////////////// */
-
+/*NAVIGATION ----------------- */
 
 /* Dimension du bloc de navition : Fullsize */
 header #nav-block {
@@ -204,7 +207,7 @@ header #main-nav {
 
 }
 
-/* MENU PRINCIPAL - NON MOBILE //////////////////////////////////// */
+/* MENU PRINCIPAL - NON MOBILE ----------------- */
 
 header #main-nav ul {
 	
@@ -241,7 +244,7 @@ header #main-nav ul #booking a, header #main-nav ul #cart a{
 	font-weight: bold;
 }
 
-/* DROPDOWN MENU //////////////////////////////////// */
+/* DROPDOWN MENU  ----------------- */
 
 /*Bloc LI*/
 header #main-nav .dropdown{
@@ -394,7 +397,7 @@ header #main-nav .mobile-only #search-mobile input {
 	text-align: center;
 }
 
-header         #main-nav .mobile-only #search-mobile button {
+header  #main-nav .mobile-only #search-mobile button {
 	
 	height: 40px;
 	background-color: white;
@@ -438,9 +441,24 @@ p {
 }
 
 li p {
-	
-	margin-top:	0.5em	;
-	
+	margin-top:	0.5em;
+}
+
+.legal p{margin:0.8em auto;}
+.legal h2, .legal h3{margin-top:1em;margin-bottom:0.75em;}
+
+.h-line-black {
+
+    border-bottom: 1px solid #2E2E2E;
+    width: 50%;
+    margin-bottom: 0.5em;
+}
+
+.h-line-white {
+
+    border-bottom: 1px solid white;
+    width: 50%;
+    margin-bottom: 0.5em;
 }
 
 .text-block ul, .text-block ol{
@@ -496,31 +514,29 @@ li p {
 .b-grey {background-color: rgba(0,0,0,0.5);}
 .b-black{background-color: #2e2e2e; color: white;}
 .b-white {background-color: white; color: #2e2e2e; }
-
 /* ///////////////////////////////////////////////////////////////////////////
-	ACCUEIL
+	CONTENU
 //////////////////////////////////////////////////////////////////////////////*/
 
+/* ÉLÉMENTS PARTAGÉS	////////////////////////////////////////////////*/
+
 main .top-banner {
-    width: 100%;
-    height: 250px;
-    overflow: hidden;
-    text-align: center;
-		border-bottom: 5px solid #2e2e2e;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  text-align: center;
+  border-bottom: 5px solid #2e2e2e;
+  position: relative;
+	/*Background options*/
+	background-position: center;
+	background-size: cover;
 }
 
 main .top-banner img {
   margin: auto;
 	display:block;
   width: 100%;
-	
-}
-
-main .block-image{
-	
-	overflow: hidden;
-  height: auto;
-	
+  position: absolute;
 }
 
 .swipe {
@@ -528,24 +544,37 @@ main .block-image{
   visibility: hidden;
   position: relative;
 }
-
 .swipe-wrap {
   overflow: hidden;
   position: relative;
 }
-
-.item-container .swipe-wrap img {
-
-	position:relative;
-
-
+.swipe-wrap > img {
+  float:left;
+  width:100%;
+  position: relative;
 }
+
 
 .swipe-wrap > div {
   float: left;
   width: 100%;
   position: relative;
 }
+
+main .top-intro{
+
+	padding-top: 3em;
+	padding-bottom: 3em;
+	border-bottom: 5px solid #2e2e2e;
+}
+
+main .top-intro h1{
+
+	text-transform:uppercase;
+
+}
+
+.top-intro .stars i{margin: 0.5em 0.75em;}
 
 
 .slider {
@@ -630,7 +659,21 @@ main .block-image{
 	
 }
 
-/* CHAMBRES RESTAURANT SPA*/
+main .image-top img{
+	
+	width:100%;
+	height:auto;
+	border-bottom: 0.5em solid #2e2e2e;
+}
+
+
+main .intro-text{
+	
+	margin: 3em auto;
+}
+
+
+/* DISPLAY STYLE NARCISSE BLANC	////////////////////////////////////////////////*/
 
 main #services{
 	
@@ -807,36 +850,20 @@ main .quote-mark{
 	opacity: 0.25;
 }
 
-/* ///////////////////////////////////////////////////////////////////////////
-	PRESENTATION CHAMBRES / SPA / RESTAU
-//////////////////////////////////////////////////////////////////////////////*/
-main .item-container{
-	
-  height:600px;
-	border-top: 0.25em solid #2E2E2E;
-	border-bottom: 0.25em solid #2E2E2E;
-	
-}
+/* CHAMBRES & SPA	////////////////////////////////////////////////*/
 
-main .item-container:first-child{
-	border-bottom: 0.25em solid #2E2E2E;
-	border-top:none;
-}
+main .item-container{border-bottom: 0.5em solid #2E2E2E;justify-content: space-evenly;/*! align-items: center; */}
 
-main .item-container:last-child{
-	border-top: 0.25em solid #2E2E2E;
-	border-bottom:none;
-}
+main .item-container:last-child{border:none;/*! justify-content: stretch; */}
 
-main 
-
+/*Obsolete ?*/
 main .item-container .block-image{
 	
 	overflow:hidden;
 	flex: 5; -moz-flex: 5; -o-flex: 5; -webkit-flex: 5;
 	
 }
-
+	
 main .description p{
 	
 	margin: 0.8em auto;
@@ -872,18 +899,33 @@ main .item-container div:last-child{
 	justify-content: space-between;
 }
 
+main .item-container .img-block {
+	
+	overflow:hidden;
+	/*! flex: 1.3; */ /*! -moz-flex: 1.3; */ /*! -o-flex: 1.3; */ -webkit-flex: 1.3;
+	align-items: center;
+}
+
+main .item-container .img-block img{height: 100%;}
 
 main .description{
 	
-	flex: 4; -moz-flex: 4; -o-flex: 4; -webkit-flex: 4;
+	flex: 0 1 50%; 
+		-moz-flex:  0 1 50%; 
+		-o-flex:  0 1 50%; 
+		-webkit-flex:  0 1 50%;
 	
+	padding: 0.75em 2em;
 }
 
 main ul.share-buttons{
   list-style: none;
   padding: 0;
   margin: 0;
-  flex: 1; -moz-flex: 1; -o-flex: 1; -webkit-flex: 1;
+  flex: 0 1 50%; 
+	 -moz-flex: 0 1 50%; 
+	 -o-flex: 0 1 50%; 
+	 -webkit-flex: 0 1 50%;
   justify-content:space-evenly;
   margin-right: 1em;
   align-self: start;
@@ -918,67 +960,56 @@ main ul.share-buttons .sr-only{
   overflow: hidden;
 }
 
-main .image-top img{
-	
-	width:100%;
-	height:auto;
-	
-	border-bottom: 0.5em solid #2e2e2e;
-}
-
-
-main .intro-text{
-	
-	margin: 3em auto;
-}
-
-main .article-container{
-	
-	flex-direction:row;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: flex-start;
-	
-}
-
-main .article{
-	
-	padding: 3%;
-	flex-basis:27%;
-	box-shadow: 0px 0px 2px rgba(0,0,0,0.25);
-	align-self: stretch;
-	
-}
-
-main .article img{
-	
-	width:100%;
-	height: auto;
-	
-}
-
-main .article p {height: 8em;}
-
-main .article .standard-btn{
-	
+main .description .standard-btn{
 	display: block;
+	margin-left: auto;
 	text-align: center;
+	/*! width: 30%; */
 }
+
 
 /*MENUS RESTAURANT /////////////////////////////////////////////////////////////*/
 
-main .menu-selectors button{ color : rgba(46,46,46, 0.5); font-weight:bold; background:transparent;}
-main .menu-selectors button:hover{ box-shadow:none;}
-
-main .menu-selectors .selected {
+main .portrait{
 	
-     color : rgba(46,46,46, 1);
-	 border-bottom: 2px solid #2E2E2E;
+	width:20%;
+	height:20%;
+	margin: 1em auto;
 	
 }
 
-main .block-menu{font-size:1.3em; font-weight:300; background-color:white; width:100%;}
+main .menu-selectors button{ /*! color : rgba(46,46,46, 0.5); */ font-weight:bold; /*! background:transparent; */}
+main .menu-selectors button:hover{ /*! box-shadow:none; */}
 
+main .menu-selectors .selected {
+	
+   color : rgba(46,46,46, 1);
+	 background-color: white;
+	 border: 1px solid rgba(46,46,46,0.25);
+	
+}
+
+main .block-menu{
+	font-size:1.3em; 
+	font-weight:300; 
+	background-color:white; 
+	width:100%; 
+}
+
+main .menu-cover{
+	
+	height:200px;
+	background-position: center;
+	background-size:cover;
+	background-repeat: no-repeat;
+	border-top: 1px solid #2E2E2E;
+	border-bottom: 1px solid #2E2E2E;
+	
+}
+
+main .block-menu h3{margin: 1em auto;}
+main .block-menu h3 span{display:block;
+margin: 0.5em auto; font-size:0.8em; font-weight:light;}
 main .price{font-size:1.1em; font-weight:bold; margin-top: 1em; display:block;}
 
 main #brasserie .price{font-size: 1.5em;}
@@ -988,105 +1019,296 @@ main .step{flex:5;}
 main .food-img{
 	
 	overflow:hidden; 
-	padding:1em 0;
 	flex:2;
 }
-
-main .food-img > div{background-position:center; background-repeat:no-repeat; width:100%; height:100%;}
-
-main .brasserie-img:nth-child(1){background-image:url('../img/photos/parimis_hotel_brasserie_1.jpg');}
-main .brasserie-img:nth-child(2){background-image:url('../img/photos/parimis_hotel_brasserie_2.jpg');}
-main .brasserie-img:nth-child(3){background-image:url('../img/photos/parimis_hotel_brasserie_3.jpg');}
-
-main .degustation-img:nth-child(1){background-image:url('../img/photos/parimis_hotel_degustation_1.jpg');}
-main .degustation-img:nth-child(2){background-image:url('../img/photos/parimis_hotel_degustation_2.jpg');}
-main .degustation-img:nth-child(3){background-image:url('../img/photos/parimis_hotel_degustation_3.jpg');}
-
-main .restaurant-img:nth-child(1){background-image:url('../img/photos/parimis_hotel_restaurant_1.jpg');}
-main .restaurant-img:nth-child(2){background-image:url('../img/photos/parimis_hotel_restaurant_2.jpg');}
-main .restaurant-img:nth-child(3){background-image:url('../img/photos/parimis_hotel_restaurant_3.jpg');}
-
+main .food-img > div{background-position:center; background-repeat:no-repeat; background-size:cover; width:100%; height:100%;}
 
 main .block-menu .flex{
-	
 	flex-flow: row wrap;
-	justify-content:space-around;
+	justify-content:space-between;
+}
+
+
+main .block-menu .food-row{
+	
+	border-top: 2px solid #2E2E2E;
 	
 }
 
-/* CONTACT ////////////////////////////////*/
+
+main .block-menu .download-row {
+
+	margin-bottom: 2em;
+}
+
+main .block-menu .download-row a {
+
+	display:inline-block;
+	width:200px;
+	margin:1em;
+
+}
+
+main .block-menu .download-row a i {
+
+	margin-left:0.8em;
+	
+}
+
+
+main .block-menu .dessert .flex:last-child{
+	flex-flow: row wrap;
+	justify-content:space-between;
+	align-items: stretch;
+	height:200px;
+}
+
+main .dessert .degustation-img {flex:1;}
+#brasserie, #degustation, #restaurant{transition: opacity 0.1s ease-in-out;}
+main .fadeSwipe{opacity:0;}
+
+
+/* HOTEL /////////////////////////////////////////////////////////////*/
+
+main .hotel-section{
+
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+main .hotel-section h2{
+
+	padding-top: 0.5em;
+
+}
+
+main .hotel-section .gmap{
+	
+	width:100%;
+	height:100%;
+}
+
+main .hotel-section i{font-size:1.2em; margin: 0.5em;}
+
+main .hotel-section > div{flex:1;}
+
+main .hotel-section .standard-btn{
+	
+	width:50%;
+	text-align: center;
+	
+	text-transform: uppercase;
+}
+
+main .transports{width:1.2em; height:auto; margin-right:0.5em;top: 0.25em;position: relative;}
+
+main .hotel-section .h-line-white,
+main .hotel-section .h-line-black{
+	margin-bottom: 1em; 
+	margin-top:1em;
+}
+
+main .news{
+	
+	overflow-y: auto;
+}
+
+main #news > div:first-child{
+	
+	border-right:1px solid rgba(46,46,46,0.1);
+	
+}
+
+main #news > div:last-child{
+	
+	border-left:1px solid rgba(46,46,46,0.1);
+	
+}
+
+
+main .article-container{
+	
+	flex-direction: column;
+	justify-content:center;
+	align-items:center;
+	overflow-x: hidden;
+	margin: auto;
+}
+
+main .article{
+	
+	width:99%;
+	padding:0;
+	margin-bottom: 0.8em;
+	flex-direction: row;
+	border: rgba(46,46,46,0.1) solid 1px;
+	box-shadow: 2px 2px 2px rgba(46,46,46,0.25);
+}
+
+main .article_img{
+	
+	flex: 0.5;
+  
+}
+
+main .article-txt{
+	
+	flex:1;
+	padding: 0.5em 0 0.5em 1em;
+	
+}
+
+main .article-txt .standard-btn{
+	
+	margin: 2em 0 0 0;
+	font-size: 0.95em;
+}
+
+main .article-txt h3{margin:0;}
+
+
+main .events{
+	
+	overflow:hidden;
+	margin:1em;
+	border: rgba(46,46,46,0.1) solid 1px;
+	box-shadow: 2px 2px 2px rgba(46,46,46,0.25);
+}
+
+main .event-img{
+	
+	margin: 1em auto;
+	width:100%;
+	height:21em;
+	border: rgba(46,46,46,0.5) solid 1px;
+}
+
+
+main .avis-container{
+	
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items:center;
+	
+	padding: 1.5em;
+}
+
+main .avis{
+	
+	padding:1%;
+	flex-basis: 48%;
+
+}
+
+main .avis_portrait,
+main .presse_logo{
+	
+	overflow:hidden;
+	align-self: center;
+	height:150px;
+	background-size: contain;
+	flex-shrink: 0;
+	width: 90px;
+	flex-grow: 0;
+}
+
+main .avis-txt{
+	
+	padding: 1em;
+	font-size: 1.1em;
+	align-self: center;
+	flex: 1;
+}
+
+main .avis-txt a{
+
+	text-decoration: underline;
+ 
+}
+	
+	
+	
+}
+
+
+/* CONTACT /////////////////////////////////////////////////////////////*/
 
 
 main .contact-block{
 	
 	flex-direction: row;
 	justify-content: space-between;
+	border-top: 5px solid white;
+	border-bottom: 5px solid white;
+}
+
+
+main .contact-block p {
+
+    font-size: 1.1em;
+
 }
 
 main .contact-right{
 	
 	 flex-direction: column;
 	 align-items: center;
-	 justify-content: center;
-	 flex: 1.2;
+	 justify-content: stretch;
+	 flex: 1;
 }
 
 main .contact-right section{
-	flex:2;
-	padding: 1em;
+
+	padding: 1em 1em 4em 1em;
 	align-self: stretch;
-}
-
-main .contact-right section:first-child{
-	flex:1;
-	background-color: tomato;
-}
-
-main .contact-right section:last-child{
 	
-	flex:1.5;
-	background-color: yellowgreen;
-  
+	
 }
 
-main #contact-form{
-
-  flex:2;
+main .contact-form,
+main .reservation-form {
+	
+	flex:1;
 	color:white;
 	padding: 1em;
 	background-color: #2e2e2e;
 }
 
-main #contact-form > div{
+
+main .contact-form > div,
+main .reservation-form  > div{
 
 	width:86%;
 	margin:auto;
-	padding: 1em;
-	/*! text-align: center; */
 }
 
-main #contact-form form{
+main .contact-form form,
+main .reservation-form form{
   
 	margin:auto;
 	padding: 1em
 
 }
 
-main #contact-form .form-components{
+main .contact-form .form-components,
+main .reservation-form .form-components{
 	width: 90%;
 	margin-left:auto; margin-right: auto;
 	display:block;
 	font-family: 'Montserrat', sans-serif;
 }
 
-main #contact-form label{
+main .contact-form label,
+main .reservation-form label{
 	
 	margin:1.5em auto 0.75em auto;
 	
 }
 
-main #contact-form input,
-main #contact-form textarea{
+main .contact-form input,
+main .contact-form textarea,
+main .reservation-form input,
+main .reservation-form textarea {
 	
 	font-size: 1.1em;
 	border:none;
@@ -1098,7 +1320,8 @@ main #contact-form textarea{
 	background-color: #222222
 }
 
-main #contact-form select{
+main .contact-form select,
+main .reservation-form  select{
 	
 	padding: 5px;
 	border:none;
@@ -1107,32 +1330,44 @@ main #contact-form select{
 
 }
 
-
-
 .select-style select:focus {
     outline: none;
 }
 
-main #contact-form .mandatory{
+main .mandatory{
 	
 	margin-left: 0.2em;
 	color: tomato;
 }
 
-main #careers a{
+main #adress-block p{font-size:1.4em;}
+
+main .contact-right-img{
 	
-	display:block;
-	font-size: 1.2em;
-	margin: 0.5em auto;
-	
+	background-image: url('https://placeimg.com/500/500/arch');
+	flex: 1;
+	width: 100%;
 }
 
+main #careers a{
+	
+	color: white;
+	font-size: 1.1em;
+	text-decoration: underline;
+	display:block;
+	margin-top: 1em;	
+}
+
+
+main #careers i, main #adress-block i{margin-right: 0.75em;}
 
 
 /* ///////////////////////////////////////////////////////////////////////////
 	FOOTER
 //////////////////////////////////////////////////////////////////////////////*/
  
+footer{margin-top: 1em;}
+
 footer .global-container {
 
 	background-color: #2e2e2e;
@@ -1273,8 +1508,8 @@ footer #contact #phone-contact span {
 /*grayscale gmap*/
 .adress-gmap iframe {
 	
-	width:100%;
-	height: 100%;
+width:100%;
+height: 100%;
   filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+ */
   filter: gray; /* IE6-9 */
 		-webkit-filter: grayscale(99%); /* Chrome 19+ & Safari 6+ */
@@ -1393,17 +1628,19 @@ footer #credits{
 }
 
 
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 /* ///////////////////////////////////////////////////////////////////////////
-	CONTENU
-//////////////////////////////////////////////////////////////////////////////*/
-
-
-/* ///////////////////////////////////////////////////////////////////////////
+	
+	
 	MEDIA QUERIES
+	
+	
 //////////////////////////////////////////////////////////////////////////////*/
 
-@media screen and (max-width: 1050px){
+
+/* LARGE SCREENS */
+@media screen and (max-width: 1199.98px){
 	
 	.global-container{
 		width:100%;
@@ -1413,7 +1650,7 @@ footer #credits{
 	
 	.sizer{width: 100%;}
 
-	/*HEADER*/
+	/*HEADER 	////////////////////////////////////////////////////////*/
 	header #main-nav ul{
 	
 		position: relative;
@@ -1436,7 +1673,7 @@ footer #credits{
 	}
 
 	
-	/*FOOTER*/
+	/*FOOTER	////////////////////////////////////////////////////////*/
 	
 	.footer-row-1{
 	
@@ -1470,7 +1707,7 @@ footer #credits{
 	
 	/*contact*/
 	
-	.adress-gmap iframe {
+	footer .adress-gmap iframe {
 	
 	width:90%;
 	height: 100%;
@@ -1478,8 +1715,6 @@ footer #credits{
 	
 	}
 
-
-	
 	footer #contact div:nth-child(2){
 		
 		font-size: 1.2em;	
@@ -1523,9 +1758,6 @@ footer #credits{
 		
 	}
 	
-	
-	/*Liens sociaux*/
-	
 	/*Lien Réseaux sociaux*/
 	footer #follow .social-links{
 		
@@ -1550,7 +1782,9 @@ footer #credits{
 		color: white;
 		opacity: 100;
 	}
-
+	
+	/*CONTENU	////////////////////////////////////////////////////////*/
+	
 	main #testimonies .quote-mark:first-child{margin-left:0.2em}
 	main #testimonies .quote-mark:last-child{margin-right:0.2em}
 	
@@ -1562,25 +1796,16 @@ footer #credits{
 
 	}
 
-
  
 }
 
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
 /* TABLETTE / ENTRE DEUX //////////////////*/
-@media screen and (max-width: 850px)
+@media screen and (max-width: 991.98px)
 {
 	
-	
-	/* TYPOGRAPHIE ////////////////////////////////// */
-	
-	.justified{text-align: center;}
-	
-	
-	/* GÉNÉRAL ////////////////////////////////// */
-	
-	
-  main .top-banner {height: 150px;}
-
+	/*GÉNÉRAL	////////////////////////////////////////////////////////*/		
 	main .standard-btn{
 		
 		margin: 2em auto 1em;
@@ -1588,7 +1813,11 @@ footer #credits{
 		width:90%;
 	}
 	
-	/*MENU MOBILE////////////////////////////////////////////////////*/
+	.h-line-black, .h-line-white {margin:1em auto; width:20%;}
+	
+	/*HEADER 	////////////////////////////////////////////////////////*/
+	
+	/*MENU MOBILE /////*/
 	
 	/*Bloc général*/
 	header #nav-block {
@@ -1644,16 +1873,14 @@ footer #credits{
 	}
 	
 		
-	/*"boutons"*/	
-	
+	/*bloc de droite en face du logo*/	
 	header .options{
 	
 		flex-direction: row;
-		justify-content: center;
+		justify-content: flex-end;
 		align-items: center;
-		
-		width: 100%;
-		
+		right: 50px;
+		position: relative;
 	}
 	
 	header .options .navBtn{
@@ -1707,7 +1934,11 @@ footer #credits{
 	
 	header #main-nav .mobile-only {display: block;}
 	
-	/*ACCUEIL /////////////////////////////////////// */
+	/* TYPOGRAPHIE	 ////////////////////////////////// */
+	
+	.justified{text-align: center;}
+
+	/*ACCUEIL	 /////////////////////////////////////// */
 	
 	main #services{height:auto;}
 	
@@ -1774,25 +2005,19 @@ footer #credits{
 
 	/*PRESENTATION CHAMBRES RESTAU SPA*/
 	
-	.item-container .swipe-wrap{
-	
-		/*! height:300px; */
-		
-	}
-	
-	.item-container .swipe-wrap img{
-	
-		width: 100%;	
-		height: 50%;
-	}
-	
-	main .item-container{height:auto;/*! border-bottom: 0.3em solid #2E2E2E; *//*! border-top: 0.3em solid #2E2E2E; */}
+	main .item-container{height:auto}
 	
 	main .item-container{
 	   flex-direction: column;
 		  -webkit-flex-direction: column;
 		
 		  font-size: 1.2em;
+	}
+	
+	main .item-container .img-block img{
+		
+		width:100%;
+		
 	}
 	
 	main .description p{
@@ -1812,6 +2037,7 @@ footer #credits{
 		 display:none;
 
 	}
+	
 	
 
 	main .description ul{
@@ -1850,48 +2076,63 @@ footer #credits{
 		flex: 1; -moz-flex: 1; -o-flex: 1; -webkit-flex: 1;
 
 	}
+
 	
-	main .article-container{
+	main .hotel-section{
 		
-		flex-direction: column;
+		flex-direction:column;
+		padding:0.5em;
 		
 	}
+	main .events{width:80%; margin:0 auto;}
+	main .event-img{width: 100% ; height:auto;}
+	main .article{/*! flex-direction: column; */width: 95%;margin: 1em auto;}
+	main .article-txt{padding:1em;margin: auto;}
+	main .article-img{position:static;flex: 0.4;}
+  main .article-img img{position: static;}
+	main .avis-container{flex-direction: column;}
+	main .avis{width:100%;}
 	
-	main .article{
+	main .hotel-section .standard-btn{width:100%;margin:2em auto auto auto; padding:1em 0; font-size: 0.9em;}
+
+
+	
+	main #map {
 		
-	font-size: 1.5em;
-	padding: 1em;
-	flex-basis:auto;
-	box-shadow:none;
-	border-bottom: 2px solid #2e2e2e;
-	border-top: 2px solid #2e2e2e;	
-	
-  }
-	
-	/*RESTAURANT ///////////////////////////////////////*/
+		height:300px;
+		
+	}
 	
 	main .menu-selectors{display:block; text-align:center; width:100%;}
 	main .menu-selectors .standard-btn{margin: auto; width: 100%; padding: 2em; margin-bottom: 0.1em;}
 	
 	main .block-menu .flex{
-		
 		flex-direction:column;
-	
 	}
+	
+	main .dessert p span{display:block; margin-top: 0.5em;}
 	
 	main .food-img > div{height:200px;}
 	
 	/*CONTACT ///////////////////////////////////////*/
 	
 	main .contact-block{display:block; font-size:1.1em;}
-	main #contact-form .form-components{width: 95%;}
+	main .contact-form .form-components{width: 95%;}
 	
-/* SMARTPHONE//////////////////*/
-@media screen and (max-width: 650px)
+	main #careers a {margin: 2em auto;}
+	
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/	
+/* SMARTPHONE*/
+@media screen and (max-width: 575.98px)
 {
 	
-	/* HEADER ///////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////*/
+	/* GÉNÉRAL ////////////////////////////////////////////////////////*/
+	
+	main .top-banner img {
+    width: auto;
+  }
+	
+	/* HEADER	////////////////////////////////////////////////////////*/
 	
 	.header-top{width:100%;}
 	
@@ -1904,8 +2145,7 @@ footer #credits{
 	
 	}
 	
-	/* CONTENU ///////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////*/
+	/* CONTENU	////////////////////////////////////////////////////////*/
 	
   main .slider .accroche {
 		position:static;
@@ -1918,11 +2158,18 @@ footer #credits{
 	#testimonies{font-size:0.7em;}
 	#testimonies p{font-weight:normal;}
 	
-		
-	/* FOOTER ///////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////*/
+	main .block-menu .dessert .flex:last-child{flex-direction: column;}
 	
+	main #careers a span{display:none;}
+	main #careers a {display:inline-block; width: 30%; text-align: center; font-size:2em; margin:0.75em auto;}
+	
+	main .contact-right-img{display:none;}
+		
+	
+	main .article-img img{width: 100%;}
 
+	/* FOOTER	////////////////////////////////////////////////////////*/
+	
 	footer .footer-container{
 		
 		display: block;

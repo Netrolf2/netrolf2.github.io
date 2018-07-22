@@ -1,8 +1,12 @@
-button:active span {
+
+button:active span{
+	
 	display: inline-block;
+
 }
 
-button:active span, button:active i {
+button:active span, button:active i{
+	
 	transition-duration: 0.2s;
 	transform: scale(0.95);
 	color: grey;
@@ -14,76 +18,35 @@ button:active span, button:active i {
 ///////////////////////////////////////////////////////////////////// */
 
 @keyframes fadeIn {
-	0% {
-		opacity: 0%;
-	}
-
-	100% {
-		opacity: 100%;
-	}
+  0% { opacity: 0%; }
+  100% { opacity: 100%; }
 }
 
 @keyframes quoteRoll {
-	0% {
-		opacity: 0;
-	}
-
-	15% {
-		opacity: 1;
-	}
-
-	85% {
-		opacity: 1;
-	}
-
-	95% {
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 0;
-	}
+	0% { opacity: 0; }
+	15% { opacity: 1; }
+	85% { opacity: 1; }
+	95% { opacity: 0;}
+	100% { opacity: 0;}
 }
 
-.fadeIn {
-	animation: 3s fadeIn linear;
-}
-
+.fadeIn{ animation: 3s fadeIn linear; }
+ 
 main .standard-btn:hover {
-	background-color: white;
+	
+	background-color:white;
 	color: #2e2e2e;
 	box-shadow: 2px 2px 2px rgba(46,46,46,0.10);
 }
+main .standard-btn{transition: 0.2s ease-in-out;font-size: medium;}
+main .standard-btn:active {transform: scale(0.95);}
 
-main .standard-btn {
-	transition: 0.2s ease-in-out;
-	font-size: medium;
-}
+main .icons-animation{transition: 0.2s ease-in-out;}
+main .icons-animation:hover {transform: scale(1.1);}
+main .icons-animation:active {transform: scale(0.9);}
 
-main .standard-btn:active {
-	transform: scale(0.95);
-}
-
-main .icons-animation {
-	transition: 0.2s ease-in-out;
-}
-
-main .icons-animation:hover {
-	transform: scale(1.1);
-}
-
-main .icons-animation:active {
-	transform: scale(0.9);
-}
-
-main .greyed {
-	opacity: 0.5;
-	transition: 0.1s ease-in-out;
-}
-
-main .greyed:hover {
-	opacity: 1;
-}
+main .greyed{opacity:0.5; transition: 0.1s ease-in-out;}
+main .greyed:hover {opacity:1;}
 
 /* HEADER
 
@@ -92,61 +55,57 @@ main .greyed:hover {
 
 /* ANIMATION NAV ----------- */
 
-header #main-nav ul li a {
-	transition-duration: 0.2s;
-}
+header #main-nav ul li a{transition-duration : 0.2s;}
 
 header #main-nav ul li a:hover {
+	
 	color: white;
-	background-color: #2e2e2e;
+	background-color: #2e2e2e;	
 }
 
 /*Animations au clic*/
 
-header #main-nav a span {
+header #main-nav a span{
+	
 	display: inline-block;
 	transform: scale(1);
-	transition-duration: 0.1s;
+	transition-duration : 0.1s;
 }
 
-header #main-nav a:active span {
+header #main-nav a:active span{
+	
 	transform: scale(0.90);
 	color: grey;
 }
 
+
 header #main-nav ul #cart a:hover, header #main-nav ul #booking a:hover {
+	
 	color: #2e2e2e;
 	background-color: white;
-	transition-duration: 0.2s;
+	transition-duration : 0.2s;
 }
 
-header .options nav a .flag {
-	transition-duration: 0.1s;
-}
+header .options nav a .flag{transition-duration : 0.1s;}
 
-header .options nav a .flag:hover {
-	filter: grayscale(0%);
-}
+header .options nav a .flag:hover{filter:grayscale(0%);}
 
 /* DROPDOWN
  --- */
 
 /*Conditions initiales du contenu dropdown*/
-header #main-nav .dropdown .dropdown-content {
-	visibility: hidden;
+header #main-nav .dropdown .dropdown-content{
+
+	visibility:hidden;
 	opacity: 0;
 	transform: translateY(-2em);
 	z-index: 1;
-	transition-duration: 0.5s;
- 			/* vendorless fallback */
-	-o-transition-duration: 0.5s;
- 		/* opera */
-	-ms-transition-duration: 0.5s;
- 		/* IE 10 */
-	-moz-transition-duration: 0.5s;
- 	/* Firefox */
-	-webkit-transition-duration: 0.5s;
-	/*safari and chrome */
+	
+	transition-duration: 0.5s; 			/* vendorless fallback */
+    -o-transition-duration: 0.5s; 		/* opera */
+    -ms-transition-duration: 0.5s; 		/* IE 10 */
+    -moz-transition-duration: 0.5s; 	/* Firefox */
+    -webkit-transition-duration: 0.5s;	/*safari and chrome */
 }
 
 /*Animation d'apparition*/
@@ -192,7 +151,6 @@ header #main-nav .dropdown .dropdown-content li a:hover {
 	/* ACCUEIL
 
 	///////////////////////////////////////////////////////////////////// */
-
 
 	main #services-top .fw{
 		
@@ -355,47 +313,65 @@ footer #follow .social-links li a:active{
 
 
 	/*Animation d'apparition*/
-header #main-nav .dropdown:hover .dropdown-content,
+	header #main-nav .dropdown:hover .dropdown-content,
 	header #main-nav .dropdown:focus .dropdown-content,
 	header #main-nav .dropdown:focus-within .dropdown-content {
-	visibility: visible;
-	z-index: 1;
-	opacity: 1;
-	transition-delay: 0s, 0.0s, 0.2s;
-	transform: translateY(0);
-	background-color: white;
-}
+		
+		visibility: visible;
+		z-index: 1;
+		opacity: 1;
+		
+		transition-delay: 0s, 0.0s, 0.2s;
+		
+		transform: translateY(0);
+		
+		background-color: white;
+	}
 
 	/*Animation du lien principal lors du survol*/
-header #main-nav .dropdown:hover .dropdown-btn {
-	transition-duration: 0;
-	background-color: transparent;
-	color: white;
-}
+	header #main-nav .dropdown:hover .dropdown-btn {
+		
+		transition-duration : 0;
+		background-color: transparent;
+		color: white;
+	}
 
 	/*Animation des liens du dropdown*/
-header #main-nav .dropdown .dropdown-content  li a:hover {
-	transition-duration: 0.2s;
-	background-color: transparent;
-	color: rgba(256,256,256, 0.8);
-}
+	header #main-nav .dropdown .dropdown-content  li a:hover {
+	
+		transition-duration : 0.2s;
+		background-color: transparent;
+		color: rgba(256,256,256, 0.8);
+	}
 	
 	/*Animation des liens du dropdown*/
-header #main-nav .dropdown .dropdown-content  li a:active {
-	transform: scale(0.8);
-	text-shadow: 0px 0px 10px white;
-}
+	header #main-nav .dropdown .dropdown-content  li a:active {
+	
+		transform: scale(0.8);
+		text-shadow: 0px 0px 10px white;
+	}
 	
 	/*Animation des liens du dropdown*/
-header #main-nav .dropdown .dropdown-content  li a:active {
-	transform: scale(0.8);
-	text-shadow: 0px 0px 10px white;
-}
-
-header .navBtn:active {
-	transform: scale(0.9);
-	transistion-duration: 0.5s;
-}
+	header #main-nav .dropdown .dropdown-content  li a:active {
+	
+		transform: scale(0.8);
+		text-shadow: 0px 0px 10px white;
+	}
+	
+	
+	header .navBtn:active {
+		
+		transform: scale(0.9);
+		transistion-duration: 0.5s;
+	}
 
 	
 }
+
+
+
+
+
+
+
+
