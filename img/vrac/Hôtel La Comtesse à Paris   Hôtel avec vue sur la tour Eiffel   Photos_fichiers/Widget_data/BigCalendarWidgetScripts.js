@@ -1,0 +1,1 @@
+(function(b){var a;function c(){b.parent.postMessage("calendarOpen","*")}b.onload=function(){a=document.getElementById("button-checkin");if(document.addEventListener){a.addEventListener("click",c)}else{if(document.attachEvent){a.attachEvent("onclick",c)}}}})(window);

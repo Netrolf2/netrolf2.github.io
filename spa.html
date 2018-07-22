@@ -157,17 +157,17 @@
 							<a href="reservation.html"><span>Réserver</span></a>
 							<fieldset class="dropdown-content calendar">
 								<div>
-									<label class="normal" for="start">Arrivée</label>
-									<input type="date" id="start" name="booking" value="" min="" max="2020-12-31" />
+									<label class="normal" for="booking-start">Arrivée</label>
+									<input type="date" id="start" name="booking-start" value="" min="" max="2020-12-31" />
 								</div>
 
 								<div>
-									<label class="normal" for="end">Départ</label>
-									<input type="date" id="end" name="booking" value="" min="" max="2022-12-31"/>
+									<label class="normal" for="booking-end">Départ</label>
+									<input type="date" id="end" name="booking-end" value="" min="" max="2022-12-31"/>
 								</div>
 								
 								<div>
-									<label class="normal" for="end">Chambre</label>
+									<label class="normal" for="chambre">Chambre</label>
 									<select id="chambre">
 										<option value="classique" selected>Classique</option>
 										<option value="confort">Confort</option>
@@ -177,7 +177,7 @@
 								</div>
 								
 								<div>
-									<label class="normal" for="end">Nombre d'occupants</label>
+									<label class="normal" for="occupants">Nombre d'occupants</label>
 									<select id="occupants">
 										<option value="1" selected>1</option>
 										<option value="2">2</option>
@@ -216,10 +216,21 @@
 	<main>
 		<div class="global-container fadeIn">
 		
+			<!-- TOP BANNER -->
+			<section class="top-banner" title="façade de l'hotel parisien parimis" style="background-image: url('img/photos/parimis_hotel_spa_top.jpg');"></section>
+			
+			<!-- ROW HISTORIQUE -->
+			<section class="top-intro text-block centered b-white">
+				<h1>Le Spa</h1>
+				<div class="stars"><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div>
+				<p>Offrez vous un moment de détente hors du temps au sein de notre Spa qui réunit une piscine intérieure chauffée, une salle de sport, des jacuzzi ainsi que des hammam et sauna.</p> 
+				<p>Le complexe est accessible que vous soyez résident ou non et met à votre disposition un éventail d'offre afin de profiter du moment présent, dans une bulle de confort.</p>
+			</section>
+		
 			<!-- DETENTE -->
 			<div id="detente" class="item-container flex">
 				<!-- BLOC IMAGE A GAUCHE -->
-				<div title="parimis hotel soin " class="flex img-block"><img src="https://placeimg.com/600/480/people" alt="parimis hotel chambre confort 1" ></div>
+				<div title="parimis hotel soin " class="flex img-block"><img src="img/photos/parimis_hotel_soin_detente.jpg" alt="parimis hotel femme dans la piscine" ></div>
 				<!-- DESCRIPTION A DROITE -->
 				<div class="description text-block justified">
 					<h1>Soin Détente</h1>
@@ -246,7 +257,7 @@
 			<!-- DÉCOUVERTE -->
 			<div id="detente" class="item-container flex">
 				<!-- BLOC IMAGE A GAUCHE -->
-				<div title="parimis hotel soin " class="flex img-block"><img src="https://placeimg.com/600/480/people" alt="parimis hotel chambre confort 1" ></div>
+				<div title="parimis hotel soin " class="flex img-block"><img src="img/photos/parimis_hotel_soin_decouverte.jpg" alt="parimis hotel serviette pliée" ></div>
 				<!-- DESCRIPTION A DROITE -->
 				<div class="description text-block justified">
 					<h1>Offre Découverte</h1>
@@ -275,7 +286,7 @@
 			<!-- RELAXANT -->
 			<div id="detente" class="item-container flex">
 				<!-- BLOC IMAGE A GAUCHE -->
-				<div title="parimis hotel soin " class="flex img-block"><img src="https://placeimg.com/600/480/people" alt="parimis hotel chambre confort 1" ></div>
+				<div title="parimis hotel soin " class="flex img-block"><img src="img/photos/parimis_hotel_soin_relaxant.jpg" alt="parimis hotel chambre massage relaxant" ></div>
 				<!-- DESCRIPTION A DROITE -->
 				<div class="description text-block justified">
 					<h1>Soin Relaxant</h1>
@@ -298,9 +309,73 @@
 						  <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-google-plus-g fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
 						  <li><a href="mailto:?subject=&body=:%20https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><i class="fas fa-envelope fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
 					</ul>
-					<a class="standard-btn b-black" href="reservation.html">RÉSERVER</a></div>
 					<!-- BOUTON RESERVER -->
+					<a class="standard-btn b-black" href="reservation.html">RÉSERVER</a></div>
 					
+					
+				</div>
+			</div>
+			
+			<!-- Plaisir -->
+			<div id="detente" class="item-container flex">
+				<!-- BLOC IMAGE A GAUCHE -->
+				<div title="parimis hotel soin " class="flex img-block"><img src="img/photos/parimis_hotel_soin_plaisir.jpg" alt="parimis hotel massage kobido" ></div>
+				<!-- DESCRIPTION A DROITE -->
+				<div class="description text-block justified">
+					<h1>Soin Relaxant</h1>
+						<h1>Soin Plaisir</h1>
+						<hr>
+						<p>En plus de l'accès complet à nos installations de bien-être cette offre comprend un massage kobido de 60 minutes.</p>
+						<p class="bold">A propos :</p>
+						<p>D'origine japonaise, le massage kobido est une technique de massage doux et apaisant à une stimulation énergétique de différents points du visage. Ce massage redonne vitalité au visage, détente et légèreté au corps et à l’esprit.</p>
+						
+						<p class="bold ul-opener">Cette offre comprend<span> :</span></p>
+						<ul>
+							<li>Accès Piscine et Jacuzzi</li>
+							<li>Accès Hammam et Sauna</li>
+							<li>Un massage Kobido de 60 minutes.</li>
+						</ul>
+						<hr>
+					<!-- ICONE PARTAGE -->
+					<div class="flex"><ul class="share-buttons flex">
+						  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.parimis-hotel.eu&quote=" target="_blank" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&quote=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-facebook-f fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
+						  <li><a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fwww.parimis-hotel.eu&text=:%20https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-twitter fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
+						  <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-google-plus-g fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+						  <li><a href="mailto:?subject=&body=:%20https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><i class="fas fa-envelope fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+					</ul>
+					<!-- BOUTON RESERVER -->
+					<a class="standard-btn b-black" href="reservation.html">RÉSERVER</a></div>
+				</div>
+			</div>
+			
+			<!-- evasion -->
+			<div id="detente" class="item-container flex">
+				<!-- BLOC IMAGE A GAUCHE -->
+				<div title="parimis hotel soin " class="flex img-block"><img src="img/photos/parimis_hotel_soin_evasion.jpg" alt="parimis hotel massage kobido" ></div>
+				<!-- DESCRIPTION A DROITE -->
+				<div class="description text-block justified">
+					<h1>Soin Évasion</h1>
+						<hr>
+						<p>En plus de l'accès complet à nos installations de bien-être comprenant piscines, hammam et sauna, cette offre comprend un massage Ayurvédique à l'huile de sésame chaude de 90 minutes.</p>
+						<p class="bold">A propos :</p>
+						<p>D'origine indienne, ce massage permet de se réunifier, de se recentrer. Il est spécialement indiqué en cas de stress, de surmenage intellectuel et physique, de mal être. Il procure rapidement détente et bien être du corps et de l’esprit.</p>
+						
+						<p class="bold ul-opener">Cette offre comprend<span> :</span></p>
+						<ul>
+							<li>Accès Piscine et Jacuzzi</li>
+							<li>Accès Hammam et Sauna</li>
+							<li>Un massage Ayurvédique de 90 minutes.</li>
+						</ul>
+						<hr>
+					<!-- ICONE PARTAGE -->
+					<div class="flex"><ul class="share-buttons flex">
+						  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.parimis-hotel.eu&quote=" target="_blank" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&quote=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-facebook-f fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
+						  <li><a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fwww.parimis-hotel.eu&text=:%20https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-twitter fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
+						  <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-google-plus-g fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
+						  <li><a href="mailto:?subject=&body=:%20https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><i class="fas fa-envelope fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
+					</ul>
+					<!-- BOUTON RESERVER -->
+					<a class="standard-btn b-black" href="reservation.html">RÉSERVER</a></div>
 				</div>
 			</div>
 			

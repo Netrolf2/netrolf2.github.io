@@ -95,9 +95,7 @@ header .options nav a .flag:hover{filter:grayscale(0%);}
 
 /*Conditions initiales du contenu dropdown*/
 header #main-nav .dropdown .dropdown-content{
-	
 
-	
 	visibility:hidden;
 	opacity: 0;
 	transform: translateY(-2em);
@@ -135,6 +133,7 @@ header #main-nav .dropdown:focus .dropdown-content {
 header #main-nav .dropdown:hover .dropdown-btn {
 	
 	background-color: #2e2e2e;
+	z-index: 2;
 	color: white;
 }
 

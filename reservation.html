@@ -157,17 +157,17 @@
 							<a href="reservation.html"><span>Réserver</span></a>
 							<fieldset class="dropdown-content calendar">
 								<div>
-									<label class="normal" for="start">Arrivée</label>
-									<input type="date" id="start" name="booking" value="" min="" max="2020-12-31" />
+									<label class="normal" for="booking-start">Arrivée</label>
+									<input type="date" id="start" name="booking-start" value="" min="" max="2020-12-31" />
 								</div>
 
 								<div>
-									<label class="normal" for="end">Départ</label>
-									<input type="date" id="end" name="booking" value="" min="" max="2022-12-31"/>
+									<label class="normal" for="booking-end">Départ</label>
+									<input type="date" id="end" name="booking-end" value="" min="" max="2022-12-31"/>
 								</div>
 								
 								<div>
-									<label class="normal" for="end">Chambre</label>
+									<label class="normal" for="chambre">Chambre</label>
 									<select id="chambre">
 										<option value="classique" selected>Classique</option>
 										<option value="confort">Confort</option>
@@ -177,7 +177,7 @@
 								</div>
 								
 								<div>
-									<label class="normal" for="end">Nombre d'occupants</label>
+									<label class="normal" for="occupants">Nombre d'occupants</label>
 									<select id="occupants">
 										<option value="1" selected>1</option>
 										<option value="2">2</option>
@@ -216,7 +216,72 @@
 	<main>
 		<div class="global-container fadeIn">
 		
+			<!-- TOP BANNER -->
+			<section class="top-banner" title="façade de l'hotel parisien parimis" style="background-image: url('img/photos/parimis_hotel_spa_top.jpg');"></section>
+			
+			<!-- ROW INTRO -->
+			<section class="top-intro text-block centered b-white">
+				<h1>Réservation</h1>
+				<div class="stars"><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div>
+				<p>Sélectionnez la date et la <a href="chambres.html">chambre idéale</a> pour votre séjour.</p> 
+				<p>Prenez rendez-vous pour profiter des nos <a href="spa.html">offres Spa.</a></p>
+				<p>Réservez une table dans notre <a href="restaurant.html">restaurant</a></p>
+				<p class="bold">Par Téléphone : +33 (0)1 23 45 67 89</p> 
+			</section>
 
+			<!-- ROW FORMULAIRE -->
+			<section class="reservation-form b-black">
+				<h2 class="uppercase centered">Formulaire de Réservation</h2>
+				<div class="h-line-white"></div>
+				<form id="pageRF" action="">
+					<label class="form-components" for="fname">Prénom<span class="mandatory">*</span></label>
+					<input class="form-components" type="text" id="clientFirstName" name="firstname" placeholder="Prénom" required>
+
+					<label class="form-components" for="lname">Nom<span class="mandatory">*</span></label>
+					<input class="form-components" type="text" id="clientLastName" name="lastname" placeholder="Nom" required>
+					
+					<label class="form-components" for="clientEmail">Email<span class="mandatory">*</span></label>
+					<input class="form-components" type="text" id="clientEmail" name="clientEmail" placeholder="adresse email"  required>
+					
+					<label class="form-components" class="normal" for="lang">Langue de service</label>
+					<select class="form-components" id="lang" required>
+						<option value="1" selected>Français</option>
+						<option value="2">Anglais</option>
+					</select>
+					
+					<label class="form-components" for="clientPhone">Téléphone<span class="mandatory">*</span></label>
+					<input class="form-components" type="tel" pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$" id="clientPhone" name="clientPhone" placeholder="ex : +33 12 34 56 78 90" required>
+				
+					<label class="form-components" class="normal" for="booking-start">Arrivée</label>						
+					<input class="form-components" type="date" id="pageStart" name="booking-start" value="" min="" max="2020-12-31" required />
+					
+					<label class="form-components" class="normal" for="booking-end">Départ</label>
+					<input class="form-components" type="date" id="pageEnd" name="booking-end" value="" min="" max="2022-12-31" required/>
+					
+					<label class="form-components" class="normal" for="chambre">Chambre</label>
+					<select class="form-components" id="chambre" required>
+						<option value="classique" selected>Classique</option>
+						<option value="confort">Confort</option>
+						<option value="deluxe">Deluxe</option>
+						<option value="suite">Suite</option>
+					</select>							
+
+					<label class="form-components" class="normal" for="occupants">Nombre d'occupants</label>
+					<select class="form-components" id="occupants" required>
+						<option value="1" selected>1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+					</select>							
+
+					<label class="form-components" for="message">Demande particulière<span class="mandatory">*</span></label>
+					<textarea class="form-components" id="clientMessage" name="message" placeholder="Votre demande" style="height:100px"></textarea>
+					
+					<button class="form-components standard-btn b-white" type="submit">RÉSERVER</button>
+				</form>
+			</section>
+			
+			</div>
 		</div>
 	</main>
 	

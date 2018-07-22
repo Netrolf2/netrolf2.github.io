@@ -1,0 +1,195 @@
+
+//<script type="text/javascript">
+    // Create iframes and popin on hotel website
+
+    (function(global) {
+        // -- variables
+
+        var buttonIframe,
+            availproRoot,
+            calendarBlockout,
+            calendarHost,
+            calendarClose,
+            calendarPopin,
+            calendarIframe,
+            calendarIframeWindow;
+
+        var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+        var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+        var receiveMessage = window[eventMethod];
+
+        var modelDomain = 'https://widgets.secure-hotel-booking.com';
+        var isLayoutHorizontal = false;
+        var calendarUrl = 'https://widgets.secure-hotel-booking.com/Hotel-La-Comtesse/25SI/17801/fr/BigCalendar/Calendar';
+
+        // -- post message
+
+        receiveMessage(messageEvent, function (event) {
+            //var removeProtocolRegex = /https:\/\/|http:\/\//;
+            //var host = event.source.document.location.host;
+            //var origin = host.replace(removeProtocolRegex, "");
+            //var domain = modelDomain.replace(removeProtocolRegex, "");
+
+            //if (origin != domain) {
+            //    throw "Domain origin do not match: " + origin + " vs " + domain;
+            //}
+
+            if (event.data == "calendarOpen") {
+                setCalendarPosition();
+                showCalendar();
+            }
+            else if (event.data == "calendarClose") {
+                hideCalendar();
+            }
+        });
+
+        // -- handlers
+
+        function setCalendarPosition() {
+            var defaultMarginTop = 50;
+            if (window.scrollY) {
+                calendarPopin.style.marginTop = (window.scrollY + defaultMarginTop) + 'px';
+            }
+        }
+
+        function showCalendar() {
+            calendarHost.style.display = "block";
+            calendarBlockout.style.display = "block";
+            calendarIframeWindow.postMessage("calendarOpen", modelDomain);
+        }
+
+        function hideCalendar() {
+            calendarHost.style.display = "none";
+            calendarBlockout.style.display = "none";
+            calendarIframeWindow.postMessage("calendarClose", modelDomain);
+        }
+
+        // -- initializer
+
+        var initializer = function () {
+
+            if (global.availproWidgetPageTest) {
+                return;
+            }
+
+            // -- create button
+
+            buttonIframe = document.createElement("iframe");
+            buttonIframe.setAttribute("src", "https://widgets.secure-hotel-booking.com/Hotel-La-Comtesse/25SI/17801/fr/BigCalendar/Widget?displayType=Vertical");
+            buttonIframe.setAttribute("id", "availpro-calendar-button-iframe");
+            buttonIframe.setAttribute("name", "availpro-calendar-button-iframe");
+            buttonIframe.setAttribute("allowTransparency", "true");
+            buttonIframe.setAttribute("frameBorder", "0");
+            buttonIframe.style.border = "0";
+
+            if (isLayoutHorizontal) {
+                buttonIframe.style.width = "400px";
+                buttonIframe.style.height = "80px";
+            } else {
+                buttonIframe.style.width = "230px";
+                buttonIframe.style.height = "260px";
+            }
+
+            buttonIframe.style.background = "transparent";
+
+            availproRoot = document.getElementById("availpro-root");
+            availproRoot.appendChild(buttonIframe);
+
+            // -- create popin
+
+            calendarBlockout = document.createElement("div");
+            calendarBlockout.setAttribute("id", "availpro-calendar-blockout");
+            calendarBlockout.style.display = "none";
+            calendarBlockout.style.position = "fixed";
+            calendarBlockout.style.zIndex = "1051";
+            calendarBlockout.style.left = "0";
+            calendarBlockout.style.top = "0";
+            calendarBlockout.style.width = "100%";
+            calendarBlockout.style.height = "100%";
+            calendarBlockout.style.backgroundColor = "#000";
+            calendarBlockout.style.opacity = "0.2";
+            calendarBlockout.style.filter = "alpha(opacity=20)";
+
+            calendarHost = document.createElement("div");
+            calendarHost.setAttribute("id", "availpro-calendar-host");
+            calendarHost.style.display = "none";
+            calendarHost.style.position = "absolute";
+            calendarHost.style.zIndex = "1052";
+            calendarHost.style.left = "0";
+            calendarHost.style.top = "0";
+            calendarHost.style.width = "100%";
+            calendarHost.style.height = "100%";
+
+            calendarPopin = document.createElement("div");
+            calendarPopin.setAttribute("id", "availpro-calendar-popin");
+            calendarPopin.style.position = "relative";
+            calendarPopin.style.margin = "50px auto";
+            calendarPopin.style.width = "900px";
+            calendarPopin.style.color = "#333";
+
+            calendarClose = document.createElement("a");
+            calendarClose.setAttribute("id", "availpro-calendar-close");
+            calendarClose.setAttribute("href", "javascript:void(0);");
+            calendarClose.innerHTML = "&#10006;";
+            calendarClose.style.position = "absolute";
+            calendarClose.style.right = "15px";
+            calendarClose.style.top = "10px";
+            calendarClose.style.color = "#333";
+            calendarClose.style.textDecoration = "none";
+            calendarClose.style.fontSize = "24px";
+
+            calendarIframe = document.createElement("iframe");
+            calendarIframe.setAttribute("src", calendarUrl);
+            calendarIframe.setAttribute("id", "availpro-calendar-iframe");
+            calendarIframe.setAttribute("name", "availpro-calendar-iframe");
+            calendarIframe.setAttribute("frameBorder", "0");
+            calendarIframe.style.border = "none";
+            calendarIframe.style.width = "900px";
+            calendarIframe.style.height = "740px";
+            calendarIframe.style.backgroundColor = "#fff";
+
+            calendarPopin.appendChild(calendarClose);
+            calendarPopin.appendChild(calendarIframe);
+            calendarHost.appendChild(calendarPopin);
+            document.body.appendChild(calendarHost);
+            document.body.appendChild(calendarBlockout);
+
+            // -- Google Analytics
+
+            global._gaq = global._gaq ? global._gaq : [];
+
+            global._gaq.push(function() {
+                var availproCalendarUrl = global._gat._getTrackerByName()._getLinkerUrl(calendarUrl);
+                var availproCalendarIframe = global.document.getElementById('availpro-calendar-iframe');
+                availproCalendarIframe.src = availproCalendarUrl;
+            });
+
+            // -- get window objects
+
+            calendarIframeWindow = global.frames["availpro-calendar-iframe"];
+
+            // -- bind events
+
+            if (document.addEventListener) {
+                calendarClose.addEventListener("click", hideCalendar);
+                calendarHost.addEventListener("click", hideCalendar);
+                calendarBlockout.addEventListener("click", hideCalendar);
+            } else if (document.attachEvent) { // IE7-8
+                calendarClose.attachEvent("onclick", hideCalendar);
+                calendarHost.attachEvent("onclick", hideCalendar);
+                calendarBlockout.attachEvent("onclick", hideCalendar);
+            }
+
+        };
+
+        // -- document ready
+
+        if (global.isAvailproWidgetOnloadDisabled) {
+            initializer();
+        } else {
+            global.onload = initializer;
+        }
+
+    })(window);
+
+//</script>

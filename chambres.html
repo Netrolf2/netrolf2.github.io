@@ -157,17 +157,17 @@
 							<a href="reservation.html"><span>Réserver</span></a>
 							<fieldset class="dropdown-content calendar">
 								<div>
-									<label class="normal" for="start">Arrivée</label>
-									<input type="date" id="start" name="booking" value="" min="" max="2020-12-31" />
+									<label class="normal" for="booking-start">Arrivée</label>
+									<input type="date" id="start" name="booking-start" value="" min="" max="2020-12-31" />
 								</div>
 
 								<div>
-									<label class="normal" for="end">Départ</label>
-									<input type="date" id="end" name="booking" value="" min="" max="2022-12-31"/>
+									<label class="normal" for="booking-end">Départ</label>
+									<input type="date" id="end" name="booking-end" value="" min="" max="2022-12-31"/>
 								</div>
 								
 								<div>
-									<label class="normal" for="end">Chambre</label>
+									<label class="normal" for="chambre">Chambre</label>
 									<select id="chambre">
 										<option value="classique" selected>Classique</option>
 										<option value="confort">Confort</option>
@@ -177,7 +177,7 @@
 								</div>
 								
 								<div>
-									<label class="normal" for="end">Nombre d'occupants</label>
+									<label class="normal" for="occupants">Nombre d'occupants</label>
 									<select id="occupants">
 										<option value="1" selected>1</option>
 										<option value="2">2</option>
@@ -216,17 +216,28 @@
 	<main>
 		<div class="global-container fadeIn">
 		
+			<!-- TOP BANNER -->
+			<section id="about"  class="top-banner" title="vue depuis la suite de l'hotel parimis" style="background-image: url('img/photos/parimis_hotel_chambres_top.jpg');background-position-y: -400px;"></section>
+			
+			<!-- ROW HISTORIQUE -->
+			<section class="top-intro text-block centered b-white">
+				<h1>Chambres &amp; Suites </h1>
+				<div class="stars"><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div>
+				<p>Aux Parimis, nous souhaitons que vous passiez un moment inoubliables au sein d'une atmosphère soignée et conçue par des designer de renom. Sobriété, confort et haut de gamme sont les maîtres mots de nos chambres et suites.</p>
+				<p>Que vous optiez pour une chambre <a href="chambres.html#classique"> Classique</a>,<a href="chambres.html#confort"> Confort</a>, <a href="chambres.html#deluxe"> Deluxe</a> ou une de nos magnifiques <a href="chambres.html#suite"> Suites</a>, nous nous evertuerons à rendre votre séjour aussi parfait qu'inoubliable.</p>
+			</section>
+			
 			<!-- CLASSIQUE -->
 			<section id="classique" class="item-container flex">
-				<div  class="swipe-block swipe block-image">
-
-					<div class="swipe-wrap">
-						<div><img src="img/photos/parimis_hotel_chambre_classique_1.jpg" alt="parimis hotel chambre classique 1" ></div>
-						<div><img src="img/photos/parimis_hotel_chambre_classique_2.jpg" alt="parimis hotel chambre classique 2" ></div>
-						<div><img src="img/photos/parimis_hotel_chambre_classique_3.jpg" alt="parimis hotel chambre classique 3" ></div>
+				<!-- BLOC IMAGE A GAUCHE -->
+				<div class="img-block swipe-block swipe">
+					<div class="swipe-wrap swipe-chambres-spa">
+						<img src="img/photos/parimis_hotel_chambre_classique_1.jpg" alt="parimis hotel chambre classique lit" >
+						<img src="img/photos/parimis_hotel_chambre_classique_2.jpg" alt="parimis hotel chambre classique salon" >
+						<img src="img/photos/parimis_hotel_chambre_classique_3.jpg" alt="parimis hotel chambre classique salle de bain" >
 					</div>
 				</div>
-				
+				<!-- DESCRIPTION A DROITE -->
 				<div class="description text-block justified">
 					<h1>Chambre Classique</h1>
 					<hr>
@@ -237,31 +248,32 @@
 						<li>Surface moyenne de 28 m²</li>
 						<li>Écran plat géant (vidéothèque incluse)</li>
 						<li>Internet fibre WiFi et Ethernet.</li>
-						<li>Baignoire</li>
 					</ul>
 					<hr>
-					<div class="flex">
-						<ul class="share-buttons flex">
+					<!-- ICONE PARTAGE -->
+					<ul class="share-buttons flex">
 						  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.parimis-hotel.eu&quote=" target="_blank" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&quote=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-facebook-f fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
 						  <li><a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fwww.parimis-hotel.eu&text=:%20https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-twitter fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
 						  <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-google-plus-g fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
 						  <li><a href="mailto:?subject=&body=:%20https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><i class="fas fa-envelope fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
-						</ul>
-						<a class="standard-btn b-black" href="reservation.html">RÉSERVER</a>
-					</div>
+					</ul>
+					<!-- BOUTON RESERVER -->
+					<a class="standard-btn b-black" href="reservation.html">RÉSERVER</a>
 				</div>
 			</section>
-			<!--CONFORT-->
+			<!-- -->
+			
+			<!-- Confort -->
 			<section id="confort" class="item-container flex">
-				<div class="swipe-block swipe block-image">
-
-					<div class="swipe-wrap">
-						<div><img src="img/photos/parimis_hotel_chambre_confort_1.jpg" alt="parimis hotel chambre confort 1" ></div>
-						<div><img src="img/photos/parimis_hotel_chambre_confort_2.jpg" alt="parimis hotel chambre confort 2" ></div>
-						<div><img src="img/photos/parimis_hotel_chambre_confort_3.jpg" alt="parimis hotel chambre confort 3" ></div>
+				<!-- BLOC IMAGE A GAUCHE -->
+				<div class="img-block swipe-block swipe">
+					<div class="swipe-wrap swipe-chambres-spa">
+						<img src="img/photos/parimis_hotel_chambre_confort_1.jpg" alt="parimis hotel chambre confort lit" >
+						<img src="img/photos/parimis_hotel_chambre_confort_2.jpg" alt="parimis hotel chambre confort salon" >
+						<img src="img/photos/parimis_hotel_chambre_confort_3.jpg" alt="parimis hotel chambre confort salle de bain" >
 					</div>
 				</div>
-				
+				<!-- DESCRIPTION A DROITE -->
 				<div class="description text-block justified">
 					<h1>Chambre Confort</h1>
 					<hr>
@@ -272,31 +284,32 @@
 						<li>Surface moyenne de 35 m²</li>
 						<li>Écran plat géant (vidéothèque incluse)</li>
 						<li>Internet fibre WiFi et Ethernet.</li>
-						<li>Baignoire</li>
 					</ul>
 					<hr>
-					<div class="flex">
-						<ul class="share-buttons flex">
+					<!-- ICONE PARTAGE -->
+					<ul class="share-buttons flex">
 						  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.parimis-hotel.eu&quote=" target="_blank" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&quote=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-facebook-f fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
 						  <li><a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fwww.parimis-hotel.eu&text=:%20https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-twitter fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
 						  <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-google-plus-g fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
 						  <li><a href="mailto:?subject=&body=:%20https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><i class="fas fa-envelope fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
-						</ul>
-						<a class="standard-btn b-black" href="reservation.html">RÉSERVER</a>
-					</div>
+					</ul>
+					<!-- BOUTON RESERVER -->
+					<a class="standard-btn b-black" href="reservation.html">RÉSERVER</a>
 				</div>
 			</section>
-			<!--DELUXE-->
+			<!-- -->
+			
+			<!-- Deluxe -->
 			<section id="deluxe" class="item-container flex">
-				<div class="swipe-block swipe block-image">
-
-					<div class="swipe-wrap">
-						<div><img src="img/photos/parimis_hotel_chambre_deluxe_1.jpg" alt="parimis hotel chambre deluxe 1" ></div>
-						<div><img src="img/photos/parimis_hotel_chambre_deluxe_2.jpg" alt="parimis hotel chambre deluxe 2" ></div>
-						<div><img src="img/photos/parimis_hotel_chambre_deluxe_3.jpg" alt="parimis hotel chambre deluxe 3" ></div>
+				<!-- BLOC IMAGE A GAUCHE -->
+				<div class="img-block swipe-block swipe">
+					<div class="swipe-wrap swipe-chambres-spa">
+						<img src="img/photos/parimis_hotel_chambre_deluxe_1.jpg" alt="parimis hotel chambre deluxe lit" >
+						<img src="img/photos/parimis_hotel_chambre_deluxe_2.jpg" alt="parimis hotel chambre deluxe salon" >
+						<img src="img/photos/parimis_hotel_chambre_deluxe_3.jpg" alt="parimis hotel chambre deluxe salle de bain" >
 					</div>
 				</div>
-				
+				<!-- DESCRIPTION A DROITE -->
 				<div class="description text-block justified">
 					<h1>Chambre Deluxe</h1>
 					<hr>
@@ -306,62 +319,59 @@
 						<li>Lit King Size</li>
 						<li>Surface moyenne de 50 m²</li>
 						<li>Écran plat géant (vidéothèque incluse)</li>
-						<li>Machine à café</li>
 						<li>Internet fibre WiFi et Ethernet.</li>
-						<li>Baignoire</li>
 					</ul>
 					<hr>
-					<div class="flex">
-						<ul class="share-buttons flex">
+					<!-- ICONE PARTAGE -->
+					<ul class="share-buttons flex">
 						  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.parimis-hotel.eu&quote=" target="_blank" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&quote=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-facebook-f fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
 						  <li><a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fwww.parimis-hotel.eu&text=:%20https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-twitter fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
 						  <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-google-plus-g fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
 						  <li><a href="mailto:?subject=&body=:%20https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><i class="fas fa-envelope fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
-						</ul>
-						<a class="standard-btn b-black" href="reservation.html">RÉSERVER</a>
-					</div>
+					</ul>
+					<!-- BOUTON RESERVER -->
+					<a class="standard-btn b-black" href="reservation.html">RÉSERVER</a>
 				</div>
 			</section>
 			
-			<!--Suite-->
-			<section id="suites" class="item-container flex">
-				<div class="swipe-block swipe block-image">
-
-					<div class="swipe-wrap">
-						<div><img src="img/photos/parimis_hotel_chambre_suite_1.jpg" alt="parimis hotel chambre suite 1" ></div>
-						<div><img src="img/photos/parimis_hotel_chambre_suite_2.jpg" alt="parimis hotel chambre suite 2" ></div>
-						<div><img src="img/photos/parimis_hotel_chambre_suite_3.jpg" alt="parimis hotel chambre suite 3" ></div>
+			<!-- Suite -->
+			<section id="suite" class="item-container flex">
+				<!-- BLOC IMAGE A GAUCHE -->
+				<div class="img-block swipe-block swipe">
+					<div class="swipe-wrap swipe-chambres-spa">
+						<img src="img/photos/parimis_hotel_chambre_suite_1.jpg" alt="parimis hotel chambre suite lit" >
+						<img src="img/photos/parimis_hotel_chambre_suite_2.jpg" alt="parimis hotel chambre suite salon" >
+						<img src="img/photos/parimis_hotel_chambre_suite_3.jpg" alt="parimis hotel chambre suite salle de bain" >
 					</div>
 				</div>
-				
+				<!-- DESCRIPTION A DROITE -->
 				<div class="description text-block justified">
 					<h1>Suites</h1>
 					<hr>
-					<p>Nos suites d'exception proposent une atmosphère épurées où se mèle simplicité, confort, luxe et art. conçues chacune par des designer de renoms, chaque meubles, chaque luminaire est un objet unique et propre au Parimis qui contribue à créer une expérience unique dont vous seul au sein de l'hôtel pouvez profiter.</p>
+					<p>Nos suites d'exception proposent une atmosphère épurées où se mèle simplicité, confort, luxe et art. Conçues chacune par des designer de renoms et propre au Parimis leur atmosphère unique créée une expérience unique dont vous seul au sein de l'hôtel pouvez profiter.</p>
 					<p class="bold ul-opener">Détails et équipements<span> :</span></p>
 					<ul>
 						<li>Lit King Size</li>
 						<li>Surface moyenne de 50 m²</li>
 						<li>Écran plat géant (vidéothèque incluse)</li>
-						<li>Machine à café</li>
 						<li>Internet fibre WiFi et Ethernet.</li>
 						<li>Baignoire</li>
 					</ul>
 					<hr>
-					<div class="flex">
-						<ul class="share-buttons flex">
+					<!-- ICONE PARTAGE -->
+					<ul class="share-buttons flex">
 						  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.parimis-hotel.eu&quote=" target="_blank" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&quote=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-facebook-f fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a></li>
 						  <li><a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fwww.parimis-hotel.eu&text=:%20https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-twitter fa-2x" aria-hidden="true"></i><span class="sr-only">Tweet</span></a></li>
 						  <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><i class="fab fa-google-plus-g fa-2x" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a></li>
 						  <li><a href="mailto:?subject=&body=:%20https%3A%2F%2Fwww.parimis-hotel.eu" target="_blank" title="Send email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><i class="fas fa-envelope fa-2x" aria-hidden="true"></i><span class="sr-only">Send email</span></a></li>
-						</ul>
-						<a class="standard-btn b-black" href="reservation.html">RÉSERVER</a>
-					</div>
+					</ul>
+					<!-- BOUTON RESERVER -->
+					<a class="standard-btn b-black" href="reservation.html">RÉSERVER</a>
 				</div>
 			</section>
 			
 			
-
+			
 		</div>
 	</main>
 	

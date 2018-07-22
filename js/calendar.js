@@ -7,10 +7,19 @@ tomorrow = tomorrow.toISOString().split('T')[0];
 
 // console.log(today);
 
-document.getElementById("start").setAttribute("min", today);
-document.getElementById("start").setAttribute("value", today);
+function setMinMaxDate(startId, endId){
+	
+	
+	document.getElementById(startId).setAttribute('min', today);
+	document.getElementById(startId).setAttribute('value', today);
 
-document.getElementById("end").setAttribute("min", tomorrow);
-document.getElementById("end").setAttribute("value", tomorrow);
+	document.getElementById(endId).setAttribute('min', tomorrow);
+	document.getElementById(endId).setAttribute('value', tomorrow);
+	
+	
+}
 
-// console.log(tomorrow);
+setMinMaxDate('start', 'end');
+
+if(document.getElementById('pageRF') != null){setMinMaxDate('pageStart', 'pageEnd');}
+	
