@@ -828,14 +828,17 @@ main #services-bot .frame {
 
 main #services-bot #frameChambres {
 	background: url("../img/photos/parimis_hotel_chambres.jpg") no-repeat right;
+	background-size: cover;
 }
 
 main #services-bot #frameSpa {
 	background: url('../img/photos/parimis_hotel_spa.jpg') no-repeat left;
+	background-size: cover;
 }
 
 main #services-bot #frameRestaurant {
-	background: url('../img/photos/parimis_hotel_restaurant.jpg') no-repeat center bottom
+	background: url('../img/photos/parimis_hotel_restaurant.jpg') no-repeat center bottom;
+	background-size: cover;
 }
 
 /*AVIS*/
